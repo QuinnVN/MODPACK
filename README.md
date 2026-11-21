@@ -1,21 +1,51 @@
 # MODPACK
 
-Modpack từ snapshot của instance PrismLauncher, dùng Minecraft **1.21.1** và NeoForge **21.1.266**. `pack/pack.toml` là manifest packwiz, `pack/index.toml` là index sinh tự động. Xem [CONTEXT.md](CONTEXT.md) để biết mục tiêu của từng bản.
+Modpack Minecraft tập trung vào **Create** và **Create Aeronautics**, với địa hình Overworld từ Regions Unexplored và Tectonic. Hai bản chơi Full và Lite được thiết kế để kết nối vào cùng một máy chủ chuyên dụng chạy bản Server.
 
-- `pack/mods/` có 218 pin `.pw.toml` từ metadata Prism và bản `voxy-0.6.0.jar` cục bộ. Hash của từng pin khớp với JAR đang bật tại thời điểm chụp snapshot.
-- `pack/shaderpacks/` có hai pin shader. `pack/config/`, `pack/defaultconfigs/` và `pack/kubejs/` chứa cấu hình và nội dung KubeJS từ instance.
-- Trong bản Full, packwiz nhúng 14 JAR CurseForge và JAR Voxy. Manifest cung cấp URL tải 204 mod và hai shader.
+**Minecraft 1.21.1** · **NeoForge 21.1.266** · **Phiên bản `0.1.0-snapshot`**
 
-Các entry Prism gắn `server` được đặt `both` trong snapshot để Full giữ đủ mod đang bật. Hai mod đang tắt trong Prism được bỏ qua. Snapshot bỏ qua `options.txt`, file `.bak`, một số trạng thái client, world save và dữ liệu người chơi.
+## Các phiên bản
 
-## Dùng packwiz
+| Bản | Tệp xuất | Nội dung |
+| --- | --- | --- |
+| **Full** | `MODPACK-<date>.mrpack` | Bản chơi đầy đủ, gồm shader, Voxy và các hiệu ứng hình ảnh. |
+| **Lite** | `MODPACK-<date>-lite.mrpack` | Bản chơi cho máy cấu hình thấp. Giữ Sodium và ImmediatelyFast, dùng thiết lập đồ họa nhẹ và lược bỏ shader, Voxy phía máy chơi và Particular. [Danh sách loại trừ](profiles/lite/exclude.txt) · [Thiết lập đồ họa](profiles/lite/options.txt) |
+| **Server** | `MODPACK-<date>-server.mrpack` | Bản cho máy chủ chuyên dụng. Giữ Chunky và Voxy Server Side, lược bỏ mod phía máy chơi, shader và NumFlux. [Danh sách loại trừ](profiles/server/exclude.txt) |
 
-Chạy `./build.ps1` trong PowerShell hoặc `bash ./build.sh` trong Bash từ thư mục gốc `MODPACK`. Mỗi lần chạy xuất ba gói vào `dist/`, với `<date>` là ngày build theo định dạng `YYYY-MM-DD`.
+Để chơi, nhập tệp `.mrpack` của bản Full hoặc Lite vào Prism Launcher. Với máy chủ chuyên dụng, dùng tệp của bản Server với trình cài đặt hỗ trợ `.mrpack` phía máy chủ.
 
-- `MODPACK-<date>.mrpack` là bản Full.
-- `MODPACK-<date>-lite.mrpack` dùng [danh sách Lite](profiles/lite/exclude.txt) và [thiết lập đồ họa nhẹ](profiles/lite/options.txt). Lite giữ Sodium và ImmediatelyFast, bỏ shader, Voxy client và Particular. Một host E4All cũ từng từ chối Lite vì thiếu Particular.
-- `MODPACK-<date>-server.mrpack` dùng [danh sách Server](profiles/server/exclude.txt) để bỏ mod client, shader và NumFlux. Bản Server giữ Chunky và Voxy Server Side.
+Bản Lite từng bị phiên chơi E4All từ Full từ chối vì thiếu Particular. Quy trình kiểm thử trước khi phát hành là khởi động bản Server rồi thử kết nối từ cả hai bản chơi mới cài. [Ghi chú tương thích và kiểm thử](CONTEXT.md#full-lite-and-server-packaging)
 
-Mỗi dòng trong `exclude.txt` là đường dẫn tương đối trong `pack/`, ví dụ `mods/iris.pw.toml`. Dòng trống và dòng bắt đầu bằng `#` được bỏ qua. Script áp dụng danh sách lên bản sao tạm trước khi chạy `packwiz refresh` và export từng bản, rồi đưa cả ba gói ra `dist/`.
+## Tạo gói từ mã nguồn
 
-Script ưu tiên packwiz cục bộ trong `.tools/bin/` (`packwiz.exe` trên Windows, `packwiz` trên Linux/macOS), sau đó tìm `packwiz` trong PATH. Khi dùng checkout mới, khôi phục `pack/mods/voxy-0.6.0.jar` từ instance nguồn trước khi build. SHA-256 của JAR có trong `pack/index.toml`. [Tài liệu packwiz](https://packwiz.infra.link/tutorials/creating/getting-started/)
+1. Cài packwiz vào `PATH` hoặc đặt tệp thực thi trong `.tools/bin/`. Script ưu tiên thư mục này và tìm `packwiz.exe` trên Windows hoặc `packwiz` trên Linux và macOS. [Hướng dẫn cài packwiz](https://packwiz.infra.link/tutorials/creating/getting-started/)
+2. Chép `voxy-0.6.0.jar` từ instance Prism Launcher gốc vào `pack/mods/`. Tệp JAR này được bỏ qua trong Git và cần có để chạy script build. SHA-256 của tệp được ghi trong [index của packwiz](pack/index.toml).
+3. Từ thư mục gốc của repo, chạy lệnh tương ứng với shell đang dùng.
+
+   **PowerShell**
+
+   ```powershell
+   ./build.ps1
+   ```
+
+   **Bash**
+
+   ```bash
+   bash ./build.sh
+   ```
+
+Mỗi lần chạy tạo cả ba gói trong `dist/`. `<date>` là ngày build theo định dạng `YYYY-MM-DD`. Script áp dụng cấu hình từng bản trên bản sao tạm của `pack/`, sau đó chạy `packwiz refresh` và `packwiz modrinth export`.
+
+Để chỉnh bản Lite hoặc Server, sửa `exclude.txt` tương ứng. Mỗi dòng là một đường dẫn tệp tương đối trong `pack/`, ví dụ `mods/iris.pw.toml`. Script bỏ qua dòng trống và dòng bắt đầu bằng `#`.
+
+## Cấu trúc repo
+
+| Đường dẫn | Nội dung |
+| --- | --- |
+| [`pack/pack.toml`](pack/pack.toml), [`pack/index.toml`](pack/index.toml) | Manifest và index do packwiz quản lý. |
+| [`pack/mods/`](pack/mods/), [`pack/shaderpacks/`](pack/shaderpacks/) | Phiên bản mod và shader được ghim bằng các tệp `.pw.toml`. |
+| [`pack/config/`](pack/config/), [`pack/defaultconfigs/`](pack/defaultconfigs/), [`pack/kubejs/`](pack/kubejs/) | Cấu hình và nội dung KubeJS dùng chung. |
+| [`profiles/`](profiles/) | Danh sách loại trừ và thiết lập riêng cho từng bản. |
+| `dist/` | Các gói `.mrpack` sinh ra khi build, được bỏ qua trong Git. |
+
+Xem mục tiêu của từng bản, kết quả thử nghiệm hiệu năng và các hạng mục đang phát triển trong [CONTEXT.md](CONTEXT.md).
