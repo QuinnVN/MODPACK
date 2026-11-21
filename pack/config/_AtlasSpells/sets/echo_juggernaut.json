@@ -1,0 +1,13 @@
+{
+  "items": [
+    "echoing_magic:reinforced_juggernaut_helmet",
+    "echoing_magic:reinforced_juggernaut_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "",
+      "power": 0.08
+    }
+  ]
+}

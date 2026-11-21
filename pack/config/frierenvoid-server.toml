@@ -1,0 +1,37 @@
+#Attraction radius in blocks.
+# Default: 16.0
+# Range: 6.0 ~ 32.0
+radius = 16.0
+#Real terrain removal: blocks rise into the singularity and are consumed without drops. Preview never alters terrain.
+absorbTerrain = true
+#Large Zoltraak excavates ordinary blocks without drops. Obsidian-strength, unbreakable, container and protected blocks stop it. Maximum 4096 blocks per cast.
+largeZoltraakBreaksTerrain = true
+# Default: 192
+# Range: 0 ~ 1024
+maxBlocksPerCast = 192
+#Every four ticks, with bounded surface sampling.
+# Default: 5
+# Range: 1 ~ 16
+blocksPerPulse = 5
+#Protect block entities, fluids and unbreakable blocks regardless of hardness.
+# Default: 5.0
+# Range: 0.0 ~ 50.0
+maxBlockHardness = 5.0
+# Default: 1.0
+# Range: 0.0 ~ 10.0
+damageMultiplier = 1.0
+# Default: 1.0
+# Range: 0.0 ~ 3.0
+pullStrength = 1.0
+#Also respects server PVP and teams.
+allowPvp = false
+#Allow singularity to pull and damage passive mobs. Aimed Zoltraak spells can always hit non-allied passive mobs.
+affectPassiveMobs = false
+#Deflect and consume hostile projectiles. Never consumes dropped items.
+affectProjectiles = true
+# Default: 4
+# Range: 1 ~ 16
+maxActivePerDimension = 4
+# Default: 64
+# Range: 8 ~ 256
+maxTargetsPerPulse = 64

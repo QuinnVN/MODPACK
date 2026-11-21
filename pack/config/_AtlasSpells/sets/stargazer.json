@@ -1,0 +1,13 @@
+{
+  "items": [
+    "asterismarcanum:astral_helmet",
+    "asterismarcanum:astral_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "asterismarcanum:astral",
+      "power": 0.08
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "twilightforest"
+  ],
+  "kind": "kill_entity",
+  "target": "twilightforest:lich",
+  "count": 1,
+  "points": 8,
+  "order": 11
+}

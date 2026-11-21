@@ -1,0 +1,21 @@
+{
+  "first": [
+    "aero_additions:wind",
+    "wind_spellbooks:wind",
+    "monsterspellbooks:aero"
+  ],
+  "second": [
+    "irons_spellbooks:fire"
+  ],
+  "color": "#FF7B00",
+  "icon": "irons_spellbooks:fire_cloth",
+  "particle": "minecraft:flame",
+  "sound": "minecraft:entity.blaze.shoot",
+  "effects": [
+    {
+      "type": "burn",
+      "seconds": 5,
+      "radius": 4
+    }
+  ]
+}

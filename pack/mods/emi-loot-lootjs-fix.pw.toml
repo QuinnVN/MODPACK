@@ -1,0 +1,16 @@
+filename = 'emi_loot_fix-1.0.0.jar'
+name = 'EMI Loot + LootJS Fix'
+side = "both"
+
+[download]
+hash = '9ece6740f50462b740399b710667ffcf0ab195bb6eb4bc68c125bfa5b05808ac9796cfb4da3172b86a96b1d4b923ce92dc67b590e6a9b0be3082ffe83d63f514'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/y8O1z8dO/versions/2E6oiXyW/emi_loot_fix-1.0.0.jar'
+
+[update.modrinth]
+mod-id = 'y8O1z8dO'
+version = '2E6oiXyW'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'qbbO7Jns'
+type = 'REQUIRED'

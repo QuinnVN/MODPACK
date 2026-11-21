@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "alexscaves"
+  ],
+  "kind": "kill_entity",
+  "target": "alexscaves:teletor",
+  "count": 3,
+  "points": 5,
+  "order": 11
+}

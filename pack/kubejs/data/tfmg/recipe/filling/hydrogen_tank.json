@@ -1,0 +1,18 @@
+{
+  "type": "create:filling",
+  "results": [
+    {
+      "id": "tfmg:hydrogen_bucket"
+    }
+  ],
+  "ingredients": [
+    {
+      "item": "minecraft:bucket"
+    },
+    {
+      "type": "neoforge:tag",
+      "amount": 1000,
+      "tag": "kubejs:hydrogen"
+    }
+  ]
+}

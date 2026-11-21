@@ -1,0 +1,30 @@
+{
+  "items": [
+    "iss_magicfromtheeast:jade_pagoda_helmet",
+    "iss_magicfromtheeast:jade_pagoda_chestplate",
+    "iss_magicfromtheeast:taoist_helmet",
+    "iss_magicfromtheeast:taoist_chestplate",
+    "iss_magicfromtheeast:taiji_sword",
+    "iss_magicfromtheeast:jade_guandao",
+    "iss_magicfromtheeast:jade_pendant",
+    "iss_magicfromtheeast:bagua_mirror",
+    "iss_magicfromtheeast:jade_pagoda_leggings",
+    "iss_magicfromtheeast:jade_pagoda_boots",
+    "iss_magicfromtheeast:taoist_leggings",
+    "iss_magicfromtheeast:taoist_boots"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "iss_magicfromtheeast:symmetry",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "iss_magicfromtheeast:symmetry",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

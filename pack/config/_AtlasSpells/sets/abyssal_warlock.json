@@ -1,0 +1,22 @@
+{
+  "items": [
+    "cataclysm_spellbooks:abyssal_warlock_helmet",
+    "cataclysm_spellbooks:abyssal_warlock_chestplate",
+    "cataclysm_spellbooks:abyss_spell_book",
+    "cataclysm_spellbooks:coral_staff"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "cataclysm_spellbooks:abyssal",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "cataclysm_spellbooks:abyssal",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "twilightforest"
+  ],
+  "kind": "kill_entity",
+  "target": "twilightforest:snow_queen",
+  "count": 1,
+  "points": 10,
+  "order": 16
+}

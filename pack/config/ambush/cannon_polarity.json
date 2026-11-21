@@ -1,0 +1,16 @@
+{
+  "ambush:artillery_car": {
+    "configHash": "v4:barrel:97d3f914",
+    "axes": {
+      "3,1,8": false,
+      "3,2,8": true
+    }
+  },
+  "ambush:piglin_overworld_gunship": {
+    "configHash": "v4:barrel:4760dea5",
+    "axes": {
+      "8,17,18": true,
+      "9,17,18": false
+    }
+  }
+}

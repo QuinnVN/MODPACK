@@ -1,0 +1,21 @@
+{
+  "first": [
+    "irons_spellbooks:eldritch"
+  ],
+  "second": [
+    "irons_spellbooks:nature"
+  ],
+  "color": "#4B3F72",
+  "icon": "irons_spellbooks:blood_upgrade_orb",
+  "particle": "minecraft:smoke",
+  "sound": "minecraft:block.sculk.spread",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "minecraft:wither",
+      "seconds": 5,
+      "amplifier": 1,
+      "target": "target"
+    }
+  ]
+}

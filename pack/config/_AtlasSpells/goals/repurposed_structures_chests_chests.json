@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "repurposed_structures"
+  ],
+  "kind": "loot_chest",
+  "target": "repurposed_structures:chests/",
+  "count": 15,
+  "points": 6,
+  "order": 50
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "deeperdarker"
+  ],
+  "kind": "loot_chest",
+  "target": "deeperdarker:chests/",
+  "count": 5,
+  "points": 5,
+  "order": 50
+}

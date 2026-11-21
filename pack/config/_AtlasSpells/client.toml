@@ -1,0 +1,61 @@
+#Show a short tip in chat the first time you meet a part of Iron's Spells (scrolls, spellbooks, inks...).
+#The tips already seen are kept in spellatlas/seen_tips.json in the game folder; /spellatlastips reset shows them again.
+beginnerTips = true
+#After each cast, show the spell's progress towards the next mastery rank for a few seconds.
+masteryHud = true
+#Where that panel appears.
+#Allowed Values: ABOVE_HOTBAR, TOP_CENTER, TOP_LEFT, TOP_RIGHT
+masteryHudPosition = "ABOVE_HOTBAR"
+#A row of mana orbs next to the hearts, sized like the vanilla bars, in place of Iron's own mana bar.
+#AUTO: above the hunger bar while it shows, in its place when a mod or pack hides it.
+#HUNGER_ROW / ABOVE_HUNGER: always there. OFF: no orbs, Iron's bar comes back.
+#Allowed Values: OFF, AUTO, HUNGER_ROW, ABOVE_HUNGER
+manaBar = "AUTO"
+#Moves the mana orbs sideways, in GUI pixels (negative = left).
+# Default: 0
+# Range: -2000 ~ 2000
+manaBarOffsetX = 0
+#Moves the mana orbs up or down, in GUI pixels (negative = up).
+# Default: 0
+# Range: -2000 ~ 2000
+manaBarOffsetY = 0
+#Fade the mana orbs out a few seconds after your mana is full, and bring them back when it changes.
+#Handy in packs with a crowded HUD.
+manaBarAutoHide = false
+#Show the mana value above the orbs.
+manaNumbers = false
+#Show health and mana in percent beside the hearts and the mana orbs.
+hudPercent = true
+#Search range of the duel window in the inventory (blocks).
+# Default: 32
+# Range: 8 ~ 512
+duelSearchRange = 32
+#Show the spellbook slot above the shield slot of the survival inventory.
+#Turned off, the book stays in its Curios slot (the Curios button of the inventory opens it).
+inventorySpellbookSlot = true
+#With a backpack mod: show its Curios back slot in the survival inventory, above the spellbook slot.
+#Turned off, the backpack stays in its Curios slot.
+inventoryBackSlot = true
+#Tabs above the inventory for Iron's tables within reach (switch them off with the button next to them).
+tableTabs = true
+#The magic panel beside the inventory is folded to mana and the spell of the day (click its arrow).
+inventoryPanelCollapsed = true
+#Show the magic status panel (mana, stats and the spell of the day) above the player inventory. Off by default.
+inventoryStats = false
+#Show each school's power in a panel under the player inventory. Off by default.
+inventorySchools = false
+#Tint the screen's edges for big moments (a mastery rank, a defeated nemesis).
+screenVignette = true
+#Show a magic circle under casters' feet.
+castCircles = true
+#Hide the Builds tab of the atlas and every build page (also from the quick search).
+#Handy in packs that bring their own builds or none at all. Nothing changes on the server.
+hideBuilds = false
+#The look of the atlas. NIGHT: the Night Grimoire (default). CLASSIC: the look of version 1.93.0.
+#Applies at once when changed in the atlas's Settings tab.
+#Allowed Values: NIGHT, CLASSIC
+bookStyle = "NIGHT"
+#Visual effects of the atlas (the Classic look has none).
+#FULL: open animation, page turns, glow, rune rings, sparks, shimmer. REDUCED: page turns and glow only. OFF: a still book.
+#Allowed Values: FULL, REDUCED, OFF
+bookEffects = "FULL"

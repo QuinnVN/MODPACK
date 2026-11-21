@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "alexscaves"
+  ],
+  "kind": "kill_entity",
+  "target": "alexscaves:gingerbread_man",
+  "count": 5,
+  "points": 4,
+  "order": 12
+}

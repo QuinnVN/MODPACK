@@ -1,0 +1,9 @@
+{
+  "first": [
+    "dragonic_spells:firedragon"
+  ],
+  "second": [
+    "dragonic_spells:icedragon"
+  ],
+  "multiplier": 1.15
+}

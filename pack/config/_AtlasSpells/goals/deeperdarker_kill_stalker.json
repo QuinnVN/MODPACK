@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "deeperdarker"
+  ],
+  "kind": "kill_entity",
+  "target": "deeperdarker:stalker",
+  "count": 1,
+  "points": 6,
+  "order": 10
+}

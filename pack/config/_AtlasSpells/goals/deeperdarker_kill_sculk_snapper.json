@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "deeperdarker"
+  ],
+  "kind": "kill_entity",
+  "target": "deeperdarker:sculk_snapper",
+  "count": 3,
+  "points": 5,
+  "order": 11
+}

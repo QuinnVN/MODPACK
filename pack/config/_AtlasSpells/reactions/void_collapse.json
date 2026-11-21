@@ -1,0 +1,23 @@
+{
+  "first": [
+    "irons_spellbooks:ender"
+  ],
+  "second": [
+    "irons_spellbooks:eldritch"
+  ],
+  "color": "#5A189A",
+  "icon": "irons_spellbooks:ender_upgrade_orb",
+  "particle": "minecraft:reverse_portal",
+  "sound": "minecraft:block.respawn_anchor.deplete",
+  "effects": [
+    {
+      "type": "knockback",
+      "value": -1.0
+    },
+    {
+      "type": "splash",
+      "value": 0.5,
+      "radius": 3
+    }
+  ]
+}

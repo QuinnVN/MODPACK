@@ -1,0 +1,11 @@
+{
+  "first": [
+    "irons_spellbooks:lightning"
+  ],
+  "second": [
+    "traveloptics:aqua",
+    "somakespells:aqua",
+    "aces_spell_utils:hydro"
+  ],
+  "multiplier": 1.15
+}

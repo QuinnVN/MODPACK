@@ -1,0 +1,19 @@
+{
+  "config_version": "2.0.43",
+  "config_datetime": "2026-11-18_16-53-39",
+  "general": {
+    "prevent_structure_overlap": true,
+    "overlap_padding": 2,
+    "enable_global_spacing_and_separation_modifier": true,
+    "global_spacing_and_separation_modifier": 1.4
+  },
+  "structure_namespaces": [
+    {
+      "name": "global",
+      "enable_flatness_check": true
+    }
+  ],
+  "structures": [],
+  "structure_sets": [],
+  "structure_template_pools": []
+}

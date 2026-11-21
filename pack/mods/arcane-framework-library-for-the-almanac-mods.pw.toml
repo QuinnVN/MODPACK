@@ -1,0 +1,13 @@
+filename = 'arcane_framework-0.0.2.jar'
+name = 'Arcane Framework - Library for the Almanac Mods'
+side = "both"
+
+[download]
+hash = 'ba5c54d682377b79d19b9432f2241774dc406844'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9695249
+project-id = 1809936

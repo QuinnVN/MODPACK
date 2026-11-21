@@ -1,0 +1,16 @@
+filename = 'voxyfog-1.1.jar'
+name = 'Voxy Fog Addon Neoforge'
+side = "client"
+
+[download]
+hash = 'd49c5f018bb04892695049696adbfd983eebe0368370d7888dd9938a091158b77d387da171cdfe97bc2dd543900c5ea146d4caed2ae1fce3cf0521cb60b70b57'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/lrtCTD1d/versions/HdbaunYR/voxyfog-1.1.jar'
+
+[update.modrinth]
+mod-id = 'lrtCTD1d'
+version = 'HdbaunYR'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'fxxUqruK'
+type = 'REQUIRED'

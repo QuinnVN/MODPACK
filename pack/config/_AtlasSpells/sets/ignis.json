@@ -1,0 +1,21 @@
+{
+  "items": [
+    "cataclysm_spellbooks:ignis_helmet",
+    "cataclysm_spellbooks:ignis_chestplate",
+    "cataclysm_spellbooks:ignis_spell_book"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:fire",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "irons_spellbooks:fire",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

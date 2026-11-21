@@ -1,0 +1,3 @@
+[Compatibility]
+	#Prefer recipes from mods over overlapping Lender's Delight recipes.
+	prefer = true

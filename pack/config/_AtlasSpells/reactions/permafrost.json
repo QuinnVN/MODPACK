@@ -1,0 +1,29 @@
+{
+  "first": [
+    "irons_spellbooks:ice"
+  ],
+  "second": [
+    "irons_spellbooks:nature"
+  ],
+  "color": "#7FE0FF",
+  "icon": "irons_spellbooks:permafrost_shard",
+  "particle": "minecraft:snowflake",
+  "sound": "minecraft:block.powder_snow.place",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "minecraft:slowness",
+      "seconds": 3,
+      "amplifier": 3,
+      "target": "target"
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:slowness",
+      "seconds": 3,
+      "amplifier": 1,
+      "target": "target",
+      "radius": 3
+    }
+  ]
+}

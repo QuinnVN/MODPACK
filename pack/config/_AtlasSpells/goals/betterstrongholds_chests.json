@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "betterstrongholds"
+  ],
+  "kind": "loot_chest",
+  "target": "betterstrongholds:",
+  "count": 6,
+  "points": 5,
+  "order": 50
+}

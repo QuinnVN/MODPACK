@@ -1,0 +1,12 @@
+filename = 'pandalib-neoforge-1.21.1-0.6.2.jar'
+name = 'PandaLib'
+side = "both"
+
+[download]
+hash = '99c025485ce42af875dbd0b4a8b3a46319ddc8f891d6068ddb3bb2e0511682a3705357a936d1488c04bc1ff1c1b0cfd69fcd7eab48165130b41d25f91a69bd9a'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/mEEGbEIu/versions/XcO6cQIb/pandalib-neoforge-1.21.1-0.6.2.jar'
+
+[update.modrinth]
+mod-id = 'mEEGbEIu'
+version = 'XcO6cQIb'

@@ -1,0 +1,30 @@
+{
+  "first": [
+    "monsterspellbooks:necro"
+  ],
+  "second": [
+    "irons_spellbooks:nature"
+  ],
+  "color": "#6B8E23",
+  "icon": "irons_spellbooks:poisonward_ring",
+  "particle": "minecraft:squid_ink",
+  "sound": "minecraft:entity.zombie_villager.cure",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "minecraft:poison",
+      "seconds": 5,
+      "amplifier": 1,
+      "target": "target",
+      "radius": 3
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:wither",
+      "seconds": 3,
+      "amplifier": 0,
+      "target": "target",
+      "radius": 3
+    }
+  ]
+}

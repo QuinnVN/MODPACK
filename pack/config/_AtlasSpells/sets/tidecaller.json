@@ -1,0 +1,13 @@
+{
+  "items": [
+    "hazennstuff:nautilus_knight_helmet",
+    "hazennstuff:nautilus_knight_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "somakespells:aqua|aces_spell_utils:hydro|traveloptics:aqua",
+      "power": 0.08
+    }
+  ]
+}

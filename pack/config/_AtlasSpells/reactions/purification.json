@@ -1,0 +1,19 @@
+{
+  "first": [
+    "irons_spellbooks:holy"
+  ],
+  "second": [
+    "irons_spellbooks:blood"
+  ],
+  "color": "#FFF3B0",
+  "icon": "irons_spellbooks:holy_rune",
+  "particle": "minecraft:end_rod",
+  "sound": "minecraft:block.beacon.power_select",
+  "effects": [
+    {
+      "type": "heal",
+      "value": 0.3,
+      "radius": 5
+    }
+  ]
+}

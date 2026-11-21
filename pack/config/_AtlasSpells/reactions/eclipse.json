@@ -1,0 +1,20 @@
+{
+  "first": [
+    "hazennstuff:radiance",
+    "hazentouvelib:radiance"
+  ],
+  "second": [
+    "hazennstuff:shadow",
+    "hazentouvelib:shadow"
+  ],
+  "color": "#FFD166",
+  "icon": "irons_spellbooks:divine_pearl",
+  "particle": "minecraft:flash",
+  "sound": "minecraft:block.beacon.deactivate",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 2.0
+    }
+  ]
+}

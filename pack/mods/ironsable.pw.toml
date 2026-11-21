@@ -1,0 +1,20 @@
+filename = 'ironsable-1.2.2.jar'
+name = 'IronSable'
+side = "both"
+
+[download]
+hash = 'fe470a5172befecf23d80c1f3a4522955ae26d53745766b57eaf979c5527cc80b8c46c7d0dc26d344c8bd638d37386eb1e40550254a75573c265c6da64486afa'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/WB9oQ4EQ/versions/tN91AzIt/ironsable-1.2.2.jar'
+
+[update.modrinth]
+mod-id = 'WB9oQ4EQ'
+version = 'tN91AzIt'
+
+[[x-prismlauncher-dependencies]]
+addonId = 's4OWxYQQ'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'T9PomCSv'
+type = 'REQUIRED'

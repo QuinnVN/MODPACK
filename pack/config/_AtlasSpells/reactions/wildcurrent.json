@@ -1,0 +1,20 @@
+{
+  "first": [
+    "irons_spellbooks:lightning"
+  ],
+  "second": [
+    "irons_spellbooks:nature"
+  ],
+  "color": "#D4FF5C",
+  "icon": "irons_spellbooks:nature_upgrade_orb",
+  "particle": "minecraft:electric_spark",
+  "sound": "minecraft:entity.lightning_bolt.impact",
+  "effects": [
+    {
+      "type": "chain",
+      "value": 0.5,
+      "radius": 6,
+      "count": 3
+    }
+  ]
+}

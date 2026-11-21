@@ -1,0 +1,5 @@
+[portal]
+	#Heaviest ship that can go through a Portal spell portal (1 = one ordinary block; 0 = none).
+	# Default: 200.0
+	# Range: 0.0 ~ 1000000.0
+	maxShipMass = 200.0

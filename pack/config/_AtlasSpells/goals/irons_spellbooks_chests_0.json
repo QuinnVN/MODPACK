@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "irons_spellbooks"
+  ],
+  "kind": "loot_chest",
+  "target": "irons_spellbooks:chests/",
+  "count": 10,
+  "points": 5,
+  "order": 50
+}

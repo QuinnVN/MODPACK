@@ -1,0 +1,13 @@
+{
+  "items": [
+    "irons_spellbooks:shadowwalker_helmet",
+    "irons_spellbooks:shadowwalker_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:ender",
+      "power": 0.08
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "first": [
+    "hazennstuff:radiance",
+    "hazentouvelib:radiance"
+  ],
+  "second": [
+    "hazennstuff:shadow",
+    "hazentouvelib:shadow"
+  ],
+  "multiplier": 1.15
+}

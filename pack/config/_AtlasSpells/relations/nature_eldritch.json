@@ -1,0 +1,9 @@
+{
+  "first": [
+    "irons_spellbooks:nature"
+  ],
+  "second": [
+    "irons_spellbooks:eldritch"
+  ],
+  "multiplier": 1.15
+}

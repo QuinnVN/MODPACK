@@ -1,0 +1,13 @@
+{
+  "items": [
+    "irons_spellbooks:plagued_helmet",
+    "irons_spellbooks:plagued_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:nature",
+      "power": 0.08
+    }
+  ]
+}

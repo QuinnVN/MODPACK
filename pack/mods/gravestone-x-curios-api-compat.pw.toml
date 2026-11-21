@@ -1,0 +1,25 @@
+filename = 'gravestonecurioscompat-1.21.1-NeoForge-4.2.1.jar'
+name = 'Gravestone x Curios API Compat'
+side = "both"
+
+[download]
+hash = '51c52fa60bb9cdcd5af05a501d3edceec5168b0a'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 9541637
+project-id = 1139062
+
+[[x-prismlauncher-dependencies]]
+addonId = '1264423'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '238551'
+type = 'REQUIRED'
+
+[[x-prismlauncher-dependencies]]
+addonId = '309927'
+type = 'REQUIRED'

@@ -1,0 +1,22 @@
+{
+  "items": [
+    "hazennstuff:cosmic_scholar_helmet",
+    "hazennstuff:cosmic_scholar_chestplate",
+    "hazennstuff:astraconic_weaver_helmet",
+    "hazennstuff:astraconic_weaver_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "hazentouvelib:cosmic|hazennstuff:cosmic",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "hazentouvelib:cosmic|hazennstuff:cosmic",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

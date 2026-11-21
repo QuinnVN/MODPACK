@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "deeperdarker"
+  ],
+  "kind": "kill_entity",
+  "target": "deeperdarker:shattered",
+  "count": 3,
+  "points": 5,
+  "order": 12
+}

@@ -1,0 +1,27 @@
+{
+  "first": [
+    "traveloptics:aqua",
+    "somakespells:aqua",
+    "aces_spell_utils:hydro"
+  ],
+  "second": [
+    "irons_spellbooks:ice"
+  ],
+  "color": "#74C0FC",
+  "icon": "irons_spellbooks:frozen_bone",
+  "particle": "minecraft:snowflake",
+  "sound": "minecraft:block.glass.break",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.2
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:slowness",
+      "seconds": 3,
+      "amplifier": 4,
+      "target": "target"
+    }
+  ]
+}

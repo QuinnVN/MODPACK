@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "twilightforest"
+  ],
+  "kind": "kill_entity",
+  "target": "twilightforest:ur_ghast",
+  "count": 1,
+  "points": 10,
+  "order": 15
+}

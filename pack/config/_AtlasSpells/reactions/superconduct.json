@@ -1,0 +1,19 @@
+{
+  "first": [
+    "irons_spellbooks:ice"
+  ],
+  "second": [
+    "irons_spellbooks:lightning"
+  ],
+  "color": "#B48CFF",
+  "icon": "irons_spellbooks:lightning_rune",
+  "particle": "minecraft:electric_spark",
+  "sound": "minecraft:block.amethyst_block.resonate",
+  "effects": [
+    {
+      "type": "vulnerable",
+      "value": 1.3,
+      "seconds": 6
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "items": [
+    "somakespells:stormcaller_lexicon_spell_book",
+    "somakespells:storm_scriptures_spell_book",
+    "somakespells:dark_metal_battlemage_helmet",
+    "somakespells:dark_metal_battlemage_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:lightning",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "irons_spellbooks:lightning",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

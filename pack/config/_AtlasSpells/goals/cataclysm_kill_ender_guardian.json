@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "cataclysm"
+  ],
+  "kind": "kill_entity",
+  "target": "cataclysm:ender_guardian",
+  "count": 1,
+  "points": 10,
+  "order": 12
+}

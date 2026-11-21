@@ -1,0 +1,13 @@
+{
+  "items": [
+    "cataclysm_spellbooks:excelsius_power_chestplate",
+    "cataclysm_spellbooks:excelsius_speed_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "aces_spell_utils:technomancy|cataclysm_spellbooks:technomancy",
+      "power": 0.08
+    }
+  ]
+}

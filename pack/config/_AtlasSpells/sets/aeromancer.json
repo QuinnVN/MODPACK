@@ -1,0 +1,21 @@
+{
+  "items": [
+    "aero_additions:air_staff",
+    "aero_additions:updraft_tome",
+    "aero_additions:wind_sword"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "aero_additions:wind",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "aero_additions:wind",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

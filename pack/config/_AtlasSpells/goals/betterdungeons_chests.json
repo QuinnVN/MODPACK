@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "betterdungeons"
+  ],
+  "kind": "loot_chest",
+  "target": "betterdungeons:",
+  "count": 8,
+  "points": 5,
+  "order": 50
+}

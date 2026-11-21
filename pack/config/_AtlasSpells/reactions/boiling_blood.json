@@ -1,0 +1,22 @@
+{
+  "first": [
+    "irons_spellbooks:fire"
+  ],
+  "second": [
+    "irons_spellbooks:blood"
+  ],
+  "color": "#C0392B",
+  "icon": "irons_spellbooks:blood_rune",
+  "particle": "minecraft:crimson_spore",
+  "sound": "minecraft:block.lava.pop",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.4
+    },
+    {
+      "type": "heal",
+      "value": 0.25
+    }
+  ]
+}

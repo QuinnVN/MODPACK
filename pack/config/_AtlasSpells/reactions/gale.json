@@ -1,0 +1,25 @@
+{
+  "first": [
+    "aero_additions:wind",
+    "wind_spellbooks:wind",
+    "monsterspellbooks:aero"
+  ],
+  "second": [
+    "*"
+  ],
+  "color": "#CFE8EF",
+  "icon": "irons_spellbooks:evocation_upgrade_orb",
+  "particle": "minecraft:gust",
+  "sound": "minecraft:entity.breeze.wind_burst",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.15
+    },
+    {
+      "type": "knockback",
+      "value": 1.5
+    }
+  ],
+  "priority": 2
+}

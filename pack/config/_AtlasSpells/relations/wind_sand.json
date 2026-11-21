@@ -1,0 +1,11 @@
+{
+  "first": [
+    "aero_additions:wind",
+    "wind_spellbooks:wind",
+    "monsterspellbooks:aero"
+  ],
+  "second": [
+    "cataclysm_spellbooks:sand"
+  ],
+  "multiplier": 1.15
+}

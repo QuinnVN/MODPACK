@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "aether"
+  ],
+  "kind": "loot_chest",
+  "target": "aether:chests/",
+  "count": 8,
+  "points": 5,
+  "order": 50
+}

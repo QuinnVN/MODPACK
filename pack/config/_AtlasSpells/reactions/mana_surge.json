@@ -1,0 +1,22 @@
+{
+  "first": [
+    "irons_spellbooks:evocation"
+  ],
+  "second": [
+    "*"
+  ],
+  "color": "#5FE3C0",
+  "icon": "irons_spellbooks:mana_upgrade_orb",
+  "particle": "minecraft:enchant",
+  "sound": "minecraft:block.enchantment_table.use",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.2
+    },
+    {
+      "type": "mana",
+      "value": 12
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "terralith"
+  ],
+  "kind": "loot_chest",
+  "target": "terralith:ruin/",
+  "count": 3,
+  "points": 4,
+  "order": 50
+}

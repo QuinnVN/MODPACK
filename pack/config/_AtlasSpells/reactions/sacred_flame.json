@@ -1,0 +1,25 @@
+{
+  "first": [
+    "irons_spellbooks:holy"
+  ],
+  "second": [
+    "irons_spellbooks:fire"
+  ],
+  "color": "#FFB84D",
+  "icon": "irons_spellbooks:fire_upgrade_orb",
+  "particle": "minecraft:flame",
+  "sound": "minecraft:entity.blaze.shoot",
+  "effects": [
+    {
+      "type": "burn",
+      "seconds": 4
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:regeneration",
+      "seconds": 4,
+      "amplifier": 0,
+      "target": "caster"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "first": [
+    "cursed_school:cursed"
+  ],
+  "second": [
+    "irons_spellbooks:holy"
+  ],
+  "color": "#FFFDE7",
+  "icon": "irons_spellbooks:shriving_stone",
+  "particle": "minecraft:end_rod",
+  "sound": "minecraft:block.bell.resonate",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.8
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "first": [
+    "irons_spellbooks:ender"
+  ],
+  "second": [
+    "*"
+  ],
+  "color": "#C77DFF",
+  "icon": "irons_spellbooks:ender_rune",
+  "particle": "minecraft:portal",
+  "sound": "minecraft:entity.enderman.teleport",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "minecraft:levitation",
+      "seconds": 2,
+      "amplifier": 1,
+      "target": "target"
+    }
+  ],
+  "priority": 1
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "betterdeserttemples"
+  ],
+  "kind": "loot_chest",
+  "target": "betterdeserttemples:",
+  "count": 3,
+  "points": 4,
+  "order": 50
+}

@@ -1,0 +1,21 @@
+{
+  "items": [
+    "discerning_the_eldritch:eldritch_warlock_helmet",
+    "discerning_the_eldritch:staff_of_ascension",
+    "discerning_the_eldritch:staff_of_eldritch"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "discerning_the_eldritch:ritual",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "discerning_the_eldritch:ritual",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

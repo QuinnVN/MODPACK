@@ -1,0 +1,21 @@
+{
+  "items": [
+    "traveloptics:mechanized_exoskeleton_helmet",
+    "traveloptics:mechanized_exoskeleton_chestplate",
+    "traveloptics:mechanized_wraithblade"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

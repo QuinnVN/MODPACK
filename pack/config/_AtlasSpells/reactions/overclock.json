@@ -1,0 +1,23 @@
+{
+  "first": [
+    "cataclysm_spellbooks:technomancy",
+    "aces_spell_utils:technomancy"
+  ],
+  "second": [
+    "irons_spellbooks:lightning"
+  ],
+  "color": "#FF5252",
+  "icon": "irons_spellbooks:cooldown_rune",
+  "particle": "minecraft:electric_spark",
+  "sound": "minecraft:block.beacon.activate",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.3
+    },
+    {
+      "type": "mana",
+      "value": 15
+    }
+  ]
+}

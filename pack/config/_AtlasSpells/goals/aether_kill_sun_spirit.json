@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "aether"
+  ],
+  "kind": "kill_entity",
+  "target": "aether:sun_spirit",
+  "count": 1,
+  "points": 12,
+  "order": 12
+}

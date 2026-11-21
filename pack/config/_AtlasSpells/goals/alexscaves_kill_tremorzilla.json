@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "alexscaves"
+  ],
+  "kind": "kill_entity",
+  "target": "alexscaves:tremorzilla",
+  "count": 1,
+  "points": 12,
+  "order": 15
+}

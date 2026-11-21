@@ -1,0 +1,25 @@
+{
+  "first": [
+    "irons_spellbooks:holy"
+  ],
+  "second": [
+    "irons_spellbooks:eldritch"
+  ],
+  "color": "#FFE680",
+  "icon": "irons_spellbooks:holy_upgrade_orb",
+  "particle": "minecraft:flash",
+  "sound": "minecraft:block.bell.use",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.5
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:weakness",
+      "seconds": 5,
+      "amplifier": 0,
+      "target": "target"
+    }
+  ]
+}

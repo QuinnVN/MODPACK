@@ -1,0 +1,22 @@
+{
+  "items": [
+    "roacw:earthen_paladin_helmet",
+    "roacw:earthen_paladin_chestplate",
+    "roacw:earthen_paladin_leggings",
+    "roacw:earthen_paladin_greaves"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "roacw:exo",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "roacw:exo",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

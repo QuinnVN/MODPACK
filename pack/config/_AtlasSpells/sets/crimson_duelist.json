@@ -1,0 +1,21 @@
+{
+  "items": [
+    "somakespells:sanguine_testament_spell_book",
+    "somakespells:withered_rose_staff",
+    "somakespells:fragmented_sword_1"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:blood",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "irons_spellbooks:blood",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

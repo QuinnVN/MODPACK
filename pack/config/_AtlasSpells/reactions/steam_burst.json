@@ -1,0 +1,25 @@
+{
+  "first": [
+    "traveloptics:aqua",
+    "somakespells:aqua",
+    "aces_spell_utils:hydro"
+  ],
+  "second": [
+    "irons_spellbooks:fire"
+  ],
+  "color": "#DDE7EE",
+  "icon": "irons_spellbooks:evocation_rune",
+  "particle": "minecraft:cloud",
+  "sound": "minecraft:block.fire.extinguish",
+  "effects": [
+    {
+      "type": "splash",
+      "value": 0.5,
+      "radius": 3
+    },
+    {
+      "type": "knockback",
+      "value": 0.5
+    }
+  ]
+}

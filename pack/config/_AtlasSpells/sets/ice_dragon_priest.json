@@ -1,0 +1,22 @@
+{
+  "items": [
+    "ice_and_fire_spellbooks:ice_dragon_priest_helmet",
+    "ice_and_fire_spellbooks:ice_dragon_priest_chestplate",
+    "ice_and_fire_spellbooks:ice_dragon_priest_leggings",
+    "ice_and_fire_spellbooks:ice_dragon_priest_boots"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:ice",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "irons_spellbooks:ice",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

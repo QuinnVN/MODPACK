@@ -1,0 +1,24 @@
+{
+  "items": [
+    "monsterspellbooks:book_of_souls",
+    "monsterspellbooks:necromancer_helmet",
+    "monsterspellbooks:necromancer_chestplate",
+    "monsterspellbooks:death_knight_helmet",
+    "monsterspellbooks:death_knight_chestplate",
+    "monsterspellbooks:reaper_lantern"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "monsterspellbooks:necro",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "monsterspellbooks:necro",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

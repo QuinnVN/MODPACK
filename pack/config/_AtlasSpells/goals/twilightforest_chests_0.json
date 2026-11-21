@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "twilightforest"
+  ],
+  "kind": "loot_chest",
+  "target": "twilightforest:chests/",
+  "count": 10,
+  "points": 5,
+  "order": 50
+}

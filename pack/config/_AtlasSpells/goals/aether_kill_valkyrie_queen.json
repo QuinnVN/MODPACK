@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "aether"
+  ],
+  "kind": "kill_entity",
+  "target": "aether:valkyrie_queen",
+  "count": 1,
+  "points": 10,
+  "order": 11
+}

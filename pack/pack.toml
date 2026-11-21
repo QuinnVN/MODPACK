@@ -1,0 +1,13 @@
+name = "MODPACK"
+author = "Quinn"
+version = "0.1.0-snapshot"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "954131e246e5a855525f53297c8b3d2c2e9d0fcabea3240ff2aebd9de79122f4"
+
+[versions]
+minecraft = "1.21.1"
+neoforge = "21.1.266"

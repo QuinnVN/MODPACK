@@ -1,0 +1,19 @@
+{
+  "first": [
+    "irons_spellbooks:fire"
+  ],
+  "second": [
+    "irons_spellbooks:nature"
+  ],
+  "color": "#E0662B",
+  "icon": "irons_spellbooks:fire_rune",
+  "particle": "minecraft:flame",
+  "sound": "minecraft:item.firecharge.use",
+  "effects": [
+    {
+      "type": "burn",
+      "seconds": 6,
+      "radius": 3
+    }
+  ]
+}

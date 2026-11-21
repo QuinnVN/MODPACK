@@ -1,0 +1,25 @@
+{
+  "first": [
+    "asterismarcanum:astral"
+  ],
+  "second": [
+    "irons_spellbooks:ender"
+  ],
+  "color": "#E0C3FC",
+  "icon": "irons_spellbooks:arcane_essence",
+  "particle": "minecraft:end_rod",
+  "sound": "minecraft:entity.firework_rocket.twinkle",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.5
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:levitation",
+      "seconds": 1,
+      "amplifier": 1,
+      "target": "target"
+    }
+  ]
+}

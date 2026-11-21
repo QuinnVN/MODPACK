@@ -1,0 +1,956 @@
+#Perk cards of the schools (bought with experience levels). Costs are in general.toml.
+[cards]
+	#Initiate (Common): power in the school (0.04 = +4%).
+	# Default: 0.04
+	# Range: 0.0 ~ 5.0
+	initiatePower = 0.04
+	#Adept (Uncommon): resistance to the school.
+	# Default: 0.08
+	# Range: 0.0 ~ 5.0
+	adeptResistance = 0.08
+	#Expert (Rare): power in the school.
+	# Default: 0.06
+	# Range: 0.0 ~ 5.0
+	expertPower = 0.06
+	#Expert (Rare): max mana.
+	# Default: 20.0
+	# Range: 0.0 ~ 10000.0
+	expertMana = 20.0
+	#Master (Epic): cooldown cut of the school's spells.
+	# Default: 0.1
+	# Range: 0.0 ~ 0.9
+	masterCooldown = 0.1
+	#Archmage (Legendary): levels added to the school's spells.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	archmageLevels = 1.0
+	#Discovered spells of the school a card needs, by tier.
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	requiredInitiate = 1.0
+	#
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	requiredAdept = 3.0
+	#
+	# Default: 6.0
+	# Range: 0.0 ~ 1000.0
+	requiredExpert = 6.0
+	#
+	# Default: 10.0
+	# Range: 0.0 ~ 1000.0
+	requiredMaster = 10.0
+	#
+	# Default: 15.0
+	# Range: 0.0 ~ 1000.0
+	requiredArchmage = 15.0
+
+#School affinity (switch: schoolAffinity in general.toml).
+[affinity]
+	#Points for a counted cast of a spell of the school.
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	castGain = 1.0
+	#Points for a kill made with a spell of the school.
+	# Default: 5.0
+	# Range: 0.0 ~ 10000.0
+	killGain = 5.0
+	#Kills of bosses give this many times the kill points.
+	# Default: 3.0
+	# Range: 1.0 ~ 100.0
+	bossKillMultiplier = 3.0
+	#Points of full affinity (the bonuses grow up to it).
+	# Default: 1000.0
+	# Range: 1.0 ~ 1000000.0
+	maxPoints = 1000.0
+	#Main school at full affinity: power in the school (0.20 = +20%).
+	# Default: 0.2
+	# Range: 0.0 ~ 5.0
+	power = 0.2
+	#Main school at full affinity: less mana for its spells.
+	# Default: 0.1
+	# Range: 0.0 ~ 0.9
+	manaCut = 0.1
+	#Main school at full affinity: shorter cooldowns for its spells.
+	# Default: 0.1
+	# Range: 0.0 ~ 0.9
+	cooldownCut = 0.1
+	#The second and third chosen schools get this part of the bonuses.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	secondaryShare = 0.5
+	#At each new game day a school not used that day loses this part (only days online count).
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	decayPerDay = 0.01
+
+#Anomalies (switch and timing: general.toml).
+[anomaly]
+	#Mobs per wave, easy (at least 4: half of them, at least 2, ranged; the rest, at least 2, melee).
+	# Default: 4.0
+	# Range: 4.0 ~ 50.0
+	mobs_easy = 4.0
+	#Waves before the guardian, easy.
+	# Default: 3.0
+	# Range: 1.0 ~ 20.0
+	waves_easy = 3.0
+	#Health multiplier of the rift mobs, easy.
+	# Default: 1.5
+	# Range: 0.1 ~ 100.0
+	health_easy = 1.5
+	#Damage multiplier (attacks and spells) of the rift mobs, easy.
+	# Default: 1.2
+	# Range: 0.1 ~ 100.0
+	damage_easy = 1.2
+	#Levels added to the rift casters' spells, easy.
+	# Default: 0.0
+	# Range: 0.0 ~ 20.0
+	spellLevels_easy = 0.0
+	#Scrolls of the school for each player, easy: min and max.
+	# Default: 0.0
+	# Range: 0.0 ~ 64.0
+	scrollsMin_easy = 0.0
+	#
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	scrollsMax_easy = 1.0
+	#Rolls of the rewards/anomaly loot table for each player, easy.
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	lootRolls_easy = 1.0
+	#Multiplier of the Arcane Points, affinity and rare-loot chance, easy.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	reward_easy = 1.0
+	#Mobs per wave, medium (at least 4: half of them, at least 2, ranged; the rest, at least 2, melee).
+	# Default: 6.0
+	# Range: 4.0 ~ 50.0
+	mobs_medium = 6.0
+	#Waves before the guardian, medium.
+	# Default: 3.0
+	# Range: 1.0 ~ 20.0
+	waves_medium = 3.0
+	#Health multiplier of the rift mobs, medium.
+	# Default: 2.0
+	# Range: 0.1 ~ 100.0
+	health_medium = 2.0
+	#Damage multiplier (attacks and spells) of the rift mobs, medium.
+	# Default: 1.5
+	# Range: 0.1 ~ 100.0
+	damage_medium = 1.5
+	#Levels added to the rift casters' spells, medium.
+	# Default: 1.0
+	# Range: 0.0 ~ 20.0
+	spellLevels_medium = 1.0
+	#Scrolls of the school for each player, medium: min and max.
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	scrollsMin_medium = 1.0
+	#
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	scrollsMax_medium = 1.0
+	#Rolls of the rewards/anomaly loot table for each player, medium.
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	lootRolls_medium = 1.0
+	#Multiplier of the Arcane Points, affinity and rare-loot chance, medium.
+	# Default: 1.5
+	# Range: 0.0 ~ 100.0
+	reward_medium = 1.5
+	#Mobs per wave, hard (at least 4: half of them, at least 2, ranged; the rest, at least 2, melee).
+	# Default: 8.0
+	# Range: 4.0 ~ 50.0
+	mobs_hard = 8.0
+	#Waves before the guardian, hard.
+	# Default: 4.0
+	# Range: 1.0 ~ 20.0
+	waves_hard = 4.0
+	#Health multiplier of the rift mobs, hard.
+	# Default: 3.0
+	# Range: 0.1 ~ 100.0
+	health_hard = 3.0
+	#Damage multiplier (attacks and spells) of the rift mobs, hard.
+	# Default: 2.0
+	# Range: 0.1 ~ 100.0
+	damage_hard = 2.0
+	#Levels added to the rift casters' spells, hard.
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	spellLevels_hard = 2.0
+	#Scrolls of the school for each player, hard: min and max.
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	scrollsMin_hard = 1.0
+	#
+	# Default: 2.0
+	# Range: 0.0 ~ 64.0
+	scrollsMax_hard = 2.0
+	#Rolls of the rewards/anomaly loot table for each player, hard.
+	# Default: 2.0
+	# Range: 0.0 ~ 64.0
+	lootRolls_hard = 2.0
+	#Multiplier of the Arcane Points, affinity and rare-loot chance, hard.
+	# Default: 2.5
+	# Range: 0.0 ~ 100.0
+	reward_hard = 2.5
+	#Mobs per wave, catastrophe (at least 4: half of them, at least 2, ranged; the rest, at least 2, melee).
+	# Default: 10.0
+	# Range: 4.0 ~ 50.0
+	mobs_catastrophe = 10.0
+	#Waves before the guardian, catastrophe.
+	# Default: 5.0
+	# Range: 1.0 ~ 20.0
+	waves_catastrophe = 5.0
+	#Health multiplier of the rift mobs, catastrophe.
+	# Default: 5.0
+	# Range: 0.1 ~ 100.0
+	health_catastrophe = 5.0
+	#Damage multiplier (attacks and spells) of the rift mobs, catastrophe.
+	# Default: 3.0
+	# Range: 0.1 ~ 100.0
+	damage_catastrophe = 3.0
+	#Levels added to the rift casters' spells, catastrophe.
+	# Default: 4.0
+	# Range: 0.0 ~ 20.0
+	spellLevels_catastrophe = 4.0
+	#Scrolls of the school for each player, catastrophe: min and max.
+	# Default: 2.0
+	# Range: 0.0 ~ 64.0
+	scrollsMin_catastrophe = 2.0
+	#
+	# Default: 3.0
+	# Range: 0.0 ~ 64.0
+	scrollsMax_catastrophe = 3.0
+	#Rolls of the rewards/anomaly loot table for each player, catastrophe.
+	# Default: 3.0
+	# Range: 0.0 ~ 64.0
+	lootRolls_catastrophe = 3.0
+	#Multiplier of the Arcane Points, affinity and rare-loot chance, catastrophe.
+	# Default: 4.0
+	# Range: 0.0 ~ 100.0
+	reward_catastrophe = 4.0
+	#The guardian has this many times the health of a rift mob.
+	# Default: 6.0
+	# Range: 1.0 ~ 100.0
+	guardianHealth = 6.0
+	#And this many times its damage.
+	# Default: 2.0
+	# Range: 1.0 ~ 100.0
+	guardianDamage = 2.0
+	#Chance a rift mob drops its own loot (Iron's mages drop scrolls).
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	mobDropChance = 0.2
+	#Chance the guardian drops its own loot.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	guardianDropChance = 1.0
+	#Arcane Points for closing an anomaly (times the reward multiplier).
+	# Default: 6.0
+	# Range: 0.0 ~ 10000.0
+	points = 6.0
+	#Affinity with the anomaly's school (times the reward multiplier).
+	# Default: 60.0
+	# Range: 0.0 ~ 100000.0
+	affinity = 60.0
+	#Chance of rare loot (rewards/elite), times the reward multiplier.
+	# Default: 0.03
+	# Range: 0.0 ~ 1.0
+	rareChance = 0.03
+
+#Nemeses (switch, limits and timing: general.toml).
+[nemesis]
+	#Health multiplier, scout.
+	# Default: 2.0
+	# Range: 1.0 ~ 100.0
+	health_scout = 2.0
+	#Attack damage multiplier, scout.
+	# Default: 1.5
+	# Range: 1.0 ~ 100.0
+	damage_scout = 1.5
+	#Minions that come with it, scout.
+	# Default: 0.0
+	# Range: 0.0 ~ 20.0
+	minions_scout = 0.0
+	#Strengths, scout.
+	# Default: 1.0
+	# Range: 0.0 ~ 9.0
+	strengths_scout = 1.0
+	#Weaknesses, scout.
+	# Default: 2.0
+	# Range: 0.0 ~ 4.0
+	weaknesses_scout = 2.0
+	#Chance to flee when nearly beaten, scout.
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	flee_scout = 0.25
+	#Reward multiplier, scout.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	reward_scout = 1.0
+	#Scrolls of its school for each fighter, scout (the victim gets double).
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	scrolls_scout = 1.0
+	#Health multiplier, veteran.
+	# Default: 3.0
+	# Range: 1.0 ~ 100.0
+	health_veteran = 3.0
+	#Attack damage multiplier, veteran.
+	# Default: 2.0
+	# Range: 1.0 ~ 100.0
+	damage_veteran = 2.0
+	#Minions that come with it, veteran.
+	# Default: 2.0
+	# Range: 0.0 ~ 20.0
+	minions_veteran = 2.0
+	#Strengths, veteran.
+	# Default: 2.0
+	# Range: 0.0 ~ 9.0
+	strengths_veteran = 2.0
+	#Weaknesses, veteran.
+	# Default: 2.0
+	# Range: 0.0 ~ 4.0
+	weaknesses_veteran = 2.0
+	#Chance to flee when nearly beaten, veteran.
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	flee_veteran = 0.35
+	#Reward multiplier, veteran.
+	# Default: 2.0
+	# Range: 0.0 ~ 100.0
+	reward_veteran = 2.0
+	#Scrolls of its school for each fighter, veteran (the victim gets double).
+	# Default: 1.0
+	# Range: 0.0 ~ 64.0
+	scrolls_veteran = 1.0
+	#Health multiplier, champion.
+	# Default: 5.0
+	# Range: 1.0 ~ 100.0
+	health_champion = 5.0
+	#Attack damage multiplier, champion.
+	# Default: 2.5
+	# Range: 1.0 ~ 100.0
+	damage_champion = 2.5
+	#Minions that come with it, champion.
+	# Default: 3.0
+	# Range: 0.0 ~ 20.0
+	minions_champion = 3.0
+	#Strengths, champion.
+	# Default: 2.0
+	# Range: 0.0 ~ 9.0
+	strengths_champion = 2.0
+	#Weaknesses, champion.
+	# Default: 1.0
+	# Range: 0.0 ~ 4.0
+	weaknesses_champion = 1.0
+	#Chance to flee when nearly beaten, champion.
+	# Default: 0.45
+	# Range: 0.0 ~ 1.0
+	flee_champion = 0.45
+	#Reward multiplier, champion.
+	# Default: 3.0
+	# Range: 0.0 ~ 100.0
+	reward_champion = 3.0
+	#Scrolls of its school for each fighter, champion (the victim gets double).
+	# Default: 2.0
+	# Range: 0.0 ~ 64.0
+	scrolls_champion = 2.0
+	#Health multiplier, warlord.
+	# Default: 8.0
+	# Range: 1.0 ~ 100.0
+	health_warlord = 8.0
+	#Attack damage multiplier, warlord.
+	# Default: 3.0
+	# Range: 1.0 ~ 100.0
+	damage_warlord = 3.0
+	#Minions that come with it, warlord.
+	# Default: 4.0
+	# Range: 0.0 ~ 20.0
+	minions_warlord = 4.0
+	#Strengths, warlord.
+	# Default: 3.0
+	# Range: 0.0 ~ 9.0
+	strengths_warlord = 3.0
+	#Weaknesses, warlord.
+	# Default: 1.0
+	# Range: 0.0 ~ 4.0
+	weaknesses_warlord = 1.0
+	#Chance to flee when nearly beaten, warlord.
+	# Default: 0.55
+	# Range: 0.0 ~ 1.0
+	flee_warlord = 0.55
+	#Reward multiplier, warlord.
+	# Default: 5.0
+	# Range: 0.0 ~ 100.0
+	reward_warlord = 5.0
+	#Scrolls of its school for each fighter, warlord (the victim gets double).
+	# Default: 3.0
+	# Range: 0.0 ~ 64.0
+	scrolls_warlord = 3.0
+	#Chance that a mob which kills a player becomes their nemesis (a nemesis that kills again always ranks up).
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	birthChance = 0.1
+	#Rank points for Veteran, Champion and Warlord (a player kill gives killPoints, an escape escapePoints).
+	# Default: 2.0
+	# Range: 1.0 ~ 1000.0
+	rankPoints_veteran = 2.0
+	#
+	# Default: 4.0
+	# Range: 1.0 ~ 1000.0
+	rankPoints_champion = 4.0
+	#
+	# Default: 7.0
+	# Range: 1.0 ~ 1000.0
+	rankPoints_warlord = 7.0
+	#Rank points for killing a player again.
+	# Default: 2.0
+	# Range: 0.0 ~ 100.0
+	killPoints = 2.0
+	#Rank points for fleeing a fight.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	escapePoints = 1.0
+	#Health share below which it may flee.
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	fleeHealth = 0.2
+	#Damage it takes from a school it resists.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	resistMult = 0.5
+	#Damage it takes from a school it is immune to.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	immuneMult = 0.1
+	#Damage it takes from a school it has a scar against.
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	scarMult = 0.6
+	#Damage it takes from the school it is weak to.
+	# Default: 2.0
+	# Range: 1.0 ~ 10.0
+	weakMult = 2.0
+	#Melee damage it takes when fragile.
+	# Default: 1.3
+	# Range: 1.0 ~ 10.0
+	fragileMult = 1.3
+	#Health share regenerated each second.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	regenPerSecond = 0.01
+	#Part of its damage it heals when vampiric.
+	# Default: 0.3
+	# Range: 0.0 ~ 5.0
+	vampiric = 0.3
+	#Part of spell damage it sends back when reflecting.
+	# Default: 0.2
+	# Range: 0.0 ~ 5.0
+	reflect = 0.2
+	#Chance a killed minion gives away one of its master's hidden traits.
+	# Default: 0.3
+	# Range: 0.0 ~ 1.0
+	minionRevealChance = 0.3
+	#Arcane Points for defeating it (times the rank multiplier; its victims get double).
+	# Default: 10.0
+	# Range: 0.0 ~ 10000.0
+	rewardPoints = 10.0
+	#Affinity with its school (times the rank multiplier).
+	# Default: 100.0
+	# Range: 0.0 ~ 100000.0
+	rewardAffinity = 100.0
+	#Chance a rumour is about a nemesis (a hidden trait or its lair) instead of a spell.
+	# Default: 0.35
+	# Range: 0.0 ~ 1.0
+	rumourChance = 0.35
+	#Chance a nemesis of the anomaly's school comes as its guardian.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.0
+	riftGuardianChance = 0.5
+
+#Mage duels (switch and distances: general.toml).
+[duels]
+	#Arcane Points for a win, once per opponent per game day.
+	# Default: 2.0
+	# Range: 0.0 ~ 1000.0
+	winPoints = 2.0
+	#How fast ratings move (the Elo K factor).
+	# Default: 32.0
+	# Range: 1.0 ~ 200.0
+	eloK = 32.0
+
+#Artificer's Almanac, when it is installed: Arcane Points and extra loot.
+[artifice]
+	#Arcane Points for breaking a seal.
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	sealPoints = 3.0
+	#Arcane Points for clearing a Sealed Vault.
+	# Default: 8.0
+	# Range: 0.0 ~ 1000.0
+	vaultPoints = 8.0
+	#Arcane Points for a material new to the Almanac's collection.
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	materialPoints = 1.0
+	#Arcane Points for a legendary part new to the collection.
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	legendaryPoints = 3.0
+	#Chance a defeated nemesis also gives Almanac loot (a staff part, maybe a scroll).
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	nemesisLoot = 1.0
+	#Chance a closed anomaly also gives Almanac loot.
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	anomalyLoot = 0.6
+
+#The school familiar (switch: general.toml).
+[familiar]
+	#Share of full affinity in the main school at which the familiar appears (tier 1).
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	unlockShare = 0.25
+	#Damage of its bolt at tier 1.
+	# Default: 2.0
+	# Range: 0.0 ~ 1000.0
+	damage = 2.0
+	#Extra damage per tier above 1 (0.5 = +50% of the tier-1 damage).
+	# Default: 0.5
+	# Range: 0.0 ~ 10.0
+	damagePerTier = 0.5
+	#Ticks between bolts at tier 1.
+	# Default: 70.0
+	# Range: 20.0 ~ 1200.0
+	intervalTicks = 70.0
+	#Ticks less per tier above 1 (never under 20).
+	# Default: 10.0
+	# Range: 0.0 ~ 200.0
+	intervalPerTier = 10.0
+	#How far from its owner a foe can be.
+	# Default: 16.0
+	# Range: 2.0 ~ 64.0
+	range = 16.0
+	#It takes on the school of its owner's last spell for this long (ticks), then goes back to the main school.
+	# Default: 600.0
+	# Range: 20.0 ~ 72000.0
+	attuneTicks = 600.0
+
+#Perk Shop cosmetics (no effect on fights): Arcane Points each costs, by kind.
+[cosmetics]
+	#A title prefix colour.
+	# Default: 8.0
+	# Range: 0.0 ~ 10000.0
+	prefixCost = 8.0
+	#A particle trail when casting.
+	# Default: 15.0
+	# Range: 0.0 ~ 10000.0
+	trailCost = 15.0
+	#A tint of the atlas's cover.
+	# Default: 10.0
+	# Range: 0.0 ~ 10000.0
+	frameCost = 10.0
+
+#Your personal bestiary (Trophies): knowledge of each magic mob. Kills are the hunter's knowledge kills, so it needs hunter in general.toml.
+[bestiary]
+	#Kills of one kind for tier III (tier I: seen, tier II: defeated once). It shows the drops and weaknesses.
+	# Default: 25.0
+	# Range: 2.0 ~ 100000.0
+	veteranKills = 25.0
+	#Kills of one kind for tier IV, which gives a damage bonus against that kind.
+	# Default: 100.0
+	# Range: 3.0 ~ 100000.0
+	masterKills = 100.0
+	#Bosses need this many times fewer kills for tiers III and IV (never under 2 and 3).
+	# Default: 5.0
+	# Range: 1.0 ~ 1000.0
+	bossDivisor = 5.0
+	#Tier IV: more spell damage against that kind (0.05 = +5%), on top of the hunter's knowledge.
+	# Default: 0.05
+	# Range: 0.0 ~ 5.0
+	masterDamage = 0.05
+	#A magic mob counts as seen when it casts a spell within this many blocks of you.
+	# Default: 32.0
+	# Range: 4.0 ~ 128.0
+	seenRange = 32.0
+	#A dimension or a mod finishes a page of the bestiary (a title) only when it has at least this many magic mobs.
+	# Default: 3.0
+	# Range: 1.0 ~ 1000.0
+	groupMin = 3.0
+
+#Tree points (the constellation of the Perk Shop): earned, never bought. Needs the Perk Shop (shop in general.toml).
+[tree]
+	#Tree points for a daily challenge.
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	daily = 1.0
+	#Tree points for a weekly challenge.
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	weekly = 3.0
+	#Tree points when a kind of magic mob reaches bestiary tier I (seen).
+	# Default: 0.0
+	# Range: 0.0 ~ 1000.0
+	beastSeen = 0.0
+	#...tier II (defeated).
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	beastDefeated = 1.0
+	#...tier III (veteran).
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	beastVeteran = 1.0
+	#...tier IV (master).
+	# Default: 2.0
+	# Range: 0.0 ~ 1000.0
+	beastMaster = 2.0
+	#Bestiary tiers of bosses give this many times the points.
+	# Default: 2.0
+	# Range: 1.0 ~ 100.0
+	bossMultiplier = 2.0
+	#Tree points for finishing a page of the bestiary (a dimension or a mod).
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	pageDone = 3.0
+	#Tree points a perk costs, Common (perkShopTree in general.toml).
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	cost_0 = 1.0
+	#Tree points a perk costs, Uncommon (perkShopTree in general.toml).
+	# Default: 1.0
+	# Range: 0.0 ~ 1000.0
+	cost_1 = 1.0
+	#Tree points a perk costs, Rare (perkShopTree in general.toml).
+	# Default: 2.0
+	# Range: 0.0 ~ 1000.0
+	cost_2 = 2.0
+	#Tree points a perk costs, Epic (perkShopTree in general.toml).
+	# Default: 3.0
+	# Range: 0.0 ~ 1000.0
+	cost_3 = 3.0
+	#Tree points a perk costs, Legendary (perkShopTree in general.toml).
+	# Default: 5.0
+	# Range: 0.0 ~ 1000.0
+	cost_4 = 5.0
+	#Perks of this rarity and above are keystones: they need a perk slot. Smaller ones work as soon as they are bought.
+	# Default: 3.0
+	# Range: 1.0 ~ 5.0
+	keystoneRarity = 3.0
+	#1: a perk can be bought only when a perk it is connected to (the one before it in its arm) is owned. 0: any perk at any time.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	connected = 1.0
+	#Arcane Points to take back all the perks of one arm of the constellation (their points come back).
+	# Default: 5.0
+	# Range: 0.0 ~ 10000.0
+	respecArm = 5.0
+	#Arcane Points to take back every perk.
+	# Default: 15.0
+	# Range: 0.0 ~ 10000.0
+	respecAll = 15.0
+
+#What the worn title gives.
+[titles]
+	#Apprentice: max mana.
+	# Default: 10.0
+	# Range: 0.0 ~ 10000.0
+	apprenticeMana = 10.0
+	#Adept: spell power.
+	# Default: 0.03
+	# Range: 0.0 ~ 5.0
+	adeptPower = 0.03
+	#Magus: spell power.
+	# Default: 0.05
+	# Range: 0.0 ~ 5.0
+	magusPower = 0.05
+	#Magus: max mana.
+	# Default: 20.0
+	# Range: 0.0 ~ 10000.0
+	magusMana = 20.0
+	#Archmage: spell power.
+	# Default: 0.08
+	# Range: 0.0 ~ 5.0
+	archmagePower = 0.08
+	#Archmage: cooldown reduction.
+	# Default: 0.05
+	# Range: 0.0 ~ 0.9
+	archmageCooldown = 0.05
+	#School Master: power in that school.
+	# Default: 0.1
+	# Range: 0.0 ~ 5.0
+	schoolMasterPower = 0.1
+	#Grandmaster: chance a cast counts twice for mastery.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	grandmasterChance = 0.1
+	#Alchemist: reaction strength multiplier.
+	# Default: 1.25
+	# Range: 1.0 ~ 10.0
+	alchemistReactions = 1.25
+	#Monster Hunter: extra hunter's knowledge tiers.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	hunterTiers = 1.0
+	#Nemesis Hunter (1 defeated): more damage to nemeses and elites.
+	# Default: 0.1
+	# Range: 0.0 ~ 5.0
+	nemesisDamage_1 = 0.1
+	#Nemesis Slayer (5 defeated).
+	# Default: 0.2
+	# Range: 0.0 ~ 5.0
+	nemesisDamage_5 = 0.2
+	#Nemesis Bane (10 defeated).
+	# Default: 0.3
+	# Range: 0.0 ~ 5.0
+	nemesisDamage_10 = 0.3
+
+#Perk Shop perks (bought with Arcane Points). Costs and slots are in general.toml.
+[shop]
+	#Power I: spell power.
+	# Default: 0.03
+	# Range: 0.0 ~ 5.0
+	power_1 = 0.03
+	#Power II: spell power.
+	# Default: 0.05
+	# Range: 0.0 ~ 5.0
+	power_2 = 0.05
+	#Power III: spell power.
+	# Default: 0.08
+	# Range: 0.0 ~ 5.0
+	power_3 = 0.08
+	#Critical Spell I: chance.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	crit_1 = 0.05
+	#Critical Spell II: extra chance.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	crit_2 = 0.1
+	#Critical spell: extra damage of the hit (0.5 = +50%).
+	# Default: 0.5
+	# Range: 0.0 ~ 10.0
+	critDamage = 0.5
+	#Archpower: spell power.
+	# Default: 0.12
+	# Range: 0.0 ~ 5.0
+	archpower = 0.12
+	#Archpower: resistance lost.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	archpowerResist = 0.05
+	#Avatar: levels added to every spell.
+	# Default: 1.0
+	# Range: 0.0 ~ 10.0
+	avatar = 1.0
+	#Toughness I: spell resistance.
+	# Default: 0.05
+	# Range: 0.0 ~ 5.0
+	tough_1 = 0.05
+	#Toughness II: spell resistance.
+	# Default: 0.08
+	# Range: 0.0 ~ 5.0
+	tough_2 = 0.08
+	#Vitality I: max health.
+	# Default: 2.0
+	# Range: 0.0 ~ 1000.0
+	vital_1 = 2.0
+	#Vitality II: max health.
+	# Default: 4.0
+	# Range: 0.0 ~ 1000.0
+	vital_2 = 4.0
+	#Last Bastion: health share that sets it off.
+	# Default: 0.3
+	# Range: 0.0 ~ 1.0
+	bastionHealth = 0.3
+	#Last Bastion: seconds between uses.
+	# Default: 60.0
+	# Range: 1.0 ~ 3600.0
+	bastionCooldown = 60.0
+	#Counterspell: chance.
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	counterChance = 0.2
+	#Counterspell: part of the spell's damage sent back.
+	# Default: 0.3
+	# Range: 0.0 ~ 10.0
+	counterPart = 0.3
+	#Undying: seconds between saves.
+	# Default: 600.0
+	# Range: 1.0 ~ 36000.0
+	undyingCooldown = 600.0
+	#Undying: health left after a save.
+	# Default: 4.0
+	# Range: 1.0 ~ 1000.0
+	undyingHealth = 4.0
+	#Bond I: summon damage.
+	# Default: 0.1
+	# Range: 0.0 ~ 5.0
+	bond_1 = 0.1
+	#Bond II: summon damage.
+	# Default: 0.15
+	# Range: 0.0 ~ 5.0
+	bond_2 = 0.15
+	#Legion: summon health.
+	# Default: 0.25
+	# Range: 0.0 ~ 10.0
+	legion = 0.25
+	#Horde: summon damage.
+	# Default: 0.4
+	# Range: 0.0 ~ 5.0
+	horde = 0.4
+	#Summon Lord: summon damage and health.
+	# Default: 0.5
+	# Range: 0.0 ~ 10.0
+	summonLord = 0.5
+	#Mana Well I: max mana.
+	# Default: 25.0
+	# Range: 0.0 ~ 10000.0
+	well_1 = 25.0
+	#Mana Well II: max mana.
+	# Default: 50.0
+	# Range: 0.0 ~ 10000.0
+	well_2 = 50.0
+	#Flow I: mana regeneration.
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	flow_1 = 0.1
+	#Flow II: mana regeneration.
+	# Default: 0.3
+	# Range: 0.0 ~ 10.0
+	flow_2 = 0.3
+	#Focus: cast time reduction.
+	# Default: 0.05
+	# Range: 0.0 ~ 0.9
+	focus_1 = 0.05
+	#Cooling I: cooldown reduction.
+	# Default: 0.05
+	# Range: 0.0 ~ 0.9
+	cool_1 = 0.05
+	#Cooling II: cooldown reduction.
+	# Default: 0.08
+	# Range: 0.0 ~ 0.9
+	cool_2 = 0.08
+	#Mana Drain: mana per kill.
+	# Default: 10.0
+	# Range: 0.0 ~ 10000.0
+	drain = 10.0
+	#Echo: chance of a free cast.
+	# Default: 0.08
+	# Range: 0.0 ~ 1.0
+	echo = 0.08
+	#Infinity: extra chance of a free cast.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	infinity = 0.1
+	#Lightfoot: movement speed.
+	# Default: 0.03
+	# Range: 0.0 ~ 5.0
+	swift = 0.03
+	#Student: experience from mobs.
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	student = 0.1
+	#Luck: luck.
+	# Default: 1.0
+	# Range: 0.0 ~ 100.0
+	luck = 1.0
+	#Hunter's Eye: chance a kill counts twice.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	hunterEye = 0.1
+	#Fast Mastery: chance a cast counts twice.
+	# Default: 0.25
+	# Range: 0.0 ~ 1.0
+	fastMastery = 0.25
+	#Scroll Luck: chance of a scroll from a boss or an elite.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	scrollLuck = 0.1
+	#Cataclysm: reaction strength multiplier.
+	# Default: 1.5
+	# Range: 1.0 ~ 10.0
+	cataclysm = 1.5
+	#Avatar drawback: max health lost (0 = no drawback).
+	# Default: 4.0
+	# Range: 0.0 ~ 1000.0
+	drawback_avatar = 4.0
+	#Infinity drawback: share of max mana lost (0 = no drawback).
+	# Default: 0.25
+	# Range: 0.0 ~ 0.9
+	drawback_infinity = 0.25
+	#Summon Lord drawback: cooldown reduction lost (0 = no drawback).
+	# Default: 0.08
+	# Range: 0.0 ~ 0.9
+	drawback_summon_lord = 0.08
+	#Horde drawback: movement speed lost (0 = no drawback).
+	# Default: 0.05
+	# Range: 0.0 ~ 0.9
+	drawback_horde = 0.05
+
+#Difficulty scaling (the switch, radius and top bonuses are in general.toml).
+[difficulty]
+	#Power score weights (they should add up to 100): spell power...
+	# Default: 30.0
+	# Range: 0.0 ~ 100.0
+	weightSpells = 30.0
+	#...resistance and armour...
+	# Default: 20.0
+	# Range: 0.0 ~ 100.0
+	weightDefence = 20.0
+	#...atlas progress...
+	# Default: 30.0
+	# Range: 0.0 ~ 100.0
+	weightAtlas = 30.0
+	#...and gear rarity.
+	# Default: 20.0
+	# Range: 0.0 ~ 100.0
+	weightGear = 20.0
+	#Elites: extra health.
+	# Default: 0.5
+	# Range: 0.0 ~ 10.0
+	eliteHealth = 0.5
+	#Elites: extra damage.
+	# Default: 0.25
+	# Range: 0.0 ~ 10.0
+	eliteDamage = 0.25
+	#Magic mobs cast one level higher for every this many tiers.
+	# Default: 3.0
+	# Range: 1.0 ~ 10.0
+	tiersPerSpellLevel = 3.0
+	#Extra experience per tier.
+	# Default: 0.1
+	# Range: 0.0 ~ 10.0
+	experiencePerTier = 0.1
+	#Experience multiplier of elites.
+	# Default: 2.0
+	# Range: 1.0 ~ 100.0
+	eliteExperience = 2.0
+	#Chance per tier that a scaled monster gives an Arcane Point.
+	# Default: 0.01
+	# Range: 0.0 ~ 1.0
+	pointChancePerTier = 0.01
+
+#Challenge rewards besides the loot tables spell_atlas:rewards/daily and rewards/challenge.
+[challenges]
+	#Experience points for a daily challenge.
+	# Default: 40.0
+	# Range: 0.0 ~ 100000.0
+	dailyExperience = 40.0
+	#Experience points for a weekly challenge.
+	# Default: 160.0
+	# Range: 0.0 ~ 100000.0
+	weeklyExperience = 160.0
+	#1 = a weekly challenge also gives a random Rare scroll.
+	# Default: 1.0
+	# Range: 0.0 ~ 1.0
+	weeklyScroll = 1.0
+
+#Pack goals (the Pack tab), besides the loot table spell_atlas:rewards/pack_goal.
+[packGoals]
+	#Experience points for a finished pack goal.
+	# Default: 60.0
+	# Range: 0.0 ~ 100000.0
+	experience = 60.0

@@ -1,0 +1,22 @@
+{
+  "items": [
+    "cataclysm_spellbooks:pharaoh_helmet",
+    "cataclysm_spellbooks:pharaoh_chestplate",
+    "cataclysm_spellbooks:desert_spell_book",
+    "cataclysm_spellbooks:amber_staff"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "cataclysm_spellbooks:sand|",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "cataclysm_spellbooks:sand|",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

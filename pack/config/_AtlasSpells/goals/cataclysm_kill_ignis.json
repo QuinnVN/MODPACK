@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "cataclysm"
+  ],
+  "kind": "kill_entity",
+  "target": "cataclysm:ignis",
+  "count": 1,
+  "points": 10,
+  "order": 10
+}

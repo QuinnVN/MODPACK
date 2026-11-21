@@ -1,0 +1,142 @@
+#Maximum number of players allowed in an expedition. The UI might not look good with more than 4 players.
+# Default: 4
+# Range: 1 ~ 100
+maxExpeditionPlayerCount = 4
+#Number of seconds that an expedition lobby should be open for others to join. When set to 0, no other players can join.
+# Default: 30
+# Range: > 0
+expeditionLobbyDuration = 30
+#Number of seconds that a player has to wait to access the same expedition again.
+#The cooldown will still decrease when the player is offline or the server is stopped.
+#When set to 0, no cooldown is applied.
+#Is displayed as hours, minutes and seconds ingame.
+#
+# Default: 3600
+# Range: > 0
+expeditionCooldown = 3600
+#Whether the expedition cooldown should be reset when players leave the expedition while the lobby is still open.
+#This should probably be turned off when the lobby duration is high.
+#
+resetExpeditionCooldownWhenLeavingDuringLobby = true
+#Distance between the expedition structures in chunks.
+# Default: 100
+# Range: > 10
+distanceBetweenExpeditionStructures = 100
+#Enables the recipe for the hub anchor that is needed to enter the hub. If you disable this setting, you will have to implement another way to get to the hub yourself.
+hubAnchorRecipeEnabled = true
+#Number of chunks of a structure that are generated in one batch. Higher values lead to longer loading times but also lower lag spikes.
+# Default: 2
+# Range: 1 ~ 5
+structureGenerationBatchSize = 2
+
+	[expeditionPositions.netherite_monstrosity]
+		#Defines the position of where the player will be teleported when starting a "netherite_monstrosity" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "27.5 37.0 -38.5 0"
+		#Defines the positions of the anchors for the "netherite_monstrosity" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["27 37 -35"]
+		#Defines the bounding box of the "netherite_monstrosity" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-48 -64 -92:108 300 91"
+
+	[expeditionPositions.ender_guardian]
+		#Defines the position of where the player will be teleported when starting a "ender_guardian" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "-22.5 56.0 11.5 270"
+		#Defines the positions of the anchors for the "ender_guardian" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["-4 54 14"]
+		#Defines the bounding box of the "ender_guardian" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-88 -64 -90:126 300 123"
+
+	[expeditionPositions.the_harbinger]
+		#Defines the position of where the player will be teleported when starting a "the_harbinger" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "58.5 -25.0 2.5 0"
+		#Defines the positions of the anchors for the "the_harbinger" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["58 -25 13"]
+		#Defines the bounding box of the "the_harbinger" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-84 -64 -55:120 300 116"
+
+	[expeditionPositions.ancient_remnant]
+		#Defines the position of where the player will be teleported when starting a "ancient_remnant" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "51.5 7.0 111.5 180"
+		#Defines the positions of the anchors for the "ancient_remnant" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["53 7 105"]
+		#Defines the bounding box of the "ancient_remnant" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-45 -64 -46:153 300 167"
+
+	[expeditionPositions.the_leviathan]
+		#Defines the position of where the player will be teleported when starting a "the_leviathan" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "-100.5 26.0 23.5 270"
+		#Defines the positions of the anchors for the "the_leviathan" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["-87 26 26"]
+		#Defines the bounding box of the "the_leviathan" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-170 -64 -130:180 300 152"
+
+	[expeditionPositions.scylla]
+		#Defines the position of where the player will be teleported when starting a "scylla" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "0.5 66.0 42.5 0"
+		#Defines the positions of the anchors for the "scylla" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["5 92 47", "99 185 24", "0 242 74"]
+		#Defines the bounding box of the "scylla" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-152 -64 -88:170 300 150"
+
+	[expeditionPositions.maledictus]
+		#Defines the position of where the player will be teleported when starting a "maledictus" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "10.5 13.0 80.5 180"
+		#Defines the positions of the anchors for the "maledictus" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["13 17 72", "27 17 -12"]
+		#Defines the bounding box of the "maledictus" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-103 -64 -105:184 300 159"
+
+	[expeditionPositions.ignis]
+		#Defines the position of where the player will be teleported when starting a "ignis" expedition
+		#The position must be four numbers separated by spaces. Three floats for the coordinates and one integer for the yaw.
+		#
+		teleportOffset = "42.5 32.0 8.5 0"
+		#Defines the positions of the anchors for the "ignis" expedition.
+		#Each position is three integers (x y z) separated by spaces.
+		#
+		anchorOffsets = ["42 32 25"]
+		#Defines the bounding box of the "ignis" expedition via two opposite corners.
+		#Each corner is three integers (x y z) separated by spaces; the two corners are separated by a colon.
+		#
+		structureBoundaryOffsets = "-53 -64 -54:140 300 140"

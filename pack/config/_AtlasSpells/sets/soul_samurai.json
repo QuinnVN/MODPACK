@@ -1,0 +1,27 @@
+{
+  "items": [
+    "iss_magicfromtheeast:onmyoji_helmet",
+    "iss_magicfromtheeast:onmyoji_chestplate",
+    "iss_magicfromtheeast:soul_breaker",
+    "iss_magicfromtheeast:spirit_crusher",
+    "iss_magicfromtheeast:muramasa",
+    "iss_magicfromtheeast:soul_katana",
+    "iss_magicfromtheeast:soulpiercer",
+    "iss_magicfromtheeast:onmyoji_leggings",
+    "iss_magicfromtheeast:onmyoji_boots"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "iss_magicfromtheeast:spirit",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "iss_magicfromtheeast:spirit",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

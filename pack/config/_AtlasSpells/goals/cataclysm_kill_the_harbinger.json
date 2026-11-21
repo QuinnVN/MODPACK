@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "cataclysm"
+  ],
+  "kind": "kill_entity",
+  "target": "cataclysm:the_harbinger",
+  "count": 1,
+  "points": 10,
+  "order": 11
+}

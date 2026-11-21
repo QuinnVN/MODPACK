@@ -1,0 +1,22 @@
+{
+  "items": [
+    "iss_elden_ring:astrologer_staff",
+    "iss_elden_ring:azur_glintstone_staff",
+    "iss_elden_ring:carian_greatsword_sword",
+    "iss_elden_ring:carian_slicer_sword"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "iss_elden_ring:glintstone",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "iss_elden_ring:glintstone",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

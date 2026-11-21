@@ -1,0 +1,22 @@
+{
+  "items": [
+    "traveloptics:primordial_crest_armor_helmet",
+    "traveloptics:primordial_crest_armor_chestplate",
+    "traveloptics:tectonic_crest_armor_helmet",
+    "traveloptics:tectonic_crest_armor_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

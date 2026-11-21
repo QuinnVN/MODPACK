@@ -1,0 +1,32 @@
+{
+  "first": [
+    "cataclysm_spellbooks:sand"
+  ],
+  "second": [
+    "aero_additions:wind",
+    "wind_spellbooks:wind",
+    "monsterspellbooks:aero"
+  ],
+  "color": "#E3C16F",
+  "icon": "irons_spellbooks:arcane_salvage",
+  "particle": "minecraft:white_ash",
+  "sound": "minecraft:block.sand.break",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "minecraft:slowness",
+      "seconds": 4,
+      "amplifier": 1,
+      "target": "target",
+      "radius": 4
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:weakness",
+      "seconds": 4,
+      "amplifier": 0,
+      "target": "target",
+      "radius": 4
+    }
+  ]
+}

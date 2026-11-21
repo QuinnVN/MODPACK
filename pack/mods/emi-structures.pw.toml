@@ -1,0 +1,17 @@
+filename = 'emi-structures-0.1.1+1.21.1-neoforge.jar'
+name = 'EMI Structures'
+side = "both"
+
+[download]
+hash = '51416725326ab5860820d20d2920c384a9e1b15c1b4e06a0deeb7b4eec50c50930e10caa1e65d51236438aa3f93cc05ac5164ae92cb5a37c3c63b670ca607823'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/YFx6D8i4/versions/JoyHtzO8/emi-structures-0.1.1%2B1.21.1-neoforge.jar'
+
+[update.modrinth]
+mod-id = 'YFx6D8i4'
+version = 'JoyHtzO8'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'fRiHVvU7'
+type = 'REQUIRED'
+version = '5sIPA1To'

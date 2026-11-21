@@ -1,0 +1,26 @@
+{
+  "first": [
+    "asterismarcanum:astral"
+  ],
+  "second": [
+    "*"
+  ],
+  "color": "#F5E6FF",
+  "icon": "irons_spellbooks:arcane_ingot",
+  "particle": "minecraft:firework",
+  "sound": "minecraft:block.amethyst_block.chime",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.15
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:speed",
+      "seconds": 3,
+      "amplifier": 1,
+      "target": "caster"
+    }
+  ],
+  "priority": 1
+}

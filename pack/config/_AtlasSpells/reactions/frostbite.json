@@ -1,0 +1,25 @@
+{
+  "first": [
+    "irons_spellbooks:ice"
+  ],
+  "second": [
+    "irons_spellbooks:blood"
+  ],
+  "color": "#A0C4FF",
+  "icon": "irons_spellbooks:ice_upgrade_orb",
+  "particle": "minecraft:snowflake",
+  "sound": "minecraft:entity.player.hurt_freeze",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.35
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:slowness",
+      "seconds": 3,
+      "amplifier": 1,
+      "target": "target"
+    }
+  ]
+}

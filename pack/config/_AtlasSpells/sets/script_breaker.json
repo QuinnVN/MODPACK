@@ -1,0 +1,22 @@
+{
+  "items": [
+    "bielgg_spells:broken_head",
+    "bielgg_spells:broken_chestplate",
+    "bielgg_spells:broken_legs",
+    "bielgg_spells:broken_feets"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "bielgg_spells:unstable",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "bielgg_spells:unstable",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

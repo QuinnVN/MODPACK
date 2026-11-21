@@ -1,0 +1,22 @@
+{
+  "items": [
+    "farmers_spell:gluttony_chef_hat",
+    "farmers_spell:gluttony_chef_apron",
+    "farmers_spell:gluttony_chef_leggings",
+    "farmers_spell:gluttony_chef_boots"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "farmers_spell:gluttony",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "farmers_spell:gluttony",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

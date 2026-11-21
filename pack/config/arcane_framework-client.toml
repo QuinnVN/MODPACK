@@ -1,0 +1,84 @@
+#Look of the Codex Hub: E7_H7 = grid with a detail panel, E7_H8 = shelves grouped by source.
+#Allowed Values: E7_H7, E7_H8
+codexStyle = "E7_H7"
+
+[effects]
+	#Background particles: OFF, LOW (12 motes) or FULL (34 motes).
+	#Allowed Values: OFF, LOW, FULL
+	quality = "FULL"
+	#Buttons sink when pressed.
+	buttonPress = true
+	#Light sweeps across hovered and selected covers.
+	glints = true
+	#The selected cover pulses.
+	selectionGlow = true
+	#A cover pops when selected.
+	pop = true
+	#The book opens with a short zoom.
+	openTransition = true
+	#Sparks burst at clicks (background layer).
+	clickBursts = true
+
+[pages]
+	#BOOK = each book's own palette; DARK or PARCHMENT forces one for every book.
+	#Allowed Values: BOOK, DARK, PARCHMENT
+	palette = "BOOK"
+	#A short wipe when the page changes.
+	pageTurn = true
+	#Reopen a book on the page you left it on.
+	rememberLastPage = true
+
+[display]
+	#Window size follows the GUI scale and the real window (never grows past 100%).
+	windowAuto = true
+	#Window size in percent when windowAuto is off.
+	# Default: 100
+	# Range: 50 ~ 150
+	windowPercent = 100
+	#Text size of the reader follows the window size.
+	textAuto = true
+	#Text size of the reader in percent when textAuto is off.
+	# Default: 100
+	# Range: 75 ~ 150
+	textPercent = 100
+
+[icons]
+	#Size of on-screen book icons.
+	#Allowed Values: S, M, L
+	size = "M"
+	#Opacity of on-screen book icons, percent.
+	# Default: 85
+	# Range: 20 ~ 100
+	opacity = 85
+	#Snap icons to a 16 px grid in the placement editor.
+	snapToGrid = true
+	#Placed icons as "provider:namespace:path;x;y" (x, y are fractions of the screen). Edited in game.
+	placed = ["native:spell_atlas:atlas;0.3720;0.3470"]
+
+[sources]
+	#Book systems hidden in the Hub (provider ids, e.g. patchouli). Hides only, never unloads.
+	hidden = []
+	#List books of supported mods that are not installed (greyed out) in the Hub.
+	showUnavailable = true
+
+[hub]
+	#Skin of the Hub and the settings screens: NIGHT, PARCHMENT, VERDANT, EMBER or FROST. Book readers are not affected.
+	#Allowed Values: NIGHT, PARCHMENT, VERDANT, EMBER, FROST
+	theme = "NIGHT"
+	#Order of the books: SOURCE (registry order), NAME or RECENT (last opened first). Favourites always come first.
+	#Allowed Values: SOURCE, NAME, RECENT
+	sort = "SOURCE"
+	#Mark books you have never opened with a NEW diamond.
+	newMarkers = true
+	#Books hidden from the Hub as "provider:namespace:path". Hiding only removes the tile; the book, its progress and its icon stay.
+	hiddenBooks = []
+	#Favourite books (same key format); they are listed first.
+	favourites = []
+	#The books opened last, newest first (kept by the game).
+	recent = ["native:spell_atlas:atlas"]
+
+[access]
+	#Turns off particles, glints, pops, the open zoom and the page wipe, whatever the Effects tab says.
+	reducedMotion = false
+	#Hints and dimmed text of the Hub and settings use the main text colour.
+	highContrast = false

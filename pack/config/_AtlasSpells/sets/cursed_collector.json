@@ -1,0 +1,24 @@
+{
+  "items": [
+    "cursed_school:cursed_helmet",
+    "cursed_school:cursed_chestplate",
+    "cursed_school:inkbound_helmet",
+    "cursed_school:inkbound_chestplate",
+    "cursed_school:ledger_scythe",
+    "cursed_school:grimoire_of_decay"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "cursed_school:cursed",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "cursed_school:cursed",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

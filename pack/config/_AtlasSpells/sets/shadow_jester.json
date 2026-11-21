@@ -1,0 +1,21 @@
+{
+  "items": [
+    "hazennstuff:shadow_jester_helmet",
+    "hazennstuff:shadow_jester_chestplate",
+    "hazennstuff:nights_edge"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "hazentouvelib:shadow|hazennstuff:shadow",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "hazentouvelib:shadow|hazennstuff:shadow",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

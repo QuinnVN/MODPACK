@@ -1,0 +1,25 @@
+{
+  "first": [
+    "monsterspellbooks:necro"
+  ],
+  "second": [
+    "irons_spellbooks:holy"
+  ],
+  "color": "#FFF8DC",
+  "icon": "irons_spellbooks:divine_soulshard",
+  "particle": "minecraft:end_rod",
+  "sound": "minecraft:block.bell.use",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.8
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:glowing",
+      "seconds": 4,
+      "amplifier": 0,
+      "target": "target"
+    }
+  ]
+}

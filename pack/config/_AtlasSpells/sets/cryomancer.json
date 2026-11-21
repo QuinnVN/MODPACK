@@ -1,0 +1,21 @@
+{
+  "items": [
+    "irons_spellbooks:cryomancer_helmet",
+    "irons_spellbooks:cryomancer_chestplate",
+    "irons_spellbooks:ice_staff"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:ice",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "irons_spellbooks:ice",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

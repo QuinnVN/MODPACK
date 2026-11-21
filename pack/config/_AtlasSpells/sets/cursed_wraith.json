@@ -1,0 +1,13 @@
+{
+  "items": [
+    "traveloptics:cursed_wraithguard_chestplate",
+    "traveloptics:cursed_wraithblade"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "",
+      "power": 0.08
+    }
+  ]
+}

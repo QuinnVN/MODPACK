@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "alexscaves"
+  ],
+  "kind": "loot_chest",
+  "target": "alexscaves:chests/",
+  "count": 8,
+  "points": 5,
+  "order": 50
+}

@@ -1,0 +1,13 @@
+{
+  "items": [
+    "irons_spellbooks:infernal_sorcerer_chestplate",
+    "irons_spellbooks:pyrium_staff"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "",
+      "power": 0.08
+    }
+  ]
+}

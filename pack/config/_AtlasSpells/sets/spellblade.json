@@ -1,0 +1,22 @@
+{
+  "items": [
+    "irons_spellbooks:tarnished_helmet",
+    "irons_spellbooks:paladin_chestplate",
+    "irons_spellbooks:keeper_flamberge",
+    "irons_spellbooks:spellbreaker"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

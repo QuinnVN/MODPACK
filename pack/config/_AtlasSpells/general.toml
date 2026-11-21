@@ -1,0 +1,376 @@
+#Only Iron's Spells 'n Spellbooks itself: spells, schools, reactions, school relations, gear sets and
+#guide pages of addons are left out, even when the addons are installed. Takes full effect after /reload.
+ironsOnly = false
+#Mods whose spells are not listed in the atlas (mob-only or developer spells).
+excludedNamespaces = ["spellcastingmobs", "darkdoppelganger", "aces_spell_utils"]
+#Schools whose spells are not listed in the atlas and do not count for discovery, goals or mastery:
+#a school id ("irons_spellbooks:eldritch") or a whole mod ("bielgg_spells:*"). An entry of a school that is not
+#installed does nothing. Set it in the server's and the players' files alike; a change shows after /reload.
+excludedSchools = []
+#Show a toast to the player when a new spell is recorded.
+announceDiscoveries = true
+#Tell everyone in chat when a player discovers a Legendary spell.
+broadcastLegendary = true
+#Tell everyone in chat when a player has discovered every spell of a school.
+broadcastSchoolComplete = true
+#Tell everyone in chat when a player reaches one of these discovery counts.
+broadcastMilestones = [50, 100, 200, 300]
+#Let players see the server ranking in the atlas.
+ranking = true
+#Casts of the same spell needed for each mastery rank. Operators can change it in game:
+#/spellatlas mastery thresholds 100 1000 10000
+masteryThresholds = [100, 1000, 10000]
+#Each mastery rank adds one level to that spell when the player casts it.
+masteryBonusLevels = true
+#Each day one spell (the same for everyone) counts extra toward mastery.
+spellOfTheDay = true
+#How many casts one cast of the spell of the day counts as.
+# Default: 2
+# Range: 1 ~ 10
+spellOfTheDayMultiplier = 2
+#Players can shift-click a discovered spell in the atlas to show it in chat.
+spellSharing = true
+#Give items for completing a school, reaching a discovery milestone (broadcastMilestones) and each
+#mastery rank. The items come from the loot tables spell_atlas:rewards/* (override them in a datapack).
+collectionRewards = true
+#Players can earn titles (Apprentice, Archmage, Fire Master...) and show one before their name.
+titles = true
+#The title a player wears gives a small bonus (Archmage: spell power, Alchemist: stronger reactions...).
+titleBonuses = true
+#Loose school dependencies: spells hit harder against targets of an opposite school (Holy and Blood,
+#Fire and Ice...) and softer against their own school. Datapack: data/<ns>/spell_atlas_school_relations.
+schoolRelations = true
+#Scales every relation (1 = as written, 0 = none).
+# Default: 1.0
+# Range: 0.0 ~ 3.0
+schoolRelationStrength = 1.0
+#Damage multiplier of a spell against a target of its own school.
+# Default: 0.85
+# Range: 0.1 ~ 2.0
+sameSchoolMultiplier = 0.85
+#Weekly challenges: the same few goals for everyone each game week (seven days of the game world),
+#with a reward (spell_atlas:rewards/challenge).
+weeklyChallenges = true
+#How many challenges each week has.
+# Default: 3
+# Range: 1 ~ 6
+challengesPerWeek = 3
+#Pack goals: one-time goals, listed in the Pack tab, that only exist when the mods they are about are installed
+#(datapack files data/<ns>/spell_atlas_goals/*.json). A finished goal gives Arcane Points and the loot table spell_atlas:rewards/pack_goal.
+packGoals = true
+#Also make a discover and a cast goal for every Iron's addon that adds spells (needs packGoals).
+autoPackGoals = true
+#Daily challenges: smaller goals for everyone each game day (the overworld's day; sleeping starts a new one),
+#with a reward (spell_atlas:rewards/daily).
+dailyChallenges = true
+#How many challenges each game day has.
+# Default: 2
+# Range: 1 ~ 4
+dailyChallengesPerDay = 2
+#Record which spells magic mobs cast and what they drop, for the bestiary in the guide.
+bestiary = true
+#Exploring now and then gives a rumour: a hint where to find one of your undiscovered spells.
+rumours = true
+#Fresh loot chests to open for one rumour.
+# Default: 4
+# Range: 1 ~ 100
+rumourEveryChests = 4
+#Monsters to defeat for one rumour.
+# Default: 40
+# Range: 1 ~ 1000
+rumourEveryKills = 40
+#School reactions: a target hit by spells of two different schools within a few seconds reacts
+#(Fire then Ice: Thermal Shock...). The reactions are datapack files: data/<ns>/spell_atlas_reactions/*.json.
+reactions = true
+#Seconds a school's mark stays on a target, waiting for a spell of another school.
+# Default: 4
+# Range: 1 ~ 30
+reactionWindowSeconds = 4
+#Seconds before the same target can react again.
+# Default: 3
+# Range: 0 ~ 60
+reactionCooldownSeconds = 3
+#Scales the reactions' extra damage, healing and mana (1 = as written in the reaction files).
+# Default: 1.0
+# Range: 0.0 ~ 5.0
+reactionStrength = 1.0
+#Mastery perks: for each mastery rank of a spell the player picks Power (+1 level), Thrift (less mana)
+#or Haste (shorter cooldown). Off: every rank is +1 level. Needs masteryBonusLevels.
+masteryPerks = true
+#Mana cost cut by each Thrift perk (0.2 = 20%, two perks: 36%).
+# Default: 0.2
+# Range: 0.0 ~ 0.9
+perkManaCut = 0.2
+#Cooldown cut by each Haste perk (0.2 = 20%, two perks: 36%).
+# Default: 0.2
+# Range: 0.0 ~ 0.9
+perkCooldownCut = 0.2
+#Arcane Essence it costs to change a perk that was already picked (0 = free).
+# Default: 4
+# Range: 0 ~ 64
+perkChangeCost = 4
+#Atlas knowledge: a completed school gives power in that school, every knowledgeManaEvery discovered
+#spells give max mana, and the complete atlas gives spell power.
+knowledgeBonuses = true
+#Power in a school for discovering all of its spells (0.05 = +5%).
+# Default: 0.05
+# Range: 0.0 ~ 1.0
+knowledgeSchoolPower = 0.05
+#Discovered spells for each step of extra max mana.
+# Default: 25
+# Range: 1 ~ 1000
+knowledgeManaEvery = 25
+#Max mana for each step.
+# Default: 10
+# Range: 0 ~ 1000
+knowledgeManaAmount = 10
+#Spell power for discovering every spell in the atlas (0.1 = +10%).
+# Default: 0.1
+# Range: 0.0 ~ 1.0
+knowledgeCompletePower = 0.1
+#Perk cards: five cards per school, bought with experience levels, unlocked by discovering the school's spells.
+perkCards = true
+#Experience levels a card costs, by tier: Common, Uncommon, Rare, Epic, Legendary.
+perkCardCosts = [5, 10, 20, 30, 50]
+#Arcane Essence a reset of all cards costs (the spent levels come back).
+# Default: 16
+# Range: 0 ~ 640
+perkCardResetCost = 16
+#The Perk Shop: universal perks bought with Arcane Points and worn in perk slots.
+perkShop = true
+#The Perk Shop as a constellation: perks are bought with tree points (earned from challenges and the bestiary), small perks work
+#as soon as they are bought, and only keystones (Epic and Legendary) need a perk slot. false: the classic shop list, bought with
+#Arcane Points, every perk worn in a slot.
+perkShopTree = true
+#Arcane Points a shop perk costs, by rarity: Common, Uncommon, Rare, Epic, Legendary.
+perkShopCosts = [3, 6, 10, 16, 25]
+#Perk slots every player has.
+# Default: 4
+# Range: 0 ~ 9
+perkSlotsBase = 4
+#Discovered spells that each open one more perk slot.
+perkSlotsForDiscoveries = [100, 250]
+#Arcane Points for each perk slot a player can buy (one number per slot).
+perkSlotCosts = [60, 120]
+#Most perk slots a player can have (base + discoveries + bought + a sigil).
+# Default: 9
+# Range: 1 ~ 20
+perkSlotsMax = 9
+#Arcane Essence a Perk Shop reset costs (the spent points come back; bought slots stay).
+# Default: 16
+# Range: 0 ~ 640
+perkShopResetCost = 16
+#Arcane Points for a daily challenge.
+# Default: 1
+# Range: 0 ~ 100
+pointsDailyChallenge = 1
+#Arcane Points for a weekly challenge.
+# Default: 5
+# Range: 0 ~ 100
+pointsWeeklyChallenge = 5
+#Arcane Points for a new mastery rank.
+# Default: 2
+# Range: 0 ~ 100
+pointsMasteryRank = 2
+#Arcane Points for a new spell in the atlas.
+# Default: 1
+# Range: 0 ~ 100
+pointsDiscovery = 1
+#pointsDiscovery is given for every this many new spells (2 = every second spell).
+# Default: 2
+# Range: 1 ~ 100
+pointsDiscoveryEvery = 2
+#Arcane Points for a new school reaction.
+# Default: 2
+# Range: 0 ~ 100
+pointsReaction = 2
+#Arcane Points for a boss.
+# Default: 5
+# Range: 0 ~ 100
+pointsBoss = 5
+#Chance that a finished weekly challenge also gives a Perk Slot Sigil.
+# Default: 0.02
+# Range: 0.0 ~ 1.0
+sigilWeeklyChance = 0.02
+#Chance that a boss kill gives a Perk Slot Sigil.
+# Default: 0.05
+# Range: 0.0 ~ 1.0
+sigilBossChance = 0.05
+#Difficulty that follows the players: a monster that spawns takes the power of the players near it
+#and gets more health and damage, stronger spells, a chance to be an elite, and better rewards.
+#Mobs in the entity tag spell_atlas:no_scaling are left alone.
+difficultyScaling = true
+#Blocks around a spawning monster in which players count.
+# Default: 64
+# Range: 8 ~ 256
+scalingRadius = 64
+#Extra health at the top tier (1.0 = +100%).
+# Default: 1.0
+# Range: 0.0 ~ 10.0
+maxHealthBonus = 1.0
+#Extra damage at the top tier (0.5 = +50%).
+# Default: 0.5
+# Range: 0.0 ~ 10.0
+maxDamageBonus = 0.5
+#Chance that a monster is an elite, before tiers.
+# Default: 0.02
+# Range: 0.0 ~ 1.0
+eliteChance = 0.02
+#Extra elite chance per tier.
+# Default: 0.015
+# Range: 0.0 ~ 1.0
+eliteChancePerTier = 0.015
+#Bosses scale too, at half strength (and never become elites).
+bossScaling = true
+#Arcane Points for an elite.
+# Default: 1
+# Range: 0 ~ 100
+pointsElite = 1
+#Players can open Iron's tables near them from tabs in their inventory.
+remoteTables = true
+#Blocks from the player's eyes to a table that can be opened from the inventory.
+# Default: 5.0
+# Range: 1.0 ~ 16.0
+remoteTableRange = 5.0
+#Blocks that get a tab (anything that opens a screen when used with an empty hand; addon tables too).
+remoteTableBlocks = ["irons_spellbooks:inscription_table", "irons_spellbooks:scroll_forge", "irons_spellbooks:arcane_anvil", "minecraft:crafting_table", "toms_storage:crafting_terminal", "toms_storage:storage_terminal", "minecraft:furnace", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:smithing_table", "minecraft:anvil", "minecraft:chipped_anvil", "minecraft:damaged_anvil", "minecraft:enchanting_table", "minecraft:grindstone", "minecraft:stonecutter", "minecraft:loom", "minecraft:cartography_table", "minecraft:brewing_stand", "minecraft:ender_chest"]
+#Set bonuses: wearing or holding several items of a guide build's gear gives its bonuses
+#(datapack files data/<ns>/spell_atlas_sets/*.json).
+setBonuses = true
+#Arcane Magnet (a knowledge perk): the drops of mobs a player kills go straight into their inventory.
+lootMagnet = true
+#Discovered spells a player needs for Arcane Magnet (0 = everyone has it).
+# Default: 10
+# Range: 0 ~ 10000
+lootMagnetUnlock = 10
+#Hunter's knowledge: killing magic mobs of one kind (the bestiary's) makes your spells stronger
+#against that kind and its spells weaker against you.
+hunterKnowledge = true
+#Kills of one kind of magic mob for each tier.
+hunterKills = [10, 50, 200]
+#The same for bosses (the c:bosses tag, or 150+ max health).
+hunterBossKills = [1, 3, 10]
+#Per tier: more spell damage against that kind, less damage from its spells (0.05 = 5%).
+# Default: 0.05
+# Range: 0.0 ~ 0.3
+hunterBonusPerTier = 0.05
+#School affinity: casting and killing with a school's spells builds affinity with it. The player picks up to
+#three schools in the atlas (Perks tab); they get bonuses scaled by their affinity. Numbers: balance.toml, section affinity.
+schoolAffinity = true
+#Anomalies: rifts of a school open in the overworld near a random player and are announced; when a player
+#comes near, three waves of the school's mobs and a guardian come out. Closing one rewards everyone who took part.
+#Numbers: balance.toml, section anomaly. Admin: /spellatlas anomaly.
+anomalies = true
+#Game days between two anomalies: a random number from min to max, never the same twice in a row.
+# Default: 2
+# Range: 1 ~ 365
+anomalyMinDays = 2
+# Default: 4
+# Range: 1 ~ 365
+anomalyMaxDays = 4
+#Anomalies that can be open at once (they wait for a player).
+# Default: 3
+# Range: 1 ~ 20
+anomalyMaxOpen = 3
+#Blocks from the chosen player to a new anomaly: min and max.
+# Default: 50
+# Range: 8 ~ 10000
+anomalyMinDistance = 50
+# Default: 150
+# Range: 8 ~ 10000
+anomalyMaxDistance = 150
+#Blocks a player must come within for the waves to start.
+# Default: 24.0
+# Range: 4.0 ~ 128.0
+anomalyActivateRange = 24.0
+#Chances of the difficulties of a natural anomaly: easy, medium, hard, catastrophe.
+anomalyDifficultyWeights = [40, 35, 20, 5]
+#Natural anomalies follow what the chosen player can do: the highest difficulty that may open near a player grows with the number of different spells
+#they have cast (anomalyReadinessSpells), and none opens near a player who has cast nothing. Anomalies opened by command ignore this.
+#false: any difficulty can open near anyone, as before 1.88.0.
+anomalyReadiness = true
+#Different spells a player must have cast to allow natural anomalies of easy, medium, hard and catastrophe difficulty.
+anomalyReadinessSpells = [1, 3, 6, 11]
+#No natural anomaly opens before this game day (with anomalyReadiness on).
+# Default: 2
+# Range: 0 ~ 365
+anomalyGraceDays = 2
+#The mobs of an anomaly of a school, one entry per school: "<school>=<mob>,<mob>", for example "spirit=minecraft:skeleton,minecraft:husk".
+#The school is its full id ("irons_spellbooks:fire") or only the part after the colon. An entry replaces the built-in mobs of that school.
+#A school without an entry uses the mobs the bestiary saw casting it, then the monsters of the school's own mod, then skeletons and zombies.
+anomalyMobs = []
+#Players with Xaero's Minimap or JourneyMap get new anomalies as waypoints they can add with one click.
+anomalyWaypoints = true
+#Nemeses: a hostile mob that kills a player may become their named nemesis (balance.toml nemesis.birthChance, 10%) with ranks, strengths and weaknesses,
+#waits in its lair, ambushes its victim and may flee and adapt. Numbers: balance.toml, section nemesis.
+nemesis = true
+#Nemeses one player can have; a new one over the limit replaces the weakest.
+# Default: 3
+# Range: 1 ~ 20
+nemesisPerVictim = 3
+#Nemeses on the server at once.
+# Default: 12
+# Range: 1 ~ 200
+nemesisMax = 12
+#After this many escapes a nemesis stays and fights to the end (0 = it can flee without limit).
+#It rolls its flee chance once each time it drops under the flee health in a fight (balance.toml: fleeHealth, flee_*).
+# Default: 3
+# Range: 0 ~ 100
+nemesisMaxEscapes = 3
+#Mobs that never become a nemesis: entity type ids ("vampirism:vampire") or a whole mod ("vampirism:*").
+#An entry of a mod that is not installed does nothing.
+nemesisBlacklist = []
+#Multiplier of the minions that come with a nemesis (1.0 = the balance.toml numbers, 0 = no minions).
+# Default: 1.0
+# Range: 0.0 ~ 2.0
+nemesisMinions = 1.0
+#Most minions that come with one nemesis, whatever the rank, trait and multiplier give.
+# Default: 8
+# Range: 0 ~ 40
+nemesisMinionsMax = 8
+#A nemesis appears in its lair when a player comes this close (blocks).
+# Default: 24.0
+# Range: 4.0 ~ 128.0
+nemesisLairRange = 24.0
+#Game days between a nemesis' ambushes on its victim: min and max.
+# Default: 5
+# Range: 1 ~ 365
+nemesisAmbushMinDays = 5
+# Default: 10
+# Range: 1 ~ 365
+nemesisAmbushMaxDays = 10
+#No ambush closer than this to the victim's bed (or the world spawn).
+# Default: 64
+# Range: 0 ~ 10000
+nemesisAmbushHomeDistance = 64
+#Mage duels: players challenge each other from the inventory (or /duel <player>). Nobody dies or loses
+#items; Elo ratings are kept. Numbers: balance.toml, section duels.
+duels = true
+#School familiar: a spirit of the player's main affinity school follows them and strikes what they fight
+#(needs school affinity). Players send it away with /familiar off. Numbers: balance.toml, section familiar.
+familiar = true
+#How far away a player can be challenged (blocks); also the largest search range of the duel window.
+# Default: 128
+# Range: 8 ~ 512
+duelMaxRange = 128
+#A duelist who goes this far from the middle point of the duel loses.
+# Default: 48
+# Range: 8 ~ 512
+duelArenaRadius = 48
+#Seconds after which a duel ends in a draw.
+# Default: 300
+# Range: 30 ~ 3600
+duelTimeLimit = 300
+#Seconds an invitation stays open.
+# Default: 60
+# Range: 10 ~ 600
+duelInviteSeconds = 60
+#Scroll study: a player can study a scroll of a spell they know, from its card in the atlas.
+#The scroll is used up and the spell gains mastery.
+scrollStudy = true
+#Mastery casts one studied scroll gives, by the scroll's rarity: common, uncommon, rare, epic, legendary.
+studyCasts = [5, 10, 25, 50, 100]
+#Mastery casts one player can gain from study per day.
+# Default: 200
+# Range: 0 ~ 1000000
+studyDailyCap = 200

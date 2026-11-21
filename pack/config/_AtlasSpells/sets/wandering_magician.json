@@ -1,0 +1,13 @@
+{
+  "items": [
+    "irons_spellbooks:wandering_magician_helmet",
+    "irons_spellbooks:wandering_magician_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "",
+      "power": 0.08
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "irons_spellbooks"
+  ],
+  "kind": "kill_entity",
+  "target": "irons_spellbooks:fire_boss",
+  "count": 1,
+  "points": 10,
+  "order": 11
+}

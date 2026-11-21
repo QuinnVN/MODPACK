@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "irons_spellbooks"
+  ],
+  "kind": "kill_entity",
+  "target": "irons_spellbooks:archevoker",
+  "count": 3,
+  "points": 6,
+  "order": 13
+}

@@ -1,0 +1,24 @@
+{
+  "items": [
+    "magic_of_color:bedrock_warlock_hat",
+    "magic_of_color:bedrock_warlock_hood",
+    "magic_of_color:bedrock_warlock_helmet",
+    "magic_of_color:bedrock_warlock_robes",
+    "magic_of_color:bedrock_warlock_leggings",
+    "magic_of_color:bedrock_warlock_greaves"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:eldritch",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "irons_spellbooks:eldritch",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

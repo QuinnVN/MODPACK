@@ -1,0 +1,22 @@
+{
+  "first": [
+    "traveloptics:aqua",
+    "somakespells:aqua",
+    "aces_spell_utils:hydro"
+  ],
+  "second": [
+    "irons_spellbooks:lightning"
+  ],
+  "color": "#4FC3F7",
+  "icon": "irons_spellbooks:lightning_bottle",
+  "particle": "minecraft:electric_spark",
+  "sound": "minecraft:entity.guardian.attack",
+  "effects": [
+    {
+      "type": "chain",
+      "value": 0.6,
+      "radius": 6,
+      "count": 4
+    }
+  ]
+}

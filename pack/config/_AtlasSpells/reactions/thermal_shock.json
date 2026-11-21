@@ -1,0 +1,18 @@
+{
+  "first": [
+    "irons_spellbooks:fire"
+  ],
+  "second": [
+    "irons_spellbooks:ice"
+  ],
+  "color": "#9AD7FF",
+  "icon": "irons_spellbooks:ice_rune",
+  "particle": "minecraft:cloud",
+  "sound": "minecraft:block.fire.extinguish",
+  "effects": [
+    {
+      "type": "damage",
+      "value": 1.75
+    }
+  ]
+}

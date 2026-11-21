@@ -1,0 +1,28 @@
+{
+  "first": [
+    "irons_spellbooks:holy"
+  ],
+  "second": [
+    "irons_spellbooks:evocation"
+  ],
+  "color": "#F5E6A8",
+  "icon": "irons_spellbooks:protection_rune",
+  "particle": "minecraft:end_rod",
+  "sound": "minecraft:block.beacon.activate",
+  "effects": [
+    {
+      "type": "effect",
+      "id": "minecraft:absorption",
+      "seconds": 10,
+      "amplifier": 0,
+      "target": "caster"
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:resistance",
+      "seconds": 4,
+      "amplifier": 0,
+      "target": "caster"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "items": [
+    "irons_spellbooks:pyromancer_helmet",
+    "irons_spellbooks:pyromancer_chestplate"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:fire",
+      "power": 0.08
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+filename = 'Create Encased-1.21.1-1.10.1.jar'
+name = 'Create Encased'
+side = "both"
+
+[download]
+hash = 'da87450d6b3035f70b7327e6e99079ad22d3e90ed258110d069dd6a318568b46ceddac77c66b13721dac50a0bcdc7d73aea05208272bf4b0d70c0c5e6faea240'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/hSSqdyU1/versions/zuFYAHgQ/Create Encased-1.21.1-1.10.1.jar'
+
+[update.modrinth]
+mod-id = 'hSSqdyU1'
+version = 'zuFYAHgQ'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'u6dRKJwZ'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'LNytGWDc'
+type = 'REQUIRED'
+version = 'UjX6dr61'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'umyGl7zF'
+type = 'OPTIONAL'
+
+[[x-prismlauncher-dependencies]]
+addonId = 'GmjmRQ0A'
+type = 'OPTIONAL'
+version = 'cV2GZBSJ'

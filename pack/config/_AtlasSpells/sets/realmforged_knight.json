@@ -1,0 +1,22 @@
+{
+  "items": [
+    "bielgg_spells:relicron_helmet",
+    "bielgg_spells:relicron_chestplate",
+    "bielgg_spells:relicron_leggings",
+    "bielgg_spells:relicron_boots"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "bielgg_spells:relicron",
+      "power": 0.08
+    },
+    {
+      "pieces": 4,
+      "school": "bielgg_spells:relicron",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "twilightforest"
+  ],
+  "kind": "kill_entity",
+  "target": "twilightforest:naga",
+  "count": 1,
+  "points": 6,
+  "order": 10
+}

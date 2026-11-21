@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "twilightforest"
+  ],
+  "kind": "kill_entity",
+  "target": "twilightforest:hydra",
+  "count": 1,
+  "points": 10,
+  "order": 13
+}

@@ -1,0 +1,21 @@
+{
+  "items": [
+    "irons_spellbooks:cultist_helmet",
+    "irons_spellbooks:cultist_chestplate",
+    "irons_spellbooks:blood_staff"
+  ],
+  "bonuses": [
+    {
+      "pieces": 2,
+      "school": "irons_spellbooks:blood",
+      "power": 0.08
+    },
+    {
+      "pieces": 3,
+      "school": "irons_spellbooks:blood",
+      "power": 0.12,
+      "mana": 50,
+      "cooldown": 0.05
+    }
+  ]
+}

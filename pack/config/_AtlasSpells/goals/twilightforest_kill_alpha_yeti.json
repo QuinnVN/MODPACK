@@ -1,0 +1,10 @@
+{
+  "requires": [
+    "twilightforest"
+  ],
+  "kind": "kill_entity",
+  "target": "twilightforest:alpha_yeti",
+  "count": 1,
+  "points": 8,
+  "order": 17
+}

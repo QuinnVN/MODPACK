@@ -1,0 +1,25 @@
+#Enable the Voxy dedicated-server companion
+enabled = true
+#Build server-side LOD data for newly generated chunks
+ingestGeneratedChunks = true
+#Also build LOD data whenever an existing chunk is loaded
+#This can add CPU and disk load on established servers.
+ingestLoadedChunks = false
+#Background threads used for Voxy ingestion and storage
+# Default: 3
+# Range: 1 ~ 32
+serviceThreads = 3
+#Stop accepting chunk-load work while this many ingestion tasks are queued
+# Default: 1024
+# Range: 64 ~ 16384
+maxIngestQueue = 1024
+#Allow Voxy clients to request cached LOD sections from this server
+serveRemoteLod = true
+#Maximum remote LOD section requests accepted per player per second
+# Default: 32
+# Range: 1 ~ 512
+maxRemoteRequestsPerSecond = 32
+#Maximum uncompressed bytes in one remote LOD response
+# Default: 900000
+# Range: 262144 ~ 1000000
+maxRemoteResponseBytes = 900000

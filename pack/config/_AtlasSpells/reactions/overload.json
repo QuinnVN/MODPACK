@@ -1,0 +1,23 @@
+{
+  "first": [
+    "irons_spellbooks:fire"
+  ],
+  "second": [
+    "irons_spellbooks:lightning"
+  ],
+  "color": "#FF8A3D",
+  "icon": "irons_spellbooks:lightning_upgrade_orb",
+  "particle": "minecraft:explosion",
+  "sound": "minecraft:entity.firework_rocket.blast",
+  "effects": [
+    {
+      "type": "splash",
+      "value": 0.6,
+      "radius": 3
+    },
+    {
+      "type": "knockback",
+      "value": 0.8
+    }
+  ]
+}

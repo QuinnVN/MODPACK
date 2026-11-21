@@ -1,0 +1,25 @@
+{
+  "first": [
+    "irons_spellbooks:eldritch"
+  ],
+  "second": [
+    "irons_spellbooks:fire"
+  ],
+  "color": "#7A1FA2",
+  "icon": "irons_spellbooks:cinder_essence",
+  "particle": "minecraft:soul_fire_flame",
+  "sound": "minecraft:particle.soul_escape",
+  "effects": [
+    {
+      "type": "burn",
+      "seconds": 5
+    },
+    {
+      "type": "effect",
+      "id": "minecraft:wither",
+      "seconds": 3,
+      "amplifier": 0,
+      "target": "target"
+    }
+  ]
+}
