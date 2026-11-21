@@ -1,0 +1,10 @@
+version:3955
+graphicsMode:0
+renderDistance:6
+simulationDistance:5
+entityDistanceScaling:0.75
+particles:1
+renderClouds:"false"
+mipmapLevels:2
+biomeBlendRadius:0
+maxFps:60

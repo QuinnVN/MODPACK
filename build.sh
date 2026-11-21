@@ -2,9 +2,9 @@
 set -euo pipefail
 
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
-cd -- "$root/pack"
+source_pack="$root/pack"
 
-if [[ ! -f mods/voxy-0.6.0.jar ]]; then
+if [[ ! -f "$source_pack/mods/voxy-0.6.0.jar" ]]; then
     printf '%s\n' 'Restore pack/mods/voxy-0.6.0.jar from the source PrismLauncher instance before building.' >&2
     exit 1
 fi
@@ -14,7 +14,7 @@ case "$OSTYPE" in
     msys*|cygwin*) packwiz_name=packwiz.exe ;;
 esac
 
-packwiz="../.tools/bin/$packwiz_name"
+packwiz="$root/.tools/bin/$packwiz_name"
 if [[ ! -f "$packwiz" || ! -x "$packwiz" ]]; then
     packwiz=packwiz
     if ! command -v "$packwiz" >/dev/null 2>&1; then
@@ -23,15 +23,55 @@ if [[ ! -f "$packwiz" || ! -x "$packwiz" ]]; then
     fi
 fi
 
-"$packwiz" list
-"$packwiz" refresh
+build_date="$(date +%Y-%m-%d)"
+outputs=("MODPACK-$build_date.mrpack" "MODPACK-$build_date-lite.mrpack" "MODPACK-$build_date-server.mrpack")
+profiles=(full lite server)
+cache="$root/.tools/packwiz-cache"
+mkdir -p -- "$root/dist"
+dist="$(cd -- "$root/dist" && pwd -P)"
+work="$(mktemp -d "$dist/.build.XXXXXXXX")"
+cleanup() {
+    if [[ "${work%/*}" == "$dist" && "${work##*/}" == .build.* ]]; then
+        rm -rf -- "$work"
+    fi
+}
+trap cleanup EXIT
 
-mkdir -p ../dist
-output=../dist/MODPACK-Full-0.1.0-snapshot.mrpack
-temporary_dir="$(mktemp -d ../dist/.build.XXXXXXXX)"
-temporary_pack="$temporary_dir/MODPACK-Full-0.1.0-snapshot.mrpack"
-trap 'rm -f -- "$temporary_pack"; rmdir -- "$temporary_dir"' EXIT
+cp -R -P -- "$source_pack" "$work/full"
+for profile in lite server; do
+    stage="$work/$profile"
+    cp -R -P -- "$work/full" "$stage"
 
-"$packwiz" --cache ../.tools/packwiz-cache modrinth export -o "$temporary_pack"
-mv -f -- "$temporary_pack" "$output"
-printf '%s\n' 'Built dist/MODPACK-Full-0.1.0-snapshot.mrpack'
+    while IFS= read -r line || [[ -n "$line" ]]; do
+        read -r entry <<< "${line%$'\r'}"
+        [[ -z "$entry" || "$entry" == \#* ]] && continue
+        if [[ ! "$entry" =~ ^(mods|shaderpacks)/[a-zA-Z0-9_.+-]+\.(pw\.toml|jar)$ ]]; then
+            printf 'Invalid exclusion in profiles/%s/exclude.txt: %s\n' "$profile" "$entry" >&2
+            exit 1
+        fi
+        if [[ ! -f "$stage/$entry" ]]; then
+            printf 'Missing or duplicate exclusion in profiles/%s/exclude.txt: %s\n' "$profile" "$entry" >&2
+            exit 1
+        fi
+        rm -- "$stage/$entry"
+    done < "$root/profiles/$profile/exclude.txt"
+done
+cp -- "$root/profiles/lite/options.txt" "$work/lite/"
+
+for i in "${!profiles[@]}"; do
+    archive="$work/${outputs[i]}"
+    (
+        cd -- "$work/${profiles[i]}"
+        "$packwiz" refresh
+        "$packwiz" --cache "$cache" modrinth export -o "$archive"
+    )
+    if [[ ! -f "$archive" ]]; then
+        printf 'packwiz did not export %s.\n' "${outputs[i]}" >&2
+        exit 1
+    fi
+done
+
+for filename in "${outputs[@]}"; do
+    mv -f -- "$work/$filename" "$dist/$filename"
+    printf 'Built dist/%s\n' "$filename"
+done

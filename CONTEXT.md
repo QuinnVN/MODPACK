@@ -10,7 +10,7 @@ Updated 2026-11-21. Project context for maintaining, testing, and sharing a Mine
 
 ## Full, Lite, and Server packaging
 
-Proposed workflow. Start from a known-good Full instance. Use one Git repo and one packwiz manifest to pin the loader, mods, configs, and shared changes. Generate all three downloads from the same release tag. The packwiz migration and build script are pending.
+The build scripts start from the Full packwiz snapshot. Full, Lite, and Server use the same source manifest for loader, mods, configs, and shared changes. Each run produces three dated `.mrpack` files.
 
 | Path | Purpose |
 |---|---|
@@ -19,20 +19,20 @@ Proposed workflow. Start from a known-good Full instance. Use one Git repo and o
 | `pack/config/` | Configs distributed with the pack |
 | `pack/kubejs/` | Shared KubeJS scripts and data. The fluid patch already uses this layout. |
 | `pack/scripts/` | Reserved for any CraftTweaker `.zs` scripts the pack ships. CraftTweaker supplied the fluid audit dump. |
-| `profiles/lite/exclude.txt` | Verified client-only exclusions, keyed by `.pw.toml` filename |
+| `profiles/lite/exclude.txt` | Lite exclusions for shaders, visual effects, and client LOD rendering |
 | `profiles/lite/options.txt` | Lite graphics defaults |
-| `build.py` or `build.ps1` | Proposed build entry point. Stage in a clean directory, apply profile differences, and export. |
+| `profiles/server/exclude.txt` | Server exclusions for client mods, shader packs, and NumFlux |
+| `build.ps1` and `build.sh` | Stage all three profiles, apply exclusions, refresh indexes, and export |
 | `dist/` | Generated releases. Ignore in Git. |
 
 | Build | Contents | Distribution |
 |---|---|---|
 | Full | Shared gameplay and dependencies, client optimizations, visual extras | `.mrpack` for Prism |
-| Lite | Same gameplay and client optimizations, with lower graphics defaults and tested visual exclusions | `.mrpack` and a ZIP if friends need a manual installation |
-| Server | Shared gameplay and server-side tools and configs, including Chunky for pregeneration | Server ZIP or packwiz-installer in server mode |
+| Lite | Same gameplay and client optimizations, with lower graphics defaults and visual exclusions | `.mrpack` for Prism |
+| Server | Shared gameplay and server-side tools and configs, including Chunky for pregeneration | `.mrpack` for a server-capable installer |
 
 - Start Lite with shaders off and lower graphics settings. Keep client optimizations such as Sodium and ImmediatelyFast. Test visual cuts against the exact loader and dependency set. Apply graphics keys selectively if updating an existing `options.txt` so players keep their keybinds.
-- An **E4All** session from Full rejected a Lite client with a missing **Particular** key. Keep the matching Particular version in both clients while the host requires it. Re-test on the dedicated release before making it an exclusion. Keep Create, Aeronautics, shared integrations, and recipe changes on the same version across builds.
-- Python was suggested for filesystem operations and ZIP packaging on Windows and Linux. PowerShell fits a Windows-only build workflow. Packwiz owns the mod pins either way. The Ubuntu host can consume the built server ZIP without running the build script.
+- An **E4All** session from Full rejected a Lite client with a missing **Particular** key. The Lite exclusion list now removes Particular. Test Lite against the dedicated Server build, which also omits Particular. Keep Create, Aeronautics, shared integrations, and recipe changes on the same version across builds.
 - If there is a working CurseForge export, import it with `packwiz curseforge import <zip>`. For a plain JAR folder, `packwiz curseforge detect` can match CurseForge files. Compare exact versions with the working instance and retain anything the importer misses. Keep the live world, player data, and host-specific settings in the deployment directory. Boot the staged Server and join once from clean Full and Lite installs before release. [Packwiz setup](https://packwiz.infra.link/tutorials/creating/getting-started/) · [Server installation](https://packwiz.infra.link/tutorials/installing/packwiz-installer/)
 
 ## Server performance and stability

@@ -1,0 +1,20 @@
+# Visual effects, shader integration, and client-side LOD rendering.
+mods/3dskinlayers.pw.toml
+mods/better-clouds.pw.toml
+mods/colorwheel-patcher.pw.toml
+mods/colorwheel.pw.toml
+mods/entity-model-features.pw.toml
+mods/entitytexturefeatures.pw.toml
+mods/iris-veil-compat.pw.toml
+mods/iris.pw.toml
+mods/lambdynamiclights.pw.toml
+mods/not-enough-animations.pw.toml
+mods/particular-reforged.pw.toml
+mods/sable-dynamic-lights.pw.toml
+mods/sound-physics-remastered.pw.toml
+mods/voxy-fog-addon-neoforge.pw.toml
+mods/voxy-0.6.0.jar
+
+# Client shader packs.
+shaderpacks/complementary-unbound.pw.toml
+shaderpacks/photon-shader.pw.toml
