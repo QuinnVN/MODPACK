@@ -19,10 +19,10 @@ The build scripts start from the Full packwiz snapshot. Full, Lite, and Server u
 | `pack/config/` | Configs distributed with the pack |
 | `pack/kubejs/` | Shared KubeJS scripts and data. The fluid patch already uses this layout. |
 | `pack/scripts/` | Reserved for any CraftTweaker `.zs` scripts the pack ships. CraftTweaker supplied the fluid audit dump. |
-| `profiles/lite/exclude.txt` | Lite exclusions for shaders, visual effects, and client LOD rendering |
+| `profiles/lite/allow.txt` | Mods and shader packs included in Lite |
 | `profiles/lite/options.txt` | Lite graphics defaults |
-| `profiles/server/exclude.txt` | Server exclusions for client mods, shader packs, and NumFlux |
-| `build.ps1` and `build.sh` | Stage all three profiles, apply exclusions, refresh indexes, and export |
+| `profiles/server/allow.txt` | Mods and shader packs included in Server |
+| `build.ps1` and `build.sh` | Stage all three profiles, apply the Lite and Server allowlists, refresh indexes, and export |
 | `dist/` | Generated releases. Ignore in Git. |
 
 | Build | Contents | Distribution |
@@ -32,7 +32,7 @@ The build scripts start from the Full packwiz snapshot. Full, Lite, and Server u
 | Server | Shared gameplay and server-side tools and configs, including Chunky for pregeneration | `.mrpack` for a server-capable installer |
 
 - Start Lite with shaders off and lower graphics settings. Keep client optimizations such as Sodium and ImmediatelyFast. Test visual cuts against the exact loader and dependency set. Apply graphics keys selectively if updating an existing `options.txt` so players keep their keybinds.
-- An **E4All** session from Full rejected a Lite client with a missing **Particular** key. The Lite exclusion list now removes Particular. Test Lite against the dedicated Server build, which also omits Particular. Keep Create, Aeronautics, shared integrations, and recipe changes on the same version across builds.
+- An **E4All** session from Full rejected a Lite client with a missing **Particular** key. Test Lite against the dedicated Server build. Both Lite and Server omit Particular. Keep Create, Aeronautics, shared integrations, and recipe changes on the same version across builds.
 - If there is a working CurseForge export, import it with `packwiz curseforge import <zip>`. For a plain JAR folder, `packwiz curseforge detect` can match CurseForge files. Compare exact versions with the working instance and retain anything the importer misses. Keep the live world, player data, and host-specific settings in the deployment directory. Boot the staged Server and join once from clean Full and Lite installs before release. [Packwiz setup](https://packwiz.infra.link/tutorials/creating/getting-started/) · [Server installation](https://packwiz.infra.link/tutorials/installing/packwiz-installer/)
 
 ## Server performance and stability

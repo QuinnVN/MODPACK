@@ -23,11 +23,11 @@ if (-not (Test-Path -LiteralPath $packwiz -PathType Leaf)) {
     $packwiz = $command.Source
 }
 
-$date = [DateTime]::Now.ToString('yyyy-MM-dd', [Globalization.CultureInfo]::InvariantCulture)
+$timestamp = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
 $outputs = [ordered]@{
-    full = "MODPACK-$date.mrpack"
-    lite = "MODPACK-$date-lite.mrpack"
-    server = "MODPACK-$date-server.mrpack"
+    full = "MODPACK-$timestamp.mrpack"
+    lite = "MODPACK-$timestamp-lite.mrpack"
+    server = "MODPACK-$timestamp-server.mrpack"
 }
 $cache = Join-Path $PSScriptRoot '.tools/packwiz-cache'
 $dist = (New-Item -ItemType Directory -Path (Join-Path $PSScriptRoot 'dist') -Force).FullName
@@ -38,20 +38,25 @@ try {
     Copy-Item -LiteralPath $source -Destination $baseline -Recurse -Force
     foreach ($profile in 'lite', 'server') {
         $stage = Join-Path $work $profile
-        Copy-Item -LiteralPath $baseline -Destination $stage -Recurse -Force
+        New-Item -ItemType Directory -Path (Join-Path $stage 'mods'), (Join-Path $stage 'shaderpacks') -Force | Out-Null
+        foreach ($item in Get-ChildItem -LiteralPath $baseline -Force) {
+            if ($item.Name -cin 'mods', 'shaderpacks') { continue }
+            Copy-Item -LiteralPath $item.FullName -Destination $stage -Recurse -Force
+        }
 
-        $list = Join-Path $PSScriptRoot "profiles/$profile/exclude.txt"
+        $list = Join-Path $PSScriptRoot "profiles/$profile/allow.txt"
         foreach ($line in Get-Content -LiteralPath $list) {
             $entry = $line.Trim()
             if ($entry -eq '' -or $entry.StartsWith('#')) { continue }
-            if ($entry -cnotmatch '^(mods|shaderpacks)/[a-zA-Z0-9_.+-]+\.(pw\.toml|jar)$') {
-                throw "Invalid exclusion in profiles/$profile/exclude.txt: $entry"
+            if ($entry -cnotmatch '^(mods|shaderpacks)/[a-zA-Z0-9_.+ -]+\.(pw\.toml|jar|zip)$') {
+                throw "Invalid entry in profiles/$profile/allow.txt: $entry"
             }
+            $includedFile = Join-Path $baseline $entry
             $target = Join-Path $stage $entry
-            if (-not (Test-Path -LiteralPath $target -PathType Leaf)) {
-                throw "Missing or duplicate exclusion in profiles/$profile/exclude.txt: $entry"
+            if (-not (Test-Path -LiteralPath $includedFile -PathType Leaf) -or (Test-Path -LiteralPath $target)) {
+                throw "Missing or duplicate entry in profiles/$profile/allow.txt: $entry"
             }
-            Remove-Item -LiteralPath $target
+            Copy-Item -LiteralPath $includedFile -Destination $target
         }
     }
     Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'profiles/lite/options.txt') -Destination (Join-Path $work 'lite')

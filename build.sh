@@ -23,8 +23,8 @@ if [[ ! -f "$packwiz" || ! -x "$packwiz" ]]; then
     fi
 fi
 
-build_date="$(date +%Y-%m-%d)"
-outputs=("MODPACK-$build_date.mrpack" "MODPACK-$build_date-lite.mrpack" "MODPACK-$build_date-server.mrpack")
+build_timestamp="$(date +%s)"
+outputs=("MODPACK-$build_timestamp.mrpack" "MODPACK-$build_timestamp-lite.mrpack" "MODPACK-$build_timestamp-server.mrpack")
 profiles=(full lite server)
 cache="$root/.tools/packwiz-cache"
 mkdir -p -- "$root/dist"
@@ -37,24 +37,31 @@ cleanup() {
 }
 trap cleanup EXIT
 
-cp -R -P -- "$source_pack" "$work/full"
+baseline="$work/full"
+cp -R -P -- "$source_pack" "$baseline"
+shopt -s dotglob
+entry_pattern='^(mods|shaderpacks)/[a-zA-Z0-9_.+ -]+\.(pw\.toml|jar|zip)$'
 for profile in lite server; do
     stage="$work/$profile"
-    cp -R -P -- "$work/full" "$stage"
+    mkdir -p -- "$stage/mods" "$stage/shaderpacks"
+    for path in "$baseline"/*; do
+        case "${path##*/}" in mods|shaderpacks) continue ;; esac
+        cp -R -P -- "$path" "$stage/"
+    done
 
     while IFS= read -r line || [[ -n "$line" ]]; do
         read -r entry <<< "${line%$'\r'}"
         [[ -z "$entry" || "$entry" == \#* ]] && continue
-        if [[ ! "$entry" =~ ^(mods|shaderpacks)/[a-zA-Z0-9_.+-]+\.(pw\.toml|jar)$ ]]; then
-            printf 'Invalid exclusion in profiles/%s/exclude.txt: %s\n' "$profile" "$entry" >&2
+        if [[ ! "$entry" =~ $entry_pattern ]]; then
+            printf 'Invalid entry in profiles/%s/allow.txt: %s\n' "$profile" "$entry" >&2
             exit 1
         fi
-        if [[ ! -f "$stage/$entry" ]]; then
-            printf 'Missing or duplicate exclusion in profiles/%s/exclude.txt: %s\n' "$profile" "$entry" >&2
+        if [[ ! -f "$baseline/$entry" || -e "$stage/$entry" ]]; then
+            printf 'Missing or duplicate entry in profiles/%s/allow.txt: %s\n' "$profile" "$entry" >&2
             exit 1
         fi
-        rm -- "$stage/$entry"
-    done < "$root/profiles/$profile/exclude.txt"
+        cp -P -- "$baseline/$entry" "$stage/$entry"
+    done < "$root/profiles/$profile/allow.txt"
 done
 cp -- "$root/profiles/lite/options.txt" "$work/lite/"
 

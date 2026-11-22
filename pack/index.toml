@@ -2392,6 +2392,11 @@ hash = "1bfd95217100cb38f3ba769c819c22bc1b476270190e91253c7465659367ae78"
 metafile = true
 
 [[files]]
+file = "mods/barbeques-delight-forge.pw.toml"
+hash = "41a0cc077d1a3785851f3cd1592eda537974cae75707eba8ab27ec1bd8116af2"
+metafile = true
+
+[[files]]
 file = "mods/bellsandwhistles.pw.toml"
 hash = "6599590b27522eaf08446f640f004aec42e4693874ebab4bbbbeae979003e0f4"
 metafile = true
@@ -2434,6 +2439,11 @@ metafile = true
 [[files]]
 file = "mods/bookshelf-lib.pw.toml"
 hash = "d91f9fbef4596a9b0ce6486a701551ecf1314e75607138ce6aea294c65f1117f"
+metafile = true
+
+[[files]]
+file = "mods/brewin-and-chewin.pw.toml"
+hash = "060c109f819c89c6741ef953899802579875a570c7506a5711c01023919509fb"
 metafile = true
 
 [[files]]
@@ -2697,6 +2707,11 @@ hash = "36672ac54b1cd40254db463188e39fe73c8e51620020d38f874dfa8b52ca4774"
 metafile = true
 
 [[files]]
+file = "mods/cultural-delights.pw.toml"
+hash = "82877af99840d03e96dd93beaf19e435fb18bc3ac8047d6bbc3ac3faf9b3548e"
+metafile = true
+
+[[files]]
 file = "mods/curios.pw.toml"
 hash = "b3f30d0ea5cdd359c503cddd4a1ee1690efe060dc9826b6539fe48b3552700c9"
 metafile = true
@@ -2704,6 +2719,16 @@ metafile = true
 [[files]]
 file = "mods/customskinloader.pw.toml"
 hash = "c38d536d2c05383f5253691914ac33675484364d116d5847216822809db42bf3"
+metafile = true
+
+[[files]]
+file = "mods/diegesis-api.pw.toml"
+hash = "556387dfb9e9297e12aade7c899587305ed02ee6a995f97061c961628f38ab82"
+metafile = true
+
+[[files]]
+file = "mods/display-delight.pw.toml"
+hash = "487bf073347b4116922e3564f1e05685234e8fe616dd83542bbba75c9e1e08fd"
 metafile = true
 
 [[files]]
@@ -2797,6 +2822,11 @@ hash = "0a380a2f0f82495bd66322c63ecfb683fd81c713d731a20a027181af59856d4e"
 metafile = true
 
 [[files]]
+file = "mods/farmers-respite-unofficial-port.pw.toml"
+hash = "a617c8e9a05d36418332c4619dcb6efc13ef30ff215a6086945c779d1d53d077"
+metafile = true
+
+[[files]]
 file = "mods/fast-paintings.pw.toml"
 hash = "6ee9b0206d288bbf6cd44765ceffefc35435d6dabe09c552c6237c1acf8ecd55"
 metafile = true
@@ -2874,6 +2904,11 @@ metafile = true
 [[files]]
 file = "mods/gravestone-x-curios-api-compat.pw.toml"
 hash = "a95f2bef1874a319857f65f81b5744d419b3ed9070926c7be88e9d14b7115337"
+metafile = true
+
+[[files]]
+file = "mods/handson-delight.pw.toml"
+hash = "502442addf164a61fce7cef39b3433369f92a08fc64a7019c81113d38f9bd282"
 metafile = true
 
 [[files]]
