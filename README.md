@@ -1,25 +1,23 @@
 # MODPACK
 
-Modpack Minecraft tập trung vào **Create** và **Create Aeronautics**, với địa hình Overworld từ Regions Unexplored và Tectonic. Hai bản chơi Full và Lite được thiết kế để kết nối vào cùng một máy chủ chuyên dụng chạy bản Server.
+Modpack Minecraft tập trung vào **Create** và **Create Aeronautics**, với địa hình Overworld từ Regions Unexplored và Tectonic. Một tệp `.mrpack` dùng chung cho máy chơi và máy chủ chuyên dụng.
 
 **Minecraft 1.21.1** · **NeoForge 21.1.266** · **Phiên bản `0.1.1-snapshot`**
 
-## Các phiên bản
+## Cài đặt
 
-| Bản | Tệp xuất | Nội dung |
-| --- | --- | --- |
-| **Full** | `MODPACK-<timestamp>.mrpack` | Bản chơi đầy đủ, gồm shader, Voxy và các hiệu ứng hình ảnh. |
-| **Lite** | `MODPACK-<timestamp>-lite.mrpack` | Bản chơi cho máy cấu hình thấp. Giữ Sodium và ImmediatelyFast, dùng thiết lập đồ họa nhẹ và lược bỏ shader, Voxy phía máy chơi và Particular. [Danh sách tệp được đóng gói](profiles/lite/allow.txt) · [Thiết lập đồ họa](profiles/lite/options.txt) |
-| **Server** | `MODPACK-<timestamp>-server.mrpack` | Bản cho máy chủ chuyên dụng. Giữ Chunky và Voxy Server Side, lược bỏ mod phía máy chơi, shader và NumFlux. [Danh sách tệp được đóng gói](profiles/server/allow.txt) |
+Nhập `MODPACK-<timestamp>.mrpack` vào Prism Launcher. Trong hộp thoại chọn mod tùy chọn, bỏ chọn tất cả để chơi với bộ mod Lite, hoặc chọn các hiệu ứng muốn dùng. Cả hai cách đều dùng thiết lập đồ họa Lite khi cài mới. Shader mặc định tắt. [Danh sách mod Lite](profiles/lite/allow.txt) · [Thiết lập đồ họa](profiles/lite/configureddefaults/options.txt)
 
-Để chơi, nhập tệp `.mrpack` của bản Full hoặc Lite vào Prism Launcher. Với máy chủ chuyên dụng, dùng tệp của bản Server với trình cài đặt hỗ trợ `.mrpack` phía máy chủ.
+Máy chơi luôn cài CreativeCore, MRU và Entity Texture Features. Chọn Iris nếu muốn dùng shader, Iris Veil Compat hoặc Colorwheel. Nếu chọn shader, bật shader trong phần cài đặt video. Để dùng shader đã vá với Colorwheel, chọn cả Colorwheel và Colorwheel Patcher. Chọn Voxy NeoForge nếu muốn dựng địa hình xa hoặc dùng Voxy Fog.
 
-Bản Lite từng bị phiên chơi E4All từ Full từ chối vì thiếu Particular. Quy trình kiểm thử trước khi phát hành là khởi động bản Server rồi thử kết nối từ cả hai bản chơi mới cài. [Ghi chú tương thích và kiểm thử](CONTEXT.md#full-lite-and-server-packaging)
+Dùng cùng tệp đó với trình cài đặt `.mrpack` có hỗ trợ chế độ máy chủ. Máy chủ cài Chunky, Voxy Server Side và các mod có trong danh sách Server. [Danh sách mod Server](profiles/server/allow.txt)
+
+Phiên chơi E4All từ Full từng từ chối máy chơi Lite vì thiếu Particular. Trước khi phát hành, khởi động máy chủ chuyên dụng và thử kết nối từ máy chơi với bộ mod Lite và với đầy đủ mod tùy chọn. [Ghi chú tương thích và kiểm thử](CONTEXT.md#full-lite-and-server-packaging)
 
 ## Tạo gói từ mã nguồn
 
 1. Cài packwiz vào `PATH` hoặc đặt tệp thực thi trong `.tools/bin/`. Script ưu tiên thư mục này và tìm `packwiz.exe` trên Windows hoặc `packwiz` trên Linux và macOS. [Hướng dẫn cài packwiz](https://packwiz.infra.link/tutorials/creating/getting-started/)
-2. Chép `voxy-0.6.0.jar` từ instance Prism Launcher gốc vào `pack/mods/`. Tệp JAR này được bỏ qua trong Git và cần có để chạy script build. SHA-256 của tệp được ghi trong [index của packwiz](pack/index.toml).
+2. Cài Python 3 vào `PATH`. Script dùng Python để ghép các bản xuất của packwiz.
 3. Từ thư mục gốc của repo, chạy lệnh tương ứng với shell đang dùng.
 
    **PowerShell**
@@ -34,9 +32,9 @@ Bản Lite từng bị phiên chơi E4All từ Full từ chối vì thiếu Part
    bash ./build.sh
    ```
 
-Mỗi lần chạy tạo cả ba gói trong `dist/`. `<timestamp>` là dấu thời gian Unix tính bằng giây khi bắt đầu build. Script áp dụng cấu hình từng bản trên bản sao tạm của `pack/`, sau đó chạy `packwiz refresh` và `packwiz modrinth export`.
+Mỗi lần chạy tạo một tệp `MODPACK-<timestamp>.mrpack` trong `dist/`. `<timestamp>` là dấu thời gian Unix tính bằng giây khi bắt đầu build. Script xuất Full, Lite và Server từ bản sao tạm của `pack/` rồi ghép chúng vào tệp này.
 
-Để chỉnh bản Lite hoặc Server, sửa `allow.txt` tương ứng. Bản Lite và Server chỉ đóng gói mod và shader có tên trong danh sách. Mỗi dòng là một đường dẫn tệp tương đối trong `pack/`, ví dụ `mods/farmers-delight.pw.toml`. Script bỏ qua dòng trống và dòng bắt đầu bằng `#`.
+Sửa `profiles/lite/allow.txt` để chọn mod và shader bắt buộc khi chơi. Mod và shader còn lại trong Full là tùy chọn trên máy chơi và cần có URL tải xuống. Sửa `profiles/server/allow.txt` để chọn mod và shader cho máy chủ. Mỗi dòng là một đường dẫn tệp tương đối trong `pack/`, ví dụ `mods/farmers-delight.pw.toml`. Script bỏ qua dòng trống và dòng bắt đầu bằng `#`.
 
 ## Cấu trúc repo
 

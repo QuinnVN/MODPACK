@@ -1,0 +1,15 @@
+{
+  "configVersion": 2,
+  "blacklisted_items": [
+    "create_sa:copper_axe",
+    "create_sa:copper_hoe",
+    "create_sa:copper_pickaxe",
+    "create_sa:copper_shovel",
+    "create_sa:copper_sword"
+  ],
+  "blacklisted_nbt": [],
+  "only_disable_interactions": [],
+  "only_disable_attacks": [],
+  "only_disable_recipes": [],
+  "use_hashmap_optimizations": false
+}

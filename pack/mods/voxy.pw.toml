@@ -1,0 +1,8 @@
+filename = 'voxy-0.6.0.jar'
+name = 'Voxy NeoForge'
+side = 'client'
+
+[download]
+hash = '21674d12a3d02916ad9012c0a1ffaea1453bc9a2c76b9e600554f9414c4d5325ca42d3cda1b643a35a97a891fbba32cf19d732e9f75a8fa9ca00fe82819452f5'
+hash-format = 'sha512'
+url = 'https://github.com/xiaoancute/voxy-neoforge/releases/download/v0.6.0/voxy-0.6.0.jar'

@@ -6,7 +6,6 @@ mods/alltheleaks.pw.toml
 mods/almanac.pw.toml
 mods/almostunified.pw.toml
 mods/alternate-current.pw.toml
-mods/ambush.pw.toml
 mods/amendments.pw.toml
 mods/appleskin.pw.toml
 mods/arcane-framework-library-for-the-almanac-mods.pw.toml
@@ -100,6 +99,7 @@ mods/interiors.pw.toml
 mods/irons-lib.pw.toml
 mods/irons-spells-n-spellbooks.pw.toml
 mods/ironsable.pw.toml
+mods/item-obliterator.pw.toml
 mods/jade.pw.toml
 mods/kotlin-for-forge.pw.toml
 mods/kubejs-create.pw.toml
@@ -116,6 +116,7 @@ mods/lootjs.pw.toml
 mods/modernfix.pw.toml
 mods/moonlight.pw.toml
 mods/natures-compass.pw.toml
+mods/necronomicon.pw.toml
 mods/netherportalfix.pw.toml
 mods/no-chat-reports.pw.toml
 mods/nullscape.pw.toml

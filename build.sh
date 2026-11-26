@@ -4,11 +4,6 @@ set -euo pipefail
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source_pack="$root/pack"
 
-if [[ ! -f "$source_pack/mods/voxy-0.6.0.jar" ]]; then
-    printf '%s\n' 'Restore pack/mods/voxy-0.6.0.jar from the source PrismLauncher instance before building.' >&2
-    exit 1
-fi
-
 packwiz_name=packwiz
 case "$OSTYPE" in
     msys*|cygwin*) packwiz_name=packwiz.exe ;;
@@ -23,9 +18,13 @@ if [[ ! -f "$packwiz" || ! -x "$packwiz" ]]; then
     fi
 fi
 
+if ! command -v python3 >/dev/null 2>&1; then
+    printf '%s\n' 'Install Python 3 on PATH to combine the client and server exports.' >&2
+    exit 1
+fi
+
 build_timestamp="$(date +%s)"
-outputs=("MODPACK-$build_timestamp.mrpack" "MODPACK-$build_timestamp-lite.mrpack" "MODPACK-$build_timestamp-server.mrpack")
-profiles=(full lite server)
+filename="MODPACK-$build_timestamp.mrpack"
 cache="$root/.tools/packwiz-cache"
 mkdir -p -- "$root/dist"
 dist="$(cd -- "$root/dist" && pwd -P)"
@@ -63,22 +62,23 @@ for profile in lite server; do
         cp -P -- "$baseline/$entry" "$stage/$entry"
     done < "$root/profiles/$profile/allow.txt"
 done
-cp -- "$root/profiles/lite/options.txt" "$work/lite/"
+mkdir -p -- "$work/lite/configureddefaults"
+cp -- "$root/profiles/lite/configureddefaults/options.txt" "$work/lite/configureddefaults/"
 
-for i in "${!profiles[@]}"; do
-    archive="$work/${outputs[i]}"
+for profile in full lite server; do
+    archive="$work/$profile.mrpack"
     (
-        cd -- "$work/${profiles[i]}"
+        cd -- "$work/$profile"
         "$packwiz" refresh
         "$packwiz" --cache "$cache" modrinth export -o "$archive"
     )
     if [[ ! -f "$archive" ]]; then
-        printf 'packwiz did not export %s.\n' "${outputs[i]}" >&2
+        printf 'packwiz did not export %s.mrpack.\n' "$profile" >&2
         exit 1
     fi
 done
 
-for filename in "${outputs[@]}"; do
-    mv -f -- "$work/$filename" "$dist/$filename"
-    printf 'Built dist/%s\n' "$filename"
-done
+python3 "$root/merge-mrpack.py" "$work/full.mrpack" "$work/lite.mrpack" "$work/server.mrpack" "$work/$filename"
+
+mv -f -- "$work/$filename" "$dist/$filename"
+printf 'Built dist/%s\n' "$filename"

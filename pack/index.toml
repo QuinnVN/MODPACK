@@ -642,19 +642,11 @@ hash = "2512b9c947342813ee667013941f07c3be8323ac4cb8d3d1686dd8530c7c66b1"
 
 [[files]]
 file = "config/almostunified/unification/materials.json"
-hash = "e540d0920b31599b0933a2160a92414c02270a6d946ee494ac477aba969fd651"
+hash = "e1ec095f4750a5a8424342dcbcffe8f2496c0470fc93a79d013d37419ca2cf3f"
 
 [[files]]
 file = "config/ambientsounds-client.json"
 hash = "c98f572839ace55b0792042fa4b984311e7d876abdaccfc8a4694f5bebad766c"
-
-[[files]]
-file = "config/ambush-common.toml"
-hash = "24956aa3267ffce8f490e80c6277ae77a055d68ecbaf861e07ad4c242fbcd76a"
-
-[[files]]
-file = "config/ambush/cannon_polarity.json"
-hash = "cc2a29886f5eae9bbd7f3c57c312fecae156c1aa2a5c193d5035f1cbf55da68a"
 
 [[files]]
 file = "config/amendments-client.toml"
@@ -1642,7 +1634,7 @@ hash = "4d3264b58c502afaeca3f44e8d2db0843c54b8ba957afd21a2d450fe10dafefb"
 
 [[files]]
 file = "config/iris.properties"
-hash = "32c2b579b409474d704335cea7d29a412208d640b4acba3499dfb8a014ed0159"
+hash = "bfb249f5f838cced8bcf3d377fdeb0e09d58e2b291951eaf239298682f48cc6f"
 
 [[files]]
 file = "config/irons_spellbooks-client.toml"
@@ -1667,6 +1659,10 @@ hash = "3c1d5827f4853eed7f05bef1e425be821616888219cdcedc8a9e28588c6e7592"
 [[files]]
 file = "config/issui-client.toml"
 hash = "e47a8c811906b4b92574444fdf3b395c4418e6477c01184473fa83cba422c251"
+
+[[files]]
+file = "config/item_obliterator.json5"
+hash = "397b820918426e620efe774ae1ed1b4891aac1fa2bd4193bdaaabad8dce8ec26"
 
 [[files]]
 file = "config/jade/hide-blocks.json"
@@ -2122,7 +2118,7 @@ hash = "594da2187c9ac2f67e97ba7bb47273db877ea48765d3f378c6504a67c4407661"
 
 [[files]]
 file = "config/vss-server-config.yaml"
-hash = "3f662a0f5722c1d4331525591b9b18ef5b61a7c959f9524df991dd828b4d7886"
+hash = "2d8491ef47e615f0ec8f5828adbcad9b35f2f2e071060001e55cde6449af26a2"
 
 [[files]]
 file = "config/world_preview/config.json"
@@ -2237,6 +2233,10 @@ file = "kubejs/config/web_server.json"
 hash = "719e1919e3a18c8cebb28ccb9ef6073ffad894f0e8d31f4c680a78d957931dca"
 
 [[files]]
+file = "kubejs/data/brewinandchewin/recipe/pizza_from_dough.json"
+hash = "9b9a92df59f968cbbb0878131be32e28b2ec587a1fdaa888e8c6a7b9a1a572d2"
+
+[[files]]
 file = "kubejs/data/c/tags/fluid/crude_oil.json"
 hash = "6c5c032ee80a9fb6531d144f712348403a1ac2864a765cc212a29068263dcde2"
 
@@ -2261,8 +2261,68 @@ file = "kubejs/data/createbb/recipe/phase2/methanol_mixing.json"
 hash = "c88d0498a4307ca2602b22a3d7f74d5fc6d544e59f4bae6243fb33e8facbcafb"
 
 [[files]]
+file = "kubejs/data/createdeco/recipe/placard.json"
+hash = "ed4187c4cbf97c3b3c821782f4f1c26cbe45b958a9a0361432e8647b853e6b0d"
+
+[[files]]
+file = "kubejs/data/fcru/recipe/dead_steppe_shrub.json"
+hash = "d7f42bab7fe34c73b850b7b7eceb2386058746ab361746d916d8e49a856e9d70"
+
+[[files]]
+file = "kubejs/data/fcru/recipe/small_desert_shrub.json"
+hash = "68b6511e90e6a910188d6e7e2dc5fec304d4d9f2ac4b496316ea11c00dfc6ac4"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/archmages_tower/archmages_tower.json"
+hash = "3269d5f2bfbfbe51674d87241906a1cf0973b56027e000c463e8c1ddadfa3e4b"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/archmages_tower/archmages_tower_library.json"
+hash = "e35c780546695dc872ca794f42a1b0ca74dc4cd26d79c1d8fe0027c4e3665bed"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/archmages_tower/archmages_tower_treasure.json"
+hash = "21d34918949e5a42b7cd1f062378846d453e4b40c5ec953e4af81e8e3840ec61"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/dread_citadel/dread_citadel.json"
+hash = "7d625dccdf971e908f731240bc3e6d54fe2dea711e81e6921a574d4306d8af9b"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/dread_citadel/dread_citadel_library.json"
+hash = "b77ce14db3cd6a562783899a8f10b9edbcb28ebe24c6cd91f230627fd78cf71c"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/dread_citadel/dread_citadel_throne.json"
+hash = "8e53d81d68e3cc80050c3690a570c4caa993115ba8e843df37065e4fb052989d"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/enchantingtower/enchantingtower_basic_ars.json"
+hash = "2f5bfe872d3a8051eb2f6998137cc957ce956f3e8f30163c4de5cc216e44e498"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/enchantingtower/enchantingtower_top_ars.json"
+hash = "02301fa73591adf2590390a0d30ce6e2bff3d93c0332f6711a3038a3d7d0b57c"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/haunted_manor/if_haunted_manor.json"
+hash = "3986eb44d74488b7116afb9aa7815480370ecec349782934007e298d8e801d5a"
+
+[[files]]
+file = "kubejs/data/idas/loot_table/chests/labyrinth/if_labyrinth_tomb.json"
+hash = "82d458dda59961ccb7688dced4696428b694e61abdfd45a005d2de7e717f7a14"
+
+[[files]]
+file = "kubejs/data/kubejs/loot_table/compat/pending_loot_entry.json"
+hash = "af73bfdbddd392cbfcf94acfc3638cdeb8cc8f69f70341727b8e174504a838d3"
+
+[[files]]
 file = "kubejs/data/kubejs/tags/fluid/hydrogen.json"
 hash = "5d459f657d958be998324651d965c50d7249d689da10d9a0ad77ff1c9cb4d5af"
+
+[[files]]
+file = "kubejs/data/minecraft/recipe/red_dye.json"
+hash = "8d5f4a37a92e1f0debf1d587ac6eda609f60dedaf451e8d5cd80ac1c8a197e3f"
 
 [[files]]
 file = "kubejs/data/tfmg/recipe/distillation/crude_oil.json"
@@ -2285,12 +2345,32 @@ file = "kubejs/data/tfmg/recipe/mixing/napalm.json"
 hash = "ca470a5f4b3df31250e865eb31995bf15a71562c1de193df4deb4bebf06d1fa2"
 
 [[files]]
+file = "kubejs/data/tracks/loot_table/blocks/suspension_track.json"
+hash = "d52434fd851b25047534b51ee5fe3105497c75c2414570570ea58d2a3530842c"
+
+[[files]]
+file = "kubejs/data/tracks/loot_table/blocks/track_drive_wheel.json"
+hash = "da1d11610ce35b0870c4302479bbf5a756d78ceb88b23b14ee597931de59d314"
+
+[[files]]
+file = "kubejs/data/tracks/loot_table/blocks/track_mount.json"
+hash = "1fa442fa277c47cad5e83b1ff65aaeaae3c31fd56157ca05e54edf624604ce04"
+
+[[files]]
 file = "kubejs/server_scripts/fluid_compat.js"
 hash = "137657968198d2fb75c44af2bdf687691a0dd8453ce11dc5599050840483e3df"
 
 [[files]]
+file = "kubejs/server_scripts/loot_compat.js"
+hash = "9e5b6a81ff23e38b9eea986fff0cef8fb2122bfa4e6bbdc62b910e14cb11ab94"
+
+[[files]]
 file = "kubejs/server_scripts/main.js"
 hash = "dae099ae3be7f033c0c190ee8c3b023b42f6b235d9d0591be5926e8435dbd67f"
+
+[[files]]
+file = "kubejs/server_scripts/recipe_conflicts.js"
+hash = "bbd45be2185ed59ca2846fa105bc1fb2cd51d86c835d901cdca3a78fdf6f62fc"
 
 [[files]]
 file = "kubejs/startup_scripts/main.js"
@@ -2339,11 +2419,6 @@ metafile = true
 [[files]]
 file = "mods/ambientsounds.pw.toml"
 hash = "dd3a60bf29c29450bc81d5c7cbaf881cb4cc101bd2a5ed7451e83549e51413a7"
-metafile = true
-
-[[files]]
-file = "mods/ambush.pw.toml"
-hash = "407d0d361e61865cd56916375a819140e91a7fb841d64e87f2645776cd615bef"
 metafile = true
 
 [[files]]
@@ -2483,7 +2558,7 @@ metafile = true
 
 [[files]]
 file = "mods/colorwheel-patcher.pw.toml"
-hash = "22a0f2aee2562ad92e423a9368a0794be8cd449af1cbedadf5a8ea11165b1527"
+hash = "758e3c0009fe96be301e816646b1b8a26cbb9cf74edbeabd5cef4f17a7395e2e"
 metafile = true
 
 [[files]]
@@ -2494,6 +2569,11 @@ metafile = true
 [[files]]
 file = "mods/comforts.pw.toml"
 hash = "c217236c3a65633f59db8eb35825f4b15aa35249948dce564301972063568d7e"
+metafile = true
+
+[[files]]
+file = "mods/configured-defaults.pw.toml"
+hash = "11975785d3b13927c69fd7fbd8d950608a3fbeb9eb976575e4973da6630ead65"
 metafile = true
 
 [[files]]
@@ -2987,6 +3067,11 @@ hash = "eae8ab6631530938aa2c386b817a00d6f4b2fe5b485708bc19cb3b6d6b931ff1"
 metafile = true
 
 [[files]]
+file = "mods/item-obliterator.pw.toml"
+hash = "c1ec355079107363221b22a3da87699090af1c602c9afd2138680b1417b8b6be"
+metafile = true
+
+[[files]]
 file = "mods/jade-sable-compat.pw.toml"
 hash = "6709ea23476f0bf00e5bdca50f378b45e9cf67860d59bfa1807af267a4eaae83"
 metafile = true
@@ -3094,6 +3179,11 @@ metafile = true
 [[files]]
 file = "mods/natures-compass.pw.toml"
 hash = "265820229ebea5db8eabb647c51a4d5c02aebfa81c87c0f8dcbf62093e93ac70"
+metafile = true
+
+[[files]]
+file = "mods/necronomicon.pw.toml"
+hash = "5d674cf85af3082dec6ff3aa86c9b69621ed96fe635662d8232200c91ffe896c"
 metafile = true
 
 [[files]]
@@ -3243,12 +3333,12 @@ metafile = true
 
 [[files]]
 file = "mods/scalable-lux-x-sable-compat.pw.toml"
-hash = "bca3d2251c35b42b9711a44a3a2d8797c240a5cf17673db8856d2164c0f516cb"
+hash = "be93f8fe7883135037d855bcde7f438cb698eff6edc0decf7c45ab0b90a1913a"
 metafile = true
 
 [[files]]
 file = "mods/scalablelux.pw.toml"
-hash = "b219d5b86dba7ecf6c0d7a645efdc4cbe349bea47baa08f7ecde4daad4a5308e"
+hash = "739b172a42ee9733530c49c9b49b86931299657e3918f306988257a47b94ea8e"
 metafile = true
 
 [[files]]
@@ -3377,10 +3467,6 @@ hash = "10e5cd49824efd2660048a60306074717d2c7bbe10f87bbe271906e313b39b94"
 metafile = true
 
 [[files]]
-file = "mods/voxy-0.6.0.jar"
-hash = "ee147bd4214f076642e146f5c161eb6d708f7b3e5726fbf40fb71f742ef4bd43"
-
-[[files]]
 file = "mods/voxy-fog-addon-neoforge.pw.toml"
 hash = "f328f15414272d23811d3671fbb83d4e7d81c02528e663b989d67d9f8c37dac6"
 metafile = true
@@ -3388,6 +3474,11 @@ metafile = true
 [[files]]
 file = "mods/voxy-server-side.pw.toml"
 hash = "77f2df38cfa9128c6866dd7e10adebae2ce5a3c360de07cec07e52a01b6aff28"
+metafile = true
+
+[[files]]
+file = "mods/voxy.pw.toml"
+hash = "787d874674cc877691b55bc0921d6e95ef98aa35e37ae23906169fc92d08815e"
 metafile = true
 
 [[files]]

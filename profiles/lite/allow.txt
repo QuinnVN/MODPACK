@@ -6,8 +6,6 @@ mods/alltheleaks.pw.toml
 mods/almanac.pw.toml
 mods/almostunified.pw.toml
 mods/alternate-current.pw.toml
-mods/ambientsounds.pw.toml
-mods/ambush.pw.toml
 mods/amendments.pw.toml
 mods/appleskin.pw.toml
 mods/arcane-framework-library-for-the-almanac-mods.pw.toml
@@ -35,6 +33,7 @@ mods/clientsort.pw.toml
 mods/cloth-config.pw.toml
 mods/clumps.pw.toml
 mods/comforts.pw.toml
+mods/configured-defaults.pw.toml
 mods/construction-wands-revived.pw.toml
 mods/continuity-neoforged.pw.toml
 mods/controlling.pw.toml
@@ -94,8 +93,8 @@ mods/emi-structures.pw.toml
 mods/emi.pw.toml
 mods/emiffect.pw.toml
 mods/entityculling.pw.toml
+mods/entitytexturefeatures.pw.toml
 mods/extra-mod-integrations.pw.toml
-mods/extreme_sound_muffler.pw.toml
 mods/farmers-cutting-regions-unexplored.pw.toml
 mods/farmers-delight.pw.toml
 mods/farmers-respite-unofficial-port.pw.toml
@@ -129,6 +128,7 @@ mods/interiors.pw.toml
 mods/irons-lib.pw.toml
 mods/irons-spells-n-spellbooks.pw.toml
 mods/ironsable.pw.toml
+mods/item-obliterator.pw.toml
 mods/jade-sable-compat.pw.toml
 mods/jade.pw.toml
 mods/jei.pw.toml
@@ -151,6 +151,7 @@ mods/moonlight.pw.toml
 mods/moreculling.pw.toml
 mods/mru.pw.toml
 mods/natures-compass.pw.toml
+mods/necronomicon.pw.toml
 mods/netherportalfix.pw.toml
 mods/no-chat-reports.pw.toml
 mods/nullscape.pw.toml
@@ -178,8 +179,6 @@ mods/sable-cleanup.pw.toml
 mods/sable-dynamic-lights.pw.toml
 mods/sable.pw.toml
 mods/sablecompat.pw.toml
-mods/scalable-lux-x-sable-compat.pw.toml
-mods/scalablelux.pw.toml
 mods/screenshot-to-clipboard.pw.toml
 mods/searchables.pw.toml
 mods/servercore.pw.toml
@@ -192,7 +191,6 @@ mods/sophisticated-backpacks.pw.toml
 mods/sophisticated-core.pw.toml
 mods/sophisticated-storage-create-integration.pw.toml
 mods/sophisticated-storage.pw.toml
-mods/sound.pw.toml
 mods/spark.pw.toml
 mods/structurify.pw.toml
 mods/supermartijn642s-config-lib.pw.toml

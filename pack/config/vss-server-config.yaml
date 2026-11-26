@@ -26,7 +26,7 @@ lod:
 # of the LOD store. With generation off, existing terrain can still be served.
 # Higher concurrency can fill missing terrain sooner, but competes with gameplay.
 generation:
-  enabled: true # Generate missing terrain; disabling stops new jobs, existing jobs finish.
+  enabled: false # Generate missing terrain; disabling stops new jobs, existing jobs finish.
   concurrency:
     global: 40 # Maximum concurrent generations across the server; range 1–512.
     per_player: 40 # Maximum per player; cannot exceed the global limit.

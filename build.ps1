@@ -8,9 +8,6 @@ function Invoke-Packwiz {
 }
 
 $source = Join-Path $PSScriptRoot 'pack'
-if (-not (Test-Path -LiteralPath (Join-Path $source 'mods/voxy-0.6.0.jar') -PathType Leaf)) {
-    throw 'Restore pack/mods/voxy-0.6.0.jar from the source PrismLauncher instance before building.'
-}
 
 $packwizName = if ($env:OS -eq 'Windows_NT') { 'packwiz.exe' } else { 'packwiz' }
 $packwiz = Join-Path $PSScriptRoot ".tools/bin/$packwizName"
@@ -24,10 +21,11 @@ if (-not (Test-Path -LiteralPath $packwiz -PathType Leaf)) {
 }
 
 $timestamp = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
-$outputs = [ordered]@{
-    full = "MODPACK-$timestamp.mrpack"
-    lite = "MODPACK-$timestamp-lite.mrpack"
-    server = "MODPACK-$timestamp-server.mrpack"
+$filename = "MODPACK-$timestamp.mrpack"
+$python = Get-Command -Name python3, python -CommandType Application -ErrorAction SilentlyContinue |
+    Select-Object -First 1
+if (-not $python) {
+    throw 'Install Python 3 on PATH to combine the client and server exports.'
 }
 $cache = Join-Path $PSScriptRoot '.tools/packwiz-cache'
 $dist = (New-Item -ItemType Directory -Path (Join-Path $PSScriptRoot 'dist') -Force).FullName
@@ -59,26 +57,38 @@ try {
             Copy-Item -LiteralPath $includedFile -Destination $target
         }
     }
-    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'profiles/lite/options.txt') -Destination (Join-Path $work 'lite')
+    $liteDefaults = Join-Path $work 'lite/configureddefaults'
+    New-Item -ItemType Directory -Path $liteDefaults -Force | Out-Null
+    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'profiles/lite/configureddefaults/options.txt') -Destination $liteDefaults
 
-    foreach ($profile in $outputs.Keys) {
-        $archive = Join-Path $work $outputs[$profile]
+    foreach ($profile in 'full', 'lite', 'server') {
+        $archive = Join-Path $work "$profile.mrpack"
         Push-Location -LiteralPath (Join-Path $work $profile)
         try {
             Invoke-Packwiz refresh
             Invoke-Packwiz --cache $cache modrinth export -o $archive
             if (-not (Test-Path -LiteralPath $archive -PathType Leaf)) {
-                throw "packwiz did not export $($outputs[$profile])."
+                throw "packwiz did not export $profile.mrpack."
             }
         } finally {
             Pop-Location
         }
     }
 
-    foreach ($filename in $outputs.Values) {
-        Move-Item -LiteralPath (Join-Path $work $filename) -Destination (Join-Path $dist $filename) -Force
-        Write-Host "Built dist/$filename"
+    $mergeArgs = @(
+        (Join-Path $PSScriptRoot 'merge-mrpack.py')
+        (Join-Path $work 'full.mrpack')
+        (Join-Path $work 'lite.mrpack')
+        (Join-Path $work 'server.mrpack')
+        (Join-Path $work $filename)
+    )
+    & $python.Source @mergeArgs
+    if ($LASTEXITCODE -ne 0) {
+        throw "Merging the client and server exports failed with exit code $LASTEXITCODE."
     }
+
+    Move-Item -LiteralPath (Join-Path $work $filename) -Destination (Join-Path $dist $filename) -Force
+    Write-Host "Built dist/$filename"
 } finally {
     $resolvedWork = (Resolve-Path -LiteralPath $work).Path
     $resolvedDist = (Resolve-Path -LiteralPath $dist).Path

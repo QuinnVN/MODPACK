@@ -1,6 +1,6 @@
 filename = 'sablescalablelux-1.21.1-NeoForge-1.0.0.jar'
 name = 'Scalable Lux x Sable Compat'
-side = "both"
+side = "server"
 
 [download]
 hash = '69938340b9747c6c46f94fb6882f8a8dc76dcf30'

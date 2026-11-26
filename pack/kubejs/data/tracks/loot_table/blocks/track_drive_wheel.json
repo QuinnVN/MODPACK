@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:loot_table",
+          "value": "kubejs:compat/pending_loot_entry"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "tracks:blocks/track_drive_wheel"
+}
