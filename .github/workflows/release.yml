@@ -4,12 +4,16 @@ on:
   push:
     tags:
       - 'v[0-9]*'
+      - 'server-v[0-9]*-r[0-9]*'
+  release:
+    types: [published]
 
 permissions:
   contents: write
 
 jobs:
   release:
+    if: github.event_name == 'push'
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -24,32 +28,101 @@ jobs:
       - name: Install Packwiz
         run: GOBIN="$RUNNER_TEMP" go install github.com/packwiz/packwiz@170b22d785959dda5876b54b7f16e1b807a57fb6
 
-      - name: Build the merged pack
+      - name: Build release assets
+        id: build
         shell: bash
         run: |
           version=$(python3 -c 'import tomllib; print(tomllib.load(open("pack/pack.toml", "rb"))["version"])')
-          if [[ "$GITHUB_REF_NAME" != "v$version" ]]; then
-            printf 'Tag %s must match pack/pack.toml version %s.\n' "$GITHUB_REF_NAME" "$version" >&2
-            exit 1
-          fi
+          echo "version=$version" >> "$GITHUB_OUTPUT"
 
-          PATH="$RUNNER_TEMP:$PATH" bash ./build.sh
-          shopt -s nullglob
-          packs=(dist/*.mrpack)
-          if (( ${#packs[@]} != 1 )); then
-            printf 'Expected one merged .mrpack, found %s.\n' "${#packs[@]}" >&2
+          export PATH="$RUNNER_TEMP:$PATH"
+          if [[ "$GITHUB_REF_NAME" == "v$version" ]]; then
+            bash ./build.sh
+          elif [[ "$GITHUB_REF_NAME" == "server-v$version-r"* ]]; then
+            revision=${GITHUB_REF_NAME#"server-v$version-r"}
+            bash ./build.sh --server-revision "$revision"
+            echo "revision=$revision" >> "$GITHUB_OUTPUT"
+          else
+            printf 'Tag %s must use pack/pack.toml version %s.\n' "$GITHUB_REF_NAME" "$version" >&2
             exit 1
           fi
-          mv -- "${packs[0]}" "dist/MODPACK-$GITHUB_REF_NAME.mrpack"
 
       - name: Create draft release
         shell: bash
         env:
           GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.build.outputs.version }}
+          REVISION: ${{ steps.build.outputs.revision }}
         run: |
           release_flags=(--draft --verify-tag --generate-notes)
-          if [[ "$GITHUB_REF_NAME" == *-* ]]; then
+          if [[ "$VERSION" == *-* ]]; then
             release_flags+=(--prerelease)
           fi
-          gh release create "$GITHUB_REF_NAME" "dist/MODPACK-$GITHUB_REF_NAME.mrpack" \
-            --repo "$GITHUB_REPOSITORY" "${release_flags[@]}"
+
+          releases="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases"
+          notes="$RUNNER_TEMP/release-notes.md"
+          if [[ -n "$REVISION" ]]; then
+            base_tag="v$VERSION"
+            if [[ "$(gh release view "$base_tag" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft)" != false ]]; then
+              printf 'Publish %s before publishing a server revision.\n' "$base_tag" >&2
+              exit 1
+            fi
+            title="MODPACK Server $VERSION-r$REVISION"
+            assets=("dist/MODPACK-Server-$VERSION-r$REVISION.mrpack")
+            release_flags+=(--latest=false --notes-start-tag "$base_tag")
+            printf -- '- **Dựng hoặc cập nhật máy chủ** — Tải file Server trong Assets.\n- **Client tương thích** — [MODPACK %s](%s/tag/%s), cả Lite lẫn Full. Người chơi dùng tiếp bản đã cài.\n' \
+              "$VERSION" "$releases" "$base_tag" > "$notes"
+          else
+            title="MODPACK $VERSION"
+            assets=("dist/MODPACK-Client-$VERSION.mrpack" "dist/MODPACK-Server-$VERSION-r1.mrpack")
+            cat > "$notes" <<'EOF'
+          - **Chơi game** — Tải file Client trong Assets, import vào Prism rồi chọn mod và shader tùy chọn.
+          - **Dựng máy chủ** — Tải file Server trong Assets.
+          <!-- latest-server-release -->
+          EOF
+          fi
+
+          gh release create "$GITHUB_REF_NAME" "${assets[@]}" --repo "$GITHUB_REPOSITORY" \
+            "${release_flags[@]}" --title "$title" --notes-file "$notes"
+
+  link-server-revision:
+    if: github.event_name == 'release' && startsWith(github.event.release.tag_name, 'server-v')
+    runs-on: ubuntu-24.04
+    concurrency: update-server-release-link
+    steps:
+      - name: Link the latest published server revision from the main release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+        run: |
+          if [[ ! "$RELEASE_TAG" =~ ^server-(v[0-9].*)-r([2-9]|[1-9][0-9]+)$ ]]; then
+            printf 'Invalid server revision tag %s.\n' "$RELEASE_TAG" >&2
+            exit 1
+          fi
+          base_tag="${BASH_REMATCH[1]}"
+          prefix="server-$base_tag-r"
+          latest_tag=$(gh api --paginate "repos/$GITHUB_REPOSITORY/releases?per_page=100" \
+            --jq '.[] | select(.draft | not) | .tag_name' |
+            awk -v prefix="$prefix" 'index($0, prefix) == 1 && substr($0, length(prefix) + 1) ~ /^([2-9]|[1-9][0-9]+)$/' |
+            sort -V | tail -n 1)
+          test -n "$latest_tag"
+
+          notes="$RUNNER_TEMP/main-release-notes.md"
+          gh release view "$base_tag" --repo "$GITHUB_REPOSITORY" --json body --jq .body > "$notes"
+          link="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/releases/tag/$latest_tag"
+          python3 - "$notes" "${latest_tag#server-v}" "$link" <<'PY'
+          import re
+          import sys
+          from pathlib import Path
+
+          notes = Path(sys.argv[1])
+          text = notes.read_text(encoding="utf-8")
+          marker = "<!-- latest-server-release -->"
+          line = f"- **Bản vá server mới nhất** — [MODPACK Server {sys.argv[2]}]({sys.argv[3]}) {marker}"
+          text, replaced = re.subn(r"^.*" + re.escape(marker) + r"$", lambda _: line, text, count=1, flags=re.M)
+          if not replaced:
+              text = f"{text.rstrip()}\n\n{line}\n"
+          notes.write_text(text, encoding="utf-8")
+          PY
+          gh release edit "$base_tag" --repo "$GITHUB_REPOSITORY" --notes-file "$notes"

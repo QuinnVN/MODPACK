@@ -1,3 +1,9 @@
+[CmdletBinding()]
+param(
+    [ValidatePattern('^(?:[2-9]|[1-9][0-9]+)$')]
+    [string]$ServerRevision
+)
+
 $ErrorActionPreference = 'Stop'
 
 function Invoke-Packwiz {
@@ -20,21 +26,25 @@ if (-not (Test-Path -LiteralPath $packwiz -PathType Leaf)) {
     $packwiz = $command.Source
 }
 
-$timestamp = [DateTimeOffset]::UtcNow.ToUnixTimeSeconds()
-$filename = "MODPACK-$timestamp.mrpack"
 $python = Get-Command -Name python3, python -CommandType Application -ErrorAction SilentlyContinue |
     Select-Object -First 1
 if (-not $python) {
-    throw 'Install Python 3 on PATH to combine the client and server exports.'
+    throw 'Install Python 3 on PATH to package the Packwiz exports.'
 }
 $cache = Join-Path $PSScriptRoot '.tools/packwiz-cache'
 $dist = (New-Item -ItemType Directory -Path (Join-Path $PSScriptRoot 'dist') -Force).FullName
 $work = (New-Item -ItemType Directory -Path (Join-Path $dist ".build-$([guid]::NewGuid())")).FullName
 
 try {
-    $baseline = Join-Path $work 'full'
-    Copy-Item -LiteralPath $source -Destination $baseline -Recurse -Force
-    foreach ($profile in 'lite', 'server') {
+    $baseline = $source
+    $profiles = @('server')
+    if (-not $ServerRevision) {
+        $baseline = Join-Path $work 'full'
+        Copy-Item -LiteralPath $source -Destination $baseline -Recurse -Force
+        $profiles = @('full', 'lite', 'server')
+    }
+    foreach ($profile in $profiles) {
+        if ($profile -eq 'full') { continue }
         $stage = Join-Path $work $profile
         New-Item -ItemType Directory -Path (Join-Path $stage 'mods'), (Join-Path $stage 'shaderpacks') -Force | Out-Null
         foreach ($item in Get-ChildItem -LiteralPath $baseline -Force) {
@@ -57,11 +67,13 @@ try {
             Copy-Item -LiteralPath $includedFile -Destination $target
         }
     }
-    $liteDefaults = Join-Path $work 'lite/configureddefaults'
-    New-Item -ItemType Directory -Path $liteDefaults -Force | Out-Null
-    Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'profiles/lite/configureddefaults/options.txt') -Destination $liteDefaults
+    if (-not $ServerRevision) {
+        $liteDefaults = Join-Path $work 'lite/configureddefaults'
+        New-Item -ItemType Directory -Path $liteDefaults -Force | Out-Null
+        Copy-Item -LiteralPath (Join-Path $PSScriptRoot 'profiles/lite/configureddefaults/options.txt') -Destination $liteDefaults
+    }
 
-    foreach ($profile in 'full', 'lite', 'server') {
+    foreach ($profile in $profiles) {
         $archive = Join-Path $work "$profile.mrpack"
         Push-Location -LiteralPath (Join-Path $work $profile)
         try {
@@ -75,20 +87,21 @@ try {
         }
     }
 
-    $mergeArgs = @(
-        (Join-Path $PSScriptRoot 'merge-mrpack.py')
-        (Join-Path $work 'full.mrpack')
-        (Join-Path $work 'lite.mrpack')
-        (Join-Path $work 'server.mrpack')
-        (Join-Path $work $filename)
-    )
-    & $python.Source @mergeArgs
+    $packageArgs = if ($ServerRevision) {
+        @('server', (Join-Path $work 'server.mrpack'), $work, $ServerRevision)
+    } else {
+        @('both', (Join-Path $work 'full.mrpack'), (Join-Path $work 'lite.mrpack'),
+            (Join-Path $work 'server.mrpack'), $work)
+    }
+    & $python.Source (Join-Path $PSScriptRoot 'package-mrpack.py') @packageArgs
     if ($LASTEXITCODE -ne 0) {
-        throw "Merging the client and server exports failed with exit code $LASTEXITCODE."
+        throw "Packaging the Packwiz exports failed with exit code $LASTEXITCODE."
     }
 
-    Move-Item -LiteralPath (Join-Path $work $filename) -Destination (Join-Path $dist $filename) -Force
-    Write-Host "Built dist/$filename"
+    foreach ($pack in Get-ChildItem -LiteralPath $work -Filter 'MODPACK-*.mrpack' -File) {
+        Move-Item -LiteralPath $pack.FullName -Destination (Join-Path $dist $pack.Name) -Force
+        Write-Host "Built dist/$($pack.Name)"
+    }
 } finally {
     $resolvedWork = (Resolve-Path -LiteralPath $work).Path
     $resolvedDist = (Resolve-Path -LiteralPath $dist).Path

@@ -4,6 +4,15 @@ set -euo pipefail
 root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"
 source_pack="$root/pack"
 
+server_revision=
+if [[ $# -ne 0 ]]; then
+    if [[ $# -ne 2 || $1 != --server-revision || ! $2 =~ ^([2-9]|[1-9][0-9]+)$ ]]; then
+        printf 'Usage: bash build.sh [--server-revision N] (N must be at least 2)\n' >&2
+        exit 1
+    fi
+    server_revision=$2
+fi
+
 packwiz_name=packwiz
 case "$OSTYPE" in
     msys*|cygwin*) packwiz_name=packwiz.exe ;;
@@ -19,12 +28,10 @@ if [[ ! -f "$packwiz" || ! -x "$packwiz" ]]; then
 fi
 
 if ! command -v python3 >/dev/null 2>&1; then
-    printf '%s\n' 'Install Python 3 on PATH to combine the client and server exports.' >&2
+    printf '%s\n' 'Install Python 3 on PATH to package the Packwiz exports.' >&2
     exit 1
 fi
 
-build_timestamp="$(date +%s)"
-filename="MODPACK-$build_timestamp.mrpack"
 cache="$root/.tools/packwiz-cache"
 mkdir -p -- "$root/dist"
 dist="$(cd -- "$root/dist" && pwd -P)"
@@ -36,11 +43,17 @@ cleanup() {
 }
 trap cleanup EXIT
 
-baseline="$work/full"
-cp -R -P -- "$source_pack" "$baseline"
+baseline="$source_pack"
+profiles=(server)
+if [[ -z "$server_revision" ]]; then
+    baseline="$work/full"
+    cp -R -P -- "$source_pack" "$baseline"
+    profiles=(full lite server)
+fi
 shopt -s dotglob
 entry_pattern='^(mods|shaderpacks)/[a-zA-Z0-9_.+ -]+\.(pw\.toml|jar|zip)$'
-for profile in lite server; do
+for profile in "${profiles[@]}"; do
+    [[ "$profile" == full ]] && continue
     stage="$work/$profile"
     mkdir -p -- "$stage/mods" "$stage/shaderpacks"
     for path in "$baseline"/*; do
@@ -62,10 +75,12 @@ for profile in lite server; do
         cp -P -- "$baseline/$entry" "$stage/$entry"
     done < "$root/profiles/$profile/allow.txt"
 done
-mkdir -p -- "$work/lite/configureddefaults"
-cp -- "$root/profiles/lite/configureddefaults/options.txt" "$work/lite/configureddefaults/"
+if [[ -z "$server_revision" ]]; then
+    mkdir -p -- "$work/lite/configureddefaults"
+    cp -- "$root/profiles/lite/configureddefaults/options.txt" "$work/lite/configureddefaults/"
+fi
 
-for profile in full lite server; do
+for profile in "${profiles[@]}"; do
     archive="$work/$profile.mrpack"
     (
         cd -- "$work/$profile"
@@ -78,7 +93,13 @@ for profile in full lite server; do
     fi
 done
 
-python3 "$root/merge-mrpack.py" "$work/full.mrpack" "$work/lite.mrpack" "$work/server.mrpack" "$work/$filename"
+if [[ -n "$server_revision" ]]; then
+    python3 "$root/package-mrpack.py" server "$work/server.mrpack" "$work" "$server_revision"
+else
+    python3 "$root/package-mrpack.py" both "$work/full.mrpack" "$work/lite.mrpack" "$work/server.mrpack" "$work"
+fi
 
-mv -f -- "$work/$filename" "$dist/$filename"
-printf 'Built dist/%s\n' "$filename"
+for pack in "$work"/MODPACK-*.mrpack; do
+    mv -f -- "$pack" "$dist/${pack##*/}"
+    printf 'Built dist/%s\n' "${pack##*/}"
+done

@@ -10,7 +10,9 @@ Updated 2026-11-21. Project context for maintaining, testing, and sharing a Mine
 
 ## Full, Lite, and Server packaging
 
-Full, Lite, and Server share the same loader, gameplay mods, and configs. One dated `.mrpack` supports all three setups. Lite defines the required client mod set. Full enables the optional client mods and shaders. Server defines the dedicated-server mod set.
+Full, Lite, and Server share the same loader, gameplay mods, and configs. The **Client pack** supports two setups. Lite defines the required client mod set, and Full enables the optional client mods and shaders. The **Server pack** contains the dedicated-server mod set.
+
+A **server revision** updates the Server pack for an existing Client pack version. A server revision must still accept both Lite and Full clients on that version.
 
 | Path | Purpose |
 |---|---|
@@ -22,7 +24,7 @@ Full, Lite, and Server share the same loader, gameplay mods, and configs. One da
 | `profiles/lite/allow.txt` | Required client mods and shader packs |
 | `profiles/lite/configureddefaults/options.txt` | Client graphics defaults applied by Configured Defaults |
 | `profiles/server/allow.txt` | Dedicated-server mods and shader packs |
-| `build.ps1` and `build.sh` | Build the combined `.mrpack` from the three profiles |
+| `build.ps1` and `build.sh` | Build the Client and Server `.mrpack` files or a standalone server revision |
 | `dist/` | Generated releases. Ignore in Git. |
 
 | Setup | Contents |
@@ -80,7 +82,7 @@ Cross-mod recipe progression, loot integration, and LMFT tag cleanup are still o
 
 ## Next checks
 
-1. Freeze the current working Full instance and generate the first three builds. Verify both clients can join the same staging server and load the shared recipes.
+1. Build the Client and Server packs from the working mod set. Verify Lite and Full can join the same staging server and load the shared recipes.
 2. Test the fluid ZIP in-game and fold the verified changes into `pack/kubejs/`.
 3. Benchmark the Xeon or Zenbook with comparable settings. Capture chunks/s, MSPT, heap/GC, and total host memory together. Verify LOD backfill before deciding what to cut from Lite.
 4. Ship further structure, loot, and nutrition changes once tested against the shared gameplay setup.
