@@ -661,14 +661,6 @@ file = "config/appleskin-client.toml"
 hash = "7127a276c7305371397053cd8d0833e6825c828850626e4067b9fed1430ed217"
 
 [[files]]
-file = "config/arcane_framework-client.toml"
-hash = "f56079fdf83e3faf8f1cf0eaa267ceda5197e375be45846264024debf761599c"
-
-[[files]]
-file = "config/arcane_framework_reading.json"
-hash = "9a6ec84d2fa1893c7024d67a2a1bc9b00059b57db74c939ca430724555219397"
-
-[[files]]
 file = "config/artifacts/client.toml"
 hash = "fcc980a4e12e76dc42a3bc27db9fe237f628c63e2544048802b239a2a989c44c"
 
@@ -743,22 +735,6 @@ hash = "3e05221436880d09fbac95dfc9cde9d2225e8cfdb81ea0c4a41a453934acf938"
 [[files]]
 file = "config/attributefix/cataclysm/nature_heal.json"
 hash = "753bdbb0cff81ca77562a88ebcda6ae1c633d0042a12f2f9ec016a966c6ee6c7"
-
-[[files]]
-file = "config/attributefix/ftbultimine/cooldown_modifier.json"
-hash = "838f25c55c1adc889f5c14b94ddf7434c5eccf521dc8c3c93d46a0804d3f0633"
-
-[[files]]
-file = "config/attributefix/ftbultimine/exhaustion_modifier.json"
-hash = "838f25c55c1adc889f5c14b94ddf7434c5eccf521dc8c3c93d46a0804d3f0633"
-
-[[files]]
-file = "config/attributefix/ftbultimine/experience_modifier.json"
-hash = "838f25c55c1adc889f5c14b94ddf7434c5eccf521dc8c3c93d46a0804d3f0633"
-
-[[files]]
-file = "config/attributefix/ftbultimine/max_blocks_modifier.json"
-hash = "838f25c55c1adc889f5c14b94ddf7434c5eccf521dc8c3c93d46a0804d3f0633"
 
 [[files]]
 file = "config/attributefix/irons_lib/armor_pierce.json"
@@ -1501,34 +1477,6 @@ file = "config/frierenvoid-server.toml"
 hash = "f97df2841e3beacd70451fabb7b036031702b7ed986bae8fdf0f6f8823a61fe9"
 
 [[files]]
-file = "config/ftbchunks-client.snbt"
-hash = "70221a9971856e40538afca2ebe64b4e5df43aa6c5f0cdaa8b1267a8e72783e4"
-
-[[files]]
-file = "config/ftbchunks-world.snbt"
-hash = "6a0c30dd5e5ddda743f7716c3b5df42936d542bc085ed6c67f9c9c7efe4f2008"
-
-[[files]]
-file = "config/ftblibrary-client.snbt"
-hash = "3b17bab2e5d85ffd357577bd5ebbed576aff258fd4fa9d3cd54f79775ed432ce"
-
-[[files]]
-file = "config/ftbquests-client.snbt"
-hash = "1032e8651b80ddc5ddc712a56ae0d5a3408e9c28d5dcac2578705cce9ea4bcd0"
-
-[[files]]
-file = "config/ftbteams-server.snbt"
-hash = "61b37c30c24d841f4d993e933df0d60f198fbcf06671a87a73b9a23f8434858d"
-
-[[files]]
-file = "config/ftbultimine-client.snbt"
-hash = "67dadd3f0812bc01a0b0ca6fb204961512ce1332e97fe42dba2cb57813a496ef"
-
-[[files]]
-file = "config/ftbultimine-server.snbt"
-hash = "147a38645eda41c75721eb6825585f7af00b19bd3ae7e948779635747b8840e9"
-
-[[files]]
 file = "config/fzzy_config/keybinds.toml"
 hash = "26ac5810c9b5dc5c1968827357f0a58c58ac2b6f7b082630960228e16585062f"
 
@@ -2213,6 +2161,10 @@ file = "defaultconfigs/biolith/general.json"
 hash = "7f1e58be2cf7db18181869804bb09823ee93a4ea863d560036e8a05954bcf806"
 
 [[files]]
+file = "defaultconfigs/openpartiesandclaims-default-player-config.toml"
+hash = "5859681aa0c47ff2d069ee968f34708d14d02ebcc631d39e21f4a4d6082e1132"
+
+[[files]]
 file = "kubejs/README.txt"
 hash = "989f3737ae4621b8ff6730bce4cbeeee756921e7e510e0c281c8a350501d98af"
 
@@ -2383,7 +2335,7 @@ metafile = true
 
 [[files]]
 file = "mods/aeronautics-camera-sync.pw.toml"
-hash = "21bd0f1560d57657aded4de6995cc9402a901ab9c253138350c3b1881d82bdd6"
+hash = "7d4a455ac2a9dad526b34106ff870922bf3e33253aa23f7c693c1345172210d3"
 metafile = true
 
 [[files]]
@@ -2432,13 +2384,8 @@ hash = "d3d3fcb8726e6ab3bb68961d6839216a4dcbac374b1ac002ebe47c805f0fc690"
 metafile = true
 
 [[files]]
-file = "mods/arcane-framework-library-for-the-almanac-mods.pw.toml"
-hash = "e0cd42b7b2a552aa60f767fea8805b86f58098e54bf69d021228dc29ca52b7d3"
-metafile = true
-
-[[files]]
 file = "mods/architectury-api.pw.toml"
-hash = "0b47d086524b6b673102ed32b78d30fd4d2c41e1e63b6436fb9810ff1de14006"
+hash = "7517ca91180c862cb436d2d3006eeaf08a91fed25cfd105f06500a907cdd5a8f"
 metafile = true
 
 [[files]]
@@ -2458,7 +2405,7 @@ metafile = true
 
 [[files]]
 file = "mods/baguettelib.pw.toml"
-hash = "50326685b7a39141bded812bea9a6c49ed137a974741b1abcccf33ae2b6d79cc"
+hash = "57830b96134cfa5ae50f32214e15f3504e49ea79c56bfd3d5918243023189b04"
 metafile = true
 
 [[files]]
@@ -2613,7 +2560,7 @@ metafile = true
 
 [[files]]
 file = "mods/create-aeronautics-copycat-wing.pw.toml"
-hash = "f4b7a909738820c1aab6c5ff0e0d3d5e50577b6f4b498b7ac2e22bef9258e49e"
+hash = "6959d284ba0e08ccbfc54a3850bc08741b95e36e5d7c7af6509711896a69c513"
 metafile = true
 
 [[files]]
@@ -2932,26 +2879,6 @@ hash = "a26fd3d1e28149c6f62e9fb983e8eb50297206df1afa077480c9af3a1cc8a031"
 metafile = true
 
 [[files]]
-file = "mods/ftb-chunks-forge.pw.toml"
-hash = "a8664b733225dca024ae820f388e2a2b13783010a6373dd78118e6591f9c36ab"
-metafile = true
-
-[[files]]
-file = "mods/ftb-library-forge.pw.toml"
-hash = "91d9684eea34cbd5b702c8885c1bdf98715cbb80feacc1ac2ba55aecddbac59c"
-metafile = true
-
-[[files]]
-file = "mods/ftb-quests-forge.pw.toml"
-hash = "6c897ef52a98a2306d1e48f8cf09ccc8b4ddb5c7dc858deeebb3afe42aa47c07"
-metafile = true
-
-[[files]]
-file = "mods/ftb-teams-forge.pw.toml"
-hash = "1286df35206a4dba3bcf35ef5055c90e14d6f1aa639911b3ebb2cc42c9583ed3"
-metafile = true
-
-[[files]]
 file = "mods/fusion-connected-textures.pw.toml"
 hash = "6b709d0b1daba07adde77dd5632c015f5bbd06f145a9571a4df57502421bcd48"
 metafile = true
@@ -2983,7 +2910,7 @@ metafile = true
 
 [[files]]
 file = "mods/gravestone-x-curios-api-compat.pw.toml"
-hash = "a95f2bef1874a319857f65f81b5744d419b3ed9070926c7be88e9d14b7115337"
+hash = "fa65ab99b1f0393f4f0bd5d50be51f2da58d504830cd1a7f3122a04f69fe87b6"
 metafile = true
 
 [[files]]
@@ -3214,6 +3141,11 @@ metafile = true
 [[files]]
 file = "mods/ok-zoomer.pw.toml"
 hash = "24ce326d104079734dd3daa1d05639545cd2fd14d34b96de5673a1ebec679740"
+metafile = true
+
+[[files]]
+file = "mods/open-parties-and-claims.pw.toml"
+hash = "45be926266d98a8b21024095f7aca7554c5c89768f0ba300399248a5cf4f9f74"
 metafile = true
 
 [[files]]

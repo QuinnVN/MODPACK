@@ -1,0 +1,5 @@
+[playerConfig.claims]
+protectClaimedChunks = false
+
+[playerConfig.claims.forceload]
+enabled = true

@@ -3,23 +3,22 @@ name = 'Gravestone x Curios API Compat'
 side = "both"
 
 [download]
-hash = '51c52fa60bb9cdcd5af05a501d3edceec5168b0a'
-hash-format = 'sha1'
-mode = 'metadata:curseforge'
-url = ''
+hash = 'f28aa5172be644f88c9a2c4ba741a533bced3ca88361c32fc512f4bfea1a545f587e32335f85148b0aa6f064aa830569e36c6cbaacc01a3368a94ba873677ecf'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/NaiL8bPN/versions/Z1PzGMtX/gravestonecurioscompat-1.21.1-NeoForge-4.2.1.jar'
 
-[update.curseforge]
-file-id = 9541637
-project-id = 1139062
+[update.modrinth]
+mod-id = 'NaiL8bPN'
+version = 'Z1PzGMtX'
 
 [[x-prismlauncher-dependencies]]
-addonId = '1264423'
+addonId = 'RYtXKJPr'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '238551'
+addonId = 'OfKzpbRU'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '309927'
+addonId = 'vvuO3ImH'
 type = 'REQUIRED'

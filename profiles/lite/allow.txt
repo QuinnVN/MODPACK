@@ -8,7 +8,6 @@ mods/almostunified.pw.toml
 mods/alternate-current.pw.toml
 mods/amendments.pw.toml
 mods/appleskin.pw.toml
-mods/arcane-framework-library-for-the-almanac-mods.pw.toml
 mods/architectury-api.pw.toml
 mods/artifacts.pw.toml
 mods/attributefix.pw.toml
@@ -103,10 +102,6 @@ mods/fastsuite.pw.toml
 mods/ferrite-core.pw.toml
 mods/flerovium.pw.toml
 mods/forgified-fabric-api.pw.toml
-mods/ftb-chunks-forge.pw.toml
-mods/ftb-library-forge.pw.toml
-mods/ftb-quests-forge.pw.toml
-mods/ftb-teams-forge.pw.toml
 mods/fusion-connected-textures.pw.toml
 mods/fzzy-config.pw.toml
 mods/geckolib.pw.toml
@@ -157,6 +152,7 @@ mods/no-chat-reports.pw.toml
 mods/nullscape.pw.toml
 mods/numflux.pw.toml
 mods/ok-zoomer.pw.toml
+mods/open-parties-and-claims.pw.toml
 mods/owo-lib.pw.toml
 mods/packet-fixer.pw.toml
 mods/pandalib.pw.toml

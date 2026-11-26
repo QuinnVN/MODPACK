@@ -3,19 +3,18 @@ name = 'Create Aeronautics: Copycat Wing'
 side = "both"
 
 [download]
-hash = '2ee7e21782e8daabd5246921da8d19a6960468e3'
-hash-format = 'sha1'
-mode = 'metadata:curseforge'
-url = ''
+hash = '56b747042cefdf160794ba73b693b372d515a14a471c57036ef70fa4271edbac06d47e624e598f07c5d6985ae60c10fefe5314d415b1da5d9460c45f8933c678'
+hash-format = 'sha512'
+url = 'https://cdn.modrinth.com/data/lvaIchVE/versions/cztXs35m/CreateAeronauticsCopycatWing-1.21.1-1.0.4.jar'
 
-[update.curseforge]
-file-id = 8835602
-project-id = 1530305
+[update.modrinth]
+mod-id = 'lvaIchVE'
+version = 'cztXs35m'
 
 [[x-prismlauncher-dependencies]]
-addonId = '968398'
+addonId = 'UT2M39wf'
 type = 'REQUIRED'
 
 [[x-prismlauncher-dependencies]]
-addonId = '676721'
+addonId = 'oWaK0Q19'
 type = 'REQUIRED'
