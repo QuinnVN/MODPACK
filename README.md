@@ -36,6 +36,17 @@ Mỗi lần chạy tạo một tệp `MODPACK-<timestamp>.mrpack` trong `dist/`.
 
 Sửa `profiles/lite/allow.txt` để chọn mod và shader bắt buộc khi chơi. Mod và shader còn lại trong Full là tùy chọn trên máy chơi và cần có URL tải xuống. Sửa `profiles/server/allow.txt` để chọn mod và shader cho máy chủ. Mỗi dòng là một đường dẫn tệp tương đối trong `pack/`, ví dụ `mods/farmers-delight.pw.toml`. Script bỏ qua dòng trống và dòng bắt đầu bằng `#`.
 
+## Phát hành trên GitHub
+
+Cập nhật `version` trong `pack/pack.toml`, commit thay đổi rồi push tag `v<version>`. Ví dụ, với phiên bản `0.1.1-snapshot`:
+
+```bash
+git tag v0.1.1-snapshot
+git push origin v0.1.1-snapshot
+```
+
+[Workflow phát hành](.github/workflows/release.yml) chạy `build.sh` và đính kèm `MODPACK-v0.1.1-snapshot.mrpack` vào bản nháp trong **Releases**. Tag có hậu tố như `-snapshot` được đánh dấu prerelease. Kiểm tra bản nháp và thử kết nối cả hai cấu hình máy chơi vào máy chủ trước khi bấm **Publish release**.
+
 ## Cấu trúc repo
 
 | Đường dẫn | Nội dung |

@@ -2230,7 +2230,7 @@ hash = "e00a67922942660d77c213379b5128a46c5abc894178b0be04006d325ff5f6b3"
 
 [[files]]
 file = "kubejs/config/web_server.json"
-hash = "719e1919e3a18c8cebb28ccb9ef6073ffad894f0e8d31f4c680a78d957931dca"
+hash = "62e7dc15d755bfdb73271fa00bb3223ad04b2cde2fb93f696050e2fe58ad19a8"
 
 [[files]]
 file = "kubejs/data/brewinandchewin/recipe/pizza_from_dough.json"
