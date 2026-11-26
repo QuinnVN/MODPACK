@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:scroll",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "irons_spellbooks:randomize_spell",
+              "quality": { "min": 0.25, "max": 0.55 },
+              "spell_filter": {
+                "spells": [
+                  "irons_spellbooks:icicle",
+                  "irons_spellbooks:ray_of_frost",
+                  "irons_spellbooks:frostwave",
+                  "irons_spellbooks:ice_spikes",
+                  "irons_spellbooks:frostbite"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:loot_table",
+          "value": "kubejs:structure_scrolls/medium"
+        }
+      ]
+    }
+  ]
+}

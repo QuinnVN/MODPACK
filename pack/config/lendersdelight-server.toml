@@ -10,7 +10,7 @@
 	#LIMITED=food gives stats only Minecraft attribute is below configured limit.
 	#CAPPED=each food grants its stat up to number of times per player, json capped overrides the default
 	#Allowed Values: ACCUMULATE, ONCE, LIMITED, CAPPED
-	statMode = "ACCUMULATE"
+	statMode = "ONCE"
 	#Default number of stat grant uses per food in CAPPED mode when JSON has no capped field
 	# Default: 3
 	# Range: 0 ~ 1000000

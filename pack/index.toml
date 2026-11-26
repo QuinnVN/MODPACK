@@ -657,6 +657,10 @@ file = "config/amendments-common.toml"
 hash = "d718d5d845c62c0b20d62ec81066b1acae96b63fb62dd8124f5c5a28a511505c"
 
 [[files]]
+file = "config/apotheosis/enchantments.cfg"
+hash = "a1fde3c90f218db247d94a04b6015c18cdc9a7ec8c7cc589819f2256e6f66e6e"
+
+[[files]]
 file = "config/appleskin-client.toml"
 hash = "7127a276c7305371397053cd8d0833e6825c828850626e4067b9fed1430ed217"
 
@@ -1678,7 +1682,7 @@ hash = "63047118f18e7ced350c2504028a6c3f8ee3027f7ac6b3887eda38f5833f844e"
 
 [[files]]
 file = "config/lendersdelight-server.toml"
-hash = "77643ff70f24339a707b790fc103eb2577baef47b95eaa92942d2c062e70c3c4"
+hash = "4fa0bb727cd7273c5cc2a38aaab9e3afb4896f408a986b5bc637317783adf05f"
 
 [[files]]
 file = "config/letmedespawn/letmedespawn.json5"
@@ -2185,8 +2189,20 @@ file = "kubejs/config/web_server.json"
 hash = "62e7dc15d755bfdb73271fa00bb3223ad04b2cde2fb93f696050e2fe58ad19a8"
 
 [[files]]
+file = "kubejs/data/apothic_enchanting/tags/item/cannot_be_converted_to_xp.json"
+hash = "fd128c382bf1358f7bad44ade49efe4282b14eaecd98750f6cbb7a7105927c74"
+
+[[files]]
+file = "kubejs/data/apothic_spawners/tags/entity_type/blacklisted_from_spawners.json"
+hash = "5099e322e705ec7be7276079e16b43351a2f66934dfcfb27b690677c3c833114"
+
+[[files]]
 file = "kubejs/data/brewinandchewin/recipe/pizza_from_dough.json"
 hash = "9b9a92df59f968cbbb0878131be32e28b2ec587a1fdaa888e8c6a7b9a1a572d2"
+
+[[files]]
+file = "kubejs/data/c/tags/entity_type/capturing_not_supported.json"
+hash = "d8df3ebc75530a57539bfcc3a56a4a21a14b3ae835cca50c2041f29ef00905c2"
 
 [[files]]
 file = "kubejs/data/c/tags/fluid/crude_oil.json"
@@ -2269,12 +2285,56 @@ file = "kubejs/data/kubejs/loot_table/compat/pending_loot_entry.json"
 hash = "af73bfdbddd392cbfcf94acfc3638cdeb8cc8f69f70341727b8e174504a838d3"
 
 [[files]]
+file = "kubejs/data/kubejs/loot_table/structure_scrolls/basic.json"
+hash = "292f6866b2dbfa7c9af15365b6e7a22fd0481cff8d8a0773cb152b574ec93844"
+
+[[files]]
+file = "kubejs/data/kubejs/loot_table/structure_scrolls/fire.json"
+hash = "bb5ece1ac70d2bbd67af60a74edf3a06f45f7dc0e87444c32c0dc16cb294d8da"
+
+[[files]]
+file = "kubejs/data/kubejs/loot_table/structure_scrolls/ice.json"
+hash = "5ab2669329fe53b84b3cc888bb8956751277000ac651057a138f9e5a70717989"
+
+[[files]]
+file = "kubejs/data/kubejs/loot_table/structure_scrolls/low.json"
+hash = "8a627bff0392b8b8c96857077a793cceba459c8b67de53895df01b8de85506bc"
+
+[[files]]
+file = "kubejs/data/kubejs/loot_table/structure_scrolls/low_to_medium.json"
+hash = "bc45822b9a76ecff40327df6331db0048f47c3b0cbcb0f601fd4261236735924"
+
+[[files]]
+file = "kubejs/data/kubejs/loot_table/structure_scrolls/medium.json"
+hash = "7abfb6c7ad77659429be8a44b95095b4728be675c3db21cf291a2d440bfbc558"
+
+[[files]]
+file = "kubejs/data/kubejs/tags/entity_type/protected_mob_loot.json"
+hash = "c614c7f99aa7c494828e1a5bdb094790c330b19f1067f0cfd7274b99dade5edd"
+
+[[files]]
 file = "kubejs/data/kubejs/tags/fluid/hydrogen.json"
 hash = "5d459f657d958be998324651d965c50d7249d689da10d9a0ad77ff1c9cb4d5af"
 
 [[files]]
+file = "kubejs/data/minecraft/enchantment/protection.json"
+hash = "5439b4bdb1e23d219c330055e0895ecad97e58bf9a703d5810531426a0c7d26b"
+
+[[files]]
+file = "kubejs/data/minecraft/enchantment/sharpness.json"
+hash = "3d4f88b7641e47958863ef42079c6c8a5959094b199a16f7992ea6914a3669a4"
+
+[[files]]
 file = "kubejs/data/minecraft/recipe/red_dye.json"
 hash = "8d5f4a37a92e1f0debf1d587ac6eda609f60dedaf451e8d5cd80ac1c8a197e3f"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/enchantment/exclusive_set/armor.json"
+hash = "135796640c297c0c235549a35c7ef4d0bfe59972dd50c176e0f0e86eeb45f3cb"
+
+[[files]]
+file = "kubejs/data/minecraft/tags/enchantment/exclusive_set/damage.json"
+hash = "0b60eb4214af928255c87607280e1976159c3a8363aeb2e0774126ed74f205a8"
 
 [[files]]
 file = "kubejs/data/tfmg/recipe/distillation/crude_oil.json"
@@ -2309,6 +2369,18 @@ file = "kubejs/data/tracks/loot_table/blocks/track_mount.json"
 hash = "1fa442fa277c47cad5e83b1ff65aaeaae3c31fd56157ca05e54edf624604ce04"
 
 [[files]]
+file = "kubejs/server_scripts/boss_loot.js"
+hash = "2586c3016e0fe5ac364ae84bc5f390f8e6116a0f95fcb26cd72094531f1d76cd"
+
+[[files]]
+file = "kubejs/server_scripts/enchanting_progression.js"
+hash = "680c444788c1341dbbdc44720690d9230442531c8c9f69b11fbbc954c07e0cb7"
+
+[[files]]
+file = "kubejs/server_scripts/enchantment_caps.js"
+hash = "b9ce4d2e5a06ffca08c54947575973167aaafb5a58559fb4db802cc5162106bd"
+
+[[files]]
 file = "kubejs/server_scripts/fluid_compat.js"
 hash = "137657968198d2fb75c44af2bdf687691a0dd8453ce11dc5599050840483e3df"
 
@@ -2323,6 +2395,10 @@ hash = "dae099ae3be7f033c0c190ee8c3b023b42f6b235d9d0591be5926e8435dbd67f"
 [[files]]
 file = "kubejs/server_scripts/recipe_conflicts.js"
 hash = "bbd45be2185ed59ca2846fa105bc1fb2cd51d86c835d901cdca3a78fdf6f62fc"
+
+[[files]]
+file = "kubejs/server_scripts/structure_scroll_loot.js"
+hash = "632eba8d048deb2484a43d39296c9ea396bbbccc5dbc61ec1194b4c185ee0c06"
 
 [[files]]
 file = "kubejs/startup_scripts/main.js"
@@ -2376,6 +2452,16 @@ metafile = true
 [[files]]
 file = "mods/amendments.pw.toml"
 hash = "e3f5b012f489ecb7f0d6a9fe88e29a725508051ee6feadb405c24f31d36b3799"
+metafile = true
+
+[[files]]
+file = "mods/apothic-attributes.pw.toml"
+hash = "f64cc1e6cf4fc9a95406502115b907dd60e3db55db0ca5d0e3206303aa7951a3"
+metafile = true
+
+[[files]]
+file = "mods/apothic-enchanting.pw.toml"
+hash = "0f07d8a70dfe8e94bf9b01554d9fcae8b6b55fa2e62a07164707e138abef2ae3"
 metafile = true
 
 [[files]]

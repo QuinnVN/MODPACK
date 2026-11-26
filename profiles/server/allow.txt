@@ -7,6 +7,8 @@ mods/almanac.pw.toml
 mods/almostunified.pw.toml
 mods/alternate-current.pw.toml
 mods/amendments.pw.toml
+mods/apothic-attributes.pw.toml
+mods/apothic-enchanting.pw.toml
 mods/appleskin.pw.toml
 mods/architectury-api.pw.toml
 mods/artifacts.pw.toml

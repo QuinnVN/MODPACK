@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:scroll",
+          "functions": [
+            {
+              "function": "irons_spellbooks:randomize_spell",
+              "quality": { "min": 0, "max": 0.2 },
+              "spell_filter": {
+                "spells": [
+                  "irons_spellbooks:magic_missile",
+                  "irons_spellbooks:heal",
+                  "irons_spellbooks:firebolt",
+                  "irons_spellbooks:icicle",
+                  "irons_spellbooks:oakskin"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
