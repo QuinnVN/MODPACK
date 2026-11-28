@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "quark:ancient_tome"
+    }
+  ],
+  "result": {
+    "id": "minecraft:experience_bottle",
+    "count": 10
+  }
+}

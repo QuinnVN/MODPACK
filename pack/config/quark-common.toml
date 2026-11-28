@@ -47,9 +47,9 @@
 [automation]
 	"Chains Connect Blocks" = true
 	Chute = true
-	"Dispensers Place Blocks" = true
+	"Dispensers Place Blocks" = false
 	"Ender Watcher" = true
-	"Feeding Trough" = true
+	"Feeding Trough" = false
 	Gravisand = true
 	"Iron Rod" = true
 	"Metal Buttons" = true
@@ -147,10 +147,10 @@
 		"Enable Stick Block" = true
 		"Enable Apple Crate" = true
 		"Enable Golden Apple Crate" = true
-		"Enable Potato Crate" = true
-		"Enable Carrot Crate" = true
+		"Enable Potato Crate" = false
+		"Enable Carrot Crate" = false
 		"Enable Golden Carrot Crate" = true
-		"Enable Beetroot Crate" = true
+		"Enable Beetroot Crate" = false
 		"Enable Cocoa Bean Sack" = true
 		"Enable Nether Wart Sack" = true
 		"Enable Gunpowder Sack" = true
@@ -272,7 +272,7 @@
 
 [management]
 	"Automatic Tool Restock" = true
-	"Easy Transferring" = true
+	"Easy Transferring" = false
 	"Expanded Item Interactions" = true
 	"Hotbar Changer" = true
 	"Inventory Sorting" = false
@@ -331,7 +331,7 @@
 [tools]
 	Abacus = true
 	"Ambient Discs" = true
-	"Ancient Tomes" = true
+	"Ancient Tomes" = false
 	"Beacon Redirection" = true
 	"Bottled Cloud" = true
 	"Color Runes" = true
@@ -1548,7 +1548,7 @@
 	Camera = true
 	"Chest Searching" = true
 	"Elytra Indicator" = true
-	"Greener Grass" = true
+	"Greener Grass" = false
 	"Improved Tooltips" = true
 	"Long Range Pick Block" = true
 	"Microcrafting Helper" = true
@@ -1596,7 +1596,7 @@
 
 	[client.improved_tooltips]
 		"Attribute Tooltips" = true
-		"Food Tooltips" = true
+		"Food Tooltips" = false
 		"Shulker Tooltips" = true
 		"Map Tooltips" = true
 		"Enchanting Tooltips" = true

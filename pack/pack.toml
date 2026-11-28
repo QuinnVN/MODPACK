@@ -1,12 +1,12 @@
 name = "MODPACK"
 author = "Quinn"
-version = "0.3.0"
+version = "0.3.1"
 pack-format = "packwiz:1.1.0"
 
 [index]
 file = "index.toml"
 hash-format = "sha256"
-hash = "bb555d723eb4cdeab1d2afe1bf11f1c71cf9a299732bb082a362e21bd1b6e1e6"
+hash = "adbc6aa6464db126d5744c541a2c2509dc2deb5f9c37755a3d5debb07ca9f239"
 
 [versions]
 minecraft = "1.21.1"

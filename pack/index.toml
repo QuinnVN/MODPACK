@@ -1794,7 +1794,7 @@ hash = "55affffe67e84dfe11e590769e235aee999b77f9484a3adf7ee8247a9f3d35ba"
 
 [[files]]
 file = "config/quark-common.toml"
-hash = "7fd9fb45d3e4ac5307b247836fceee8fd921049e5021dbcf01c35191d13c8ff8"
+hash = "13dc3dc2565eae996b7867c653b442c6cdc909be4e1e001fc0d0946dc6672d40"
 
 [[files]]
 file = "config/railways-client.toml"
@@ -2307,6 +2307,10 @@ hash = "bc45822b9a76ecff40327df6331db0048f47c3b0cbcb0f601fd4261236735924"
 [[files]]
 file = "kubejs/data/kubejs/loot_table/structure_scrolls/medium.json"
 hash = "7abfb6c7ad77659429be8a44b95095b4728be675c3db21cf291a2d440bfbc558"
+
+[[files]]
+file = "kubejs/data/kubejs/recipe/ancient_tome_salvage.json"
+hash = "62ea4e521120697a1a63968990eb97f575678395e32812a856ac10134c39af2a"
 
 [[files]]
 file = "kubejs/data/kubejs/tags/entity_type/protected_mob_loot.json"
